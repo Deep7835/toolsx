@@ -2,7 +2,7 @@
 title: "EPFO 3.0: UPI withdrawals, face-auth UAN, auto-settlement — what employees and employers get"
 description: "Provident fund is finally behaving like a bank account. A rundown of the EPFO changes rolled out through 2025–26 — instant claims up to ₹5 lakh, UPI/ATM withdrawals, self-service profile fixes — and the employer duties that changed with them."
 date: "2026-08-22"
-updated: "2026-09-12"
+updated: "2026-09-20"
 kind: trending
 tags: [payroll, hr]
 tools: [epf-gratuity, in-hand-salary, employee-cost]
@@ -36,11 +36,11 @@ Transfer claims (Form 13) are mostly auto-approved without the old employer's at
 2. **Restructure wages under the Labour Codes.** With basic + DA at ≥ 50% of CTC, your PF contribution rises. The [employee cost calculator](/tools/employee-cost) shows the new employer outgo.
 3. **File ECR on time** — the 15th of the following month. Late payment draws 12% interest plus damages up to 25%.
 4. **Do not withhold attestation.** Most claims no longer need it, and refusing to help an ex-employee is now pointless as well as unlawful.
-5. **Watch the wage ceiling.** The ₹15,000 ceiling for mandatory PF coverage has been under review; a higher ceiling would bring more employees into compulsory PF. Check the latest EPFO notification before each financial year.
+5. **Apply the new wage ceiling.** From 17 September 2026 the mandatory coverage ceiling is **₹25,000** (was ₹15,000). Employees earning up to ₹25,000 in basic + DA must be enrolled, and EPS contributions are computed on wages up to the new ceiling — see [what the ₹25,000 ceiling changes](/blog/epf-wage-ceiling-25000-what-changes-for-payroll).
 
 ## What this means for take-home pay
 
-Nothing directly — contributions remain 12% employee + 12% employer (8.33% of which goes to EPS on wages up to ₹15,000). But because the money is now genuinely accessible, employees value PF more, and VPF (voluntary PF) contributions are rising. See how much a monthly VPF adds by retirement in the [EPF calculator](/tools/epf-gratuity).
+Nothing directly — contributions remain 12% employee + 12% employer (8.33% of which goes to EPS on wages up to ₹15,000). But because the money is now genuinely accessible, employees value PF more, VPF (voluntary PF) contributions are rising, and the ₹25,000 ceiling brings millions of lower-paid workers in for the first time. See how much a monthly VPF adds by retirement in the [EPF calculator](/tools/epf-gratuity).
 
 ## Common problems still unresolved
 

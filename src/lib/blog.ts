@@ -80,7 +80,7 @@ function extractFaqs(md: string) {
 
 let cache: Post[] | null = null;
 export function getAllPosts(): Post[] {
-  if (cache) return cache;
+  if (cache && process.env.NODE_ENV === "production") return cache;
   if (!fs.existsSync(DIR)) return [];
   const posts = fs.readdirSync(DIR).filter((f) => f.endsWith(".md")).map((file) => {
     const raw = fs.readFileSync(path.join(DIR, file), "utf8");

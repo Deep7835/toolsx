@@ -5,6 +5,7 @@ import { FieldGroup, NumberInput, Row, Select, Segmented, Toggle } from "@/compo
 import { HeroStat, KV, Stat } from "@/components/ui/Stat";
 import { computeTax, STD_DEDUCTION } from "@/lib/tax";
 import { inr, pct } from "@/lib/format";
+import { EPF_WAGE_CEILING } from "@/lib/payroll";
 
 const PT: Record<string, (g: number) => number> = { none: () => 0, MH: (g) => (g <= 7500 ? 0 : g <= 10000 ? 175 : 200), KA: (g) => (g <= 25000 ? 0 : 200), WB: (g) => (g <= 10000 ? 0 : g <= 15000 ? 110 : g <= 25000 ? 130 : g <= 40000 ? 150 : 200), GJ: (g) => (g <= 12000 ? 0 : 200), AP: (g) => (g <= 15000 ? 0 : g <= 20000 ? 150 : 200), TS: (g) => (g <= 15000 ? 0 : g <= 20000 ? 150 : 200) };
 
@@ -29,11 +30,11 @@ export default function InHandSalary() {
     const fixed = annualCtc - bonus;
     // solve gross such that gross + employer PF (+ gratuity) = fixed
     const basicOf = (g: number) => g * (basicPct / 100);
-    const erPfOf = (g: number) => (pfIn ? (pfCap ? Math.min(basicOf(g), 180000) : basicOf(g)) * 0.12 : 0);
+    const erPfOf = (g: number) => (pfIn ? (pfCap ? Math.min(basicOf(g), EPF_WAGE_CEILING * 12) : basicOf(g)) * 0.12 : 0);
     const gratOf = (g: number) => (gratIn ? basicOf(g) * 0.0481 : 0);
     let gross = fixed; for (let i = 0; i < 30; i++) gross = fixed - erPfOf(gross) - gratOf(gross);
     const basic = basicOf(gross); const hra = basic * (hraPct / 100); const special = Math.max(0, gross - basic - hra);
-    const eePf = (pfCap ? Math.min(basic, 180000) : basic) * 0.12; const erPf = erPfOf(gross); const grat = gratOf(gross);
+    const eePf = (pfCap ? Math.min(basic, EPF_WAGE_CEILING * 12) : basic) * 0.12; const erPf = erPfOf(gross); const grat = gratOf(gross);
     const pt = PT[state](gross / 12) * 12 + (state === "MH" && PT.MH(gross / 12) === 200 ? 100 : 0);
     const hraEx = regime === "old" && rent > 0 ? Math.max(0, Math.min(hra, rent - basic * 0.1, basic * (metro ? 0.5 : 0.4))) : 0;
     const taxable = gross + bonus - STD_DEDUCTION[regime] - (regime === "old" ? Math.min(150000, eePf + vpf * 12 + ded80) + hraEx + pt : 0);
@@ -52,7 +53,7 @@ export default function InHandSalary() {
         <NumberInput label="Variable / bonus included in CTC (annual)" prefix="₹" value={bonus} onChange={setBonus} />
         <Toggle checked={pfIn} onChange={setPfIn} label="Employer PF is part of CTC" />
         <Toggle checked={gratIn} onChange={setGratIn} label="Gratuity provision is part of CTC" />
-        <Toggle checked={pfCap} onChange={setPfCap} label="PF limited to ₹15,000 basic" />
+        <Toggle checked={pfCap} onChange={setPfCap} label="PF limited to the ₹25,000 statutory ceiling" help="Ceiling raised from ₹15,000 on 17 Sep 2026" />
         <NumberInput label="Voluntary PF (monthly)" prefix="₹" value={vpf} onChange={setVpf} />
       </FieldGroup>
       <FieldGroup title="Tax">

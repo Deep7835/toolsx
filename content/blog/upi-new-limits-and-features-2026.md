@@ -2,7 +2,7 @@
 title: "UPI in 2026: new transaction limits, UPI Circle, Lite auto top-up and what they mean for merchants"
 description: "Higher per-transaction caps for insurance, education and tax, delegated payments via UPI Circle, ₹1,000 offline payments with UPI Lite, and biometric authentication. A merchant-focused rundown of the changes that arrived through 2025–26."
 date: "2026-08-30"
-updated: "2026-09-16"
+updated: "2026-09-20"
 kind: trending
 tags: [upi, payments]
 tools: [upi-standee, barcode-scanner, payment-receipt, whatsapp-direct]
@@ -72,4 +72,4 @@ If your PSP has tagged you under hospitals/healthcare, yes — up to ₹5 lakh p
 Yes. UPI Lite payments settle to the merchant like any UPI payment; the only difference is on the payer's side.
 
 ### Is there a fee for receiving UPI?
-Not for P2P or small merchants. Large merchants pay 0.4% (capped ₹300) on transactions above ₹2,000 — see the MDR guide.
+Not for P2P or small merchants (up to ₹1 lakh/month of UPI QR receipts). From 15 October 2026 other merchants pay 0.4% (capped ₹300) on transactions above ₹2,000, with a flat ₹5 for fuel, railways and telecom — see the MDR guide.

@@ -4,6 +4,7 @@ import { CalculatorShell } from "@/components/shell/CalculatorShell";
 import { NumberInput, Range, Segmented, Toggle } from "@/components/ui/Field";
 import { HeroStat, KV, Stat } from "@/components/ui/Stat";
 import { inr, num, pct } from "@/lib/format";
+import { EPF_WAGE_CEILING, EPF_CEILING_EFFECTIVE } from "@/lib/payroll";
 
 export default function EpfGratuity() {
   const [tab, setTab] = useState<"epf" | "gratuity">("epf");
@@ -23,8 +24,8 @@ export default function EpfGratuity() {
   const epf = useMemo(() => {
     const yrs = Math.max(0, retire - age); let bal = balance, sal = basic, contrib = 0; const rows: Array<{ y: number; contrib: number; bal: number }> = [];
     for (let y = 1; y <= yrs; y++) {
-      const wage = cap ? Math.min(sal, 15000) : sal;
-      const eeMonthly = wage * (empPct / 100); const epsMonthly = Math.min(wage, 15000) * 0.0833; const erMonthly = wage * 0.12 - epsMonthly; const monthly = eeMonthly + erMonthly;
+      const wage = cap ? Math.min(sal, EPF_WAGE_CEILING) : sal;
+      const eeMonthly = wage * (empPct / 100); const epsMonthly = Math.min(wage, EPF_WAGE_CEILING) * 0.0833; const erMonthly = wage * 0.12 - epsMonthly; const monthly = eeMonthly + erMonthly;
       let yc = 0; for (let m = 0; m < 12; m++) { bal += monthly; yc += monthly; bal += bal * (rate / 100 / 12); }
       contrib += yc; rows.push({ y, contrib: yc, bal }); sal *= 1 + hike / 100;
     }
@@ -47,7 +48,7 @@ export default function EpfGratuity() {
           <Range label="EPF interest rate" value={rate} onChange={setRate} min={7} max={10} step={0.05} format={(v) => `${num(v, 2)}%`} />
           <Range label="Annual salary increase" value={hike} onChange={setHike} min={0} max={20} step={1} format={(v) => `${v}%`} />
           <NumberInput label="Existing EPF balance" prefix="₹" value={balance} onChange={setBalance} />
-          <Toggle checked={cap} onChange={setCap} label="Employer contributes on ₹15,000 cap only" help="Many employers limit PF wage to the statutory ceiling." />
+          <Toggle checked={cap} onChange={setCap} label={`Employer contributes on the ₹${EPF_WAGE_CEILING.toLocaleString("en-IN")} ceiling only`} help={`Statutory ceiling raised from ₹15,000 w.e.f. ${EPF_CEILING_EFFECTIVE}. Many employers cap PF wage here.`} />
         </>
       ) : (
         <>
@@ -62,7 +63,7 @@ export default function EpfGratuity() {
   const results = tab === "epf" ? (
     <>
       <HeroStat label={`EPF corpus at ${retire}`} value={inr(epf.bal, { decimals: 0 })} sub={`${epf.yrs} years · ${inr(epf.contrib, { decimals: 0 })} contributed`} />
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3"><Stat label="Interest earned" value={inr(epf.bal - epf.contrib - balance, { decimals: 0 })} tone="accent" /><Stat label="Monthly (you + employer)" value={inr(epf.rows[0] ? epf.rows[0].contrib / 12 : 0, { decimals: 0 })} /><Stat label="EPS pension wage" value={inr(Math.min(basic, 15000), { decimals: 0 })} sub="8.33% goes to EPS" /></div>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3"><Stat label="Interest earned" value={inr(epf.bal - epf.contrib - balance, { decimals: 0 })} tone="accent" /><Stat label="Monthly (you + employer)" value={inr(epf.rows[0] ? epf.rows[0].contrib / 12 : 0, { decimals: 0 })} /><Stat label="EPS pension wage" value={inr(Math.min(basic, EPF_WAGE_CEILING), { decimals: 0 })} sub="8.33% goes to EPS" /></div>
       <div className="max-h-[280px] overflow-auto rounded-xl border border-border"><table className="w-full text-xs"><thead className="sticky top-0 bg-surface-2 text-left text-[10.5px] uppercase tracking-[0.1em] text-muted"><tr><th className="px-3 py-2">Year</th><th className="px-3 py-2 text-right">Contribution</th><th className="px-3 py-2 text-right">Balance</th></tr></thead><tbody className="tabular">{epf.rows.map((r) => <tr key={r.y} className="border-t border-border"><td className="px-3 py-1.5 text-muted">{r.y}</td><td className="px-3 py-1.5 text-right">{inr(r.contrib, { decimals: 0 })}</td><td className="px-3 py-1.5 text-right">{inr(r.bal, { decimals: 0 })}</td></tr>)}</tbody></table></div>
     </>
   ) : (
@@ -73,5 +74,5 @@ export default function EpfGratuity() {
     </>
   );
 
-  return <CalculatorShell inputs={inputs} results={results} inputTitle={tab === "epf" ? "EPF inputs" : "Gratuity inputs"} resultTitle={tab === "epf" ? "Retirement corpus" : "Gratuity"} note={tab === "epf" ? `Employee 12% + employer 12% (of which 8.33% on wages up to ₹15,000 goes to EPS pension). Interest at ${pct(rate, 2)} credited annually; here compounded monthly for projection.` : "Payment of Gratuity Act, 1972."} />;
+  return <CalculatorShell inputs={inputs} results={results} inputTitle={tab === "epf" ? "EPF inputs" : "Gratuity inputs"} resultTitle={tab === "epf" ? "Retirement corpus" : "Gratuity"} note={tab === "epf" ? `Employee 12% + employer 12% (of which 8.33% on wages up to ₹25,000 — the ceiling raised on 17 Sep 2026 — goes to EPS pension). Interest at ${pct(rate, 2)} credited annually; here compounded monthly for projection.` : "Payment of Gratuity Act, 1972."} />;
 }

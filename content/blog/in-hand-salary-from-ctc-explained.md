@@ -2,7 +2,7 @@
 title: "CTC to in-hand salary: exactly where the money goes, with a worked example"
 description: "A ₹9 lakh CTC becomes about ₹62,000 a month in hand. This guide walks through every line — basic, HRA, PF, professional tax, gratuity, TDS — and shows how the 2025 Labour Code wage rule changed the maths."
 date: "2026-01-20"
-updated: "2026-09-12"
+updated: "2026-09-20"
 kind: guide
 hero: true
 tags: [payroll, personal finance]
@@ -45,7 +45,7 @@ Why zero tax: gross ₹8,48,700 − standard deduction ₹75,000 = ₹7,73,700 t
 ## Each deduction explained
 
 ### Employee PF — 12% of basic
-Yours, invested at 8.25%, tax-free after 5 years. Employers may cap it on ₹15,000 basic (₹1,800/month) — check your structure.
+Yours, invested at 8.25%, tax-free after 5 years. Employers may cap it at the statutory wage ceiling — **₹25,000 basic (₹3,000/month) from 17 September 2026**, previously ₹15,000 — check your structure.
 
 ### Professional tax — up to ₹2,500 a year
 A state levy (Maharashtra ₹200/month, Karnataka ₹200 above ₹25,000, none in Delhi/UP/Haryana). Deductible from taxable income under the old regime. See [state slabs](/blog/professional-tax-state-wise-slabs).

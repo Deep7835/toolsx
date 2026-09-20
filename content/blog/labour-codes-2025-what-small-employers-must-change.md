@@ -2,6 +2,7 @@
 title: "The four Labour Codes are in force: 9 changes every small employer must make"
 description: "Since 21 November 2025, the Wage, Social Security, Industrial Relations and OSH codes apply nationwide. Wage definition, gratuity for fixed-term staff, overtime, women on night shifts, appointment letters — here is what a 5–50 person business must actually do."
 date: "2026-09-10"
+updated: "2026-09-20"
 kind: trending
 tags: [payroll, hr, compliance]
 tools: [employee-cost, in-hand-salary, wage-slip, epf-gratuity, team-payroll]
@@ -50,7 +51,7 @@ Monthly wages must be paid by the **7th of the following month**. Deductions are
 
 ## 8. ESI and PF coverage expands
 
-ESI now applies to all establishments with 10+ workers nationwide (including hazardous units with even one worker). PF thresholds are set by notification; the ₹15,000 wage ceiling for mandatory PF was expected to rise and you should check the latest EPFO circular before finalising.
+ESI now applies to all establishments with 10+ workers nationwide (including hazardous units with even one worker). And the PF wage ceiling has finally moved: from **17 September 2026** the mandatory EPF coverage ceiling is **₹25,000 per month** (up from ₹15,000), bringing an estimated 51 lakh more employees under compulsory PF. If you have staff earning between ₹15,000 and ₹25,000 who were outside PF, enrol them now — see [the EPF ceiling explainer](/blog/epf-wage-ceiling-25000-what-changes-for-payroll).
 
 ## 9. Compliance is lighter — one licence, one return
 

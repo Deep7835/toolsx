@@ -8,6 +8,7 @@ import { HeroStat, Stat } from "@/components/ui/Stat";
 import { inr, uid } from "@/lib/format";
 import { downloadText, shareWhatsApp } from "@/lib/export";
 import { useLocalStorage } from "@/lib/hooks";
+import { EPF_WAGE_CEILING } from "@/lib/payroll";
 
 interface Emp { id: string; name: string; role: string; fixed: number; variablePct: number; achieved: number; days: number; totalDays: number; advance: number; pf: boolean; esi: boolean; pt: number }
 const mk = (o: Partial<Emp> = {}): Emp => ({ id: uid(), name: "", role: "", fixed: 20000, variablePct: 0, achieved: 100, days: 26, totalDays: 26, advance: 0, pf: false, esi: false, pt: 0, ...o });
@@ -18,10 +19,10 @@ const calc = (e: Emp) => {
   const variable = e.fixed * (e.variablePct / 100) * (e.achieved / 100);
   const gross = prorated + variable;
   const basic = gross * 0.5;
-  const pf = e.pf ? Math.min(basic, 15000) * 0.12 : 0;
+  const pf = e.pf ? Math.min(basic, EPF_WAGE_CEILING) * 0.12 : 0;
   const esi = e.esi && gross <= 21000 ? gross * 0.0075 : 0;
   const net = gross - pf - esi - e.pt - e.advance;
-  const erPf = e.pf ? Math.min(basic, 15000) * 0.13 : 0;
+  const erPf = e.pf ? Math.min(basic, EPF_WAGE_CEILING) * 0.13 : 0;
   const erEsi = e.esi && gross <= 21000 ? gross * 0.0325 : 0;
   return { prorated, variable, gross, pf, esi, net, employerCost: gross + erPf + erEsi };
 };
@@ -69,7 +70,7 @@ export default function TeamPayroll() {
           <div className="flex flex-wrap justify-end gap-2 pt-1"><Button variant="whatsapp" size="sm" onClick={() => shareWhatsApp(`Payroll ${month}\n${rows.map(({ e, c }) => `${e.name}: ${inr(c.net, { decimals: 0 })}`).join("\n")}\nTotal: ${inr(totals.net, { decimals: 0 })}`)}>Share summary</Button></div>
         </CardBody>
       </Card>
-      <p className="text-xs text-muted">Saved in this browser. PF at 12% employee / 13% employer on basic (50% of gross, capped ₹15,000). ESI 0.75% / 3.25% where gross ≤ ₹21,000. Use the wage slip tool to print individual slips.</p>
+      <p className="text-xs text-muted">Saved in this browser. PF at 12% employee / 13% employer on basic (50% of gross, capped at the ₹25,000 ceiling effective 17 Sep 2026). ESI 0.75% / 3.25% where gross ≤ ₹21,000. Use the wage slip tool to print individual slips.</p>
     </div>
   );
 }
