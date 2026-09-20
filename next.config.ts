@@ -9,8 +9,18 @@ const securityHeaders = [
   { key: "X-DNS-Prefetch-Control", value: "on" },
 ];
 
+/** Canonical host; `www.` is redirected to it (evaluated by the router, so no middleware is needed). */
+const CANONICAL_HOST = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://kaagazo.com").host;
+
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  async redirects() {
+    return [
+      // Separate root rule: OpenNext leaves ":path*" unsubstituted when the path is empty.
+      { source: "/", has: [{ type: "host", value: `www.${CANONICAL_HOST}` }], destination: `https://${CANONICAL_HOST}/`, permanent: true },
+      { source: "/:path+", has: [{ type: "host", value: `www.${CANONICAL_HOST}` }], destination: `https://${CANONICAL_HOST}/:path+`, permanent: true },
+    ];
+  },
   images: { loader: "custom", loaderFile: "./src/lib/image-loader.ts", deviceSizes: [640, 1200], imageSizes: [] },
   async headers() {
     return [

@@ -24,7 +24,6 @@ npm run build && npm start
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Search Console verification token (default in `src/lib/brand.ts`) |
 | `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Plausible domain — cookie-free analytics, loads without consent |
 | `NEXT_PUBLIC_FORM_ENDPOINT` | POST endpoint for the contact form (Formspree/Web3Forms/your own); without it the form falls back to `mailto:` |
-| `FORCE_HTTPS` | Set `false` to disable the http→https redirect in `src/proxy.ts` (on by default in production for non-localhost hosts) |
 
 No server-side secrets are used anywhere; every tool runs client-side.
 
@@ -38,7 +37,9 @@ npm run cf:preview   # build + run the Worker locally in workerd
 npm run deploy       # build + deploy to kaagazo.com / www.kaagazo.com
 ```
 
-`NEXT_PUBLIC_*` values are inlined at build time (export them in the shell or a local `.env.production` before `npm run deploy`); `FORCE_HTTPS` is a runtime var and goes in `wrangler.jsonc` → `vars`. Public IDs that should ship by default live in `src/lib/brand.ts`. `src/proxy.ts` redirects `www.` → apex and http → https.
+`NEXT_PUBLIC_*` values are inlined at build time (export them in the shell or a local `.env.production` before `npm run deploy`). Public IDs that should ship by default live in `src/lib/brand.ts`.
+
+HTTPS is enforced by Cloudflare ("Always Use HTTPS" on the zone) plus the HSTS header; `www.` → apex is a `redirects()` entry in `next.config.ts` (no middleware). Either can also be added as a Cloudflare Redirect Rule to answer at the edge.
 
 ## Launch checklist (done)
 
