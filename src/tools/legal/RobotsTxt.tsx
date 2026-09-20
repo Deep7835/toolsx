@@ -23,7 +23,7 @@ export default function RobotsTxt() {
   const base = site.replace(/\/$/, "");
   const block = (agents: string[]) => agents.map((a) => `User-agent: ${a}\nDisallow: /`).join("\n\n");
   const out = [
-    `# robots.txt for ${base}\n# Generated with India Biz Tools`,
+    `# robots.txt for ${base}\n# Generated with Kaagazo`,
     ...rules.map((r) => [`User-agent: ${r.agent || "*"}`, ...r.disallow.split("\n").filter(Boolean).map((p) => `Disallow: ${p.trim()}`), ...r.allow.split("\n").filter(Boolean).map((p) => `Allow: ${p.trim()}`), delay ? `Crawl-delay: ${delay}` : ""].filter(Boolean).join("\n")),
     blockAi ? `# Block AI training crawlers\n${block(["GPTBot", "ChatGPT-User", "ClaudeBot", "anthropic-ai", "CCBot", "Google-Extended", "PerplexityBot", "Bytespider"])}` : "",
     blockSeo ? `# Block aggressive SEO crawlers\n${block(["AhrefsBot", "SemrushBot", "MJ12bot", "DotBot"])}` : "",

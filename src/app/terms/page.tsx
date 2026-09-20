@@ -4,7 +4,7 @@ export const metadata: Metadata = { title: "Terms of service" };
 export default function Terms() {
   return (
     <ProsePage eyebrow="Legal" title="Terms of service">
-      <p>By using India Biz Tools you agree to these terms.</p>
+      <p>By using Kaagazo you agree to these terms.</p>
       <h2>Use of the tools</h2>
       <p>The tools are provided free of charge for lawful business use. You are responsible for the accuracy of the details you enter and for any document you generate.</p>
       <h2>No professional advice</h2>

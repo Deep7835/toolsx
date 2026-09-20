@@ -1,6 +1,6 @@
-# India Biz Tools
+# Kaagazo
 
-115 free, private, browser-based business utilities for Indian shops, freelancers and MSMEs — GST invoices, UPI QR standees, salary & tax calculators, barcodes, labels, legal policies, SEO helpers and more. Everything runs client-side; nothing is uploaded.
+Kaagazo (kaagazo.com) — 115 free, private, browser-based business utilities for Indian shops, freelancers and MSMEs — GST invoices, UPI QR standees, salary & tax calculators, barcodes, labels, legal policies, SEO helpers and more. Everything runs client-side; nothing is uploaded.
 
 ## Stack
 
@@ -39,7 +39,7 @@ public/sw.js           offline service worker (registered in production)
 
 ## Design
 
-Minimal, elegant: warm stone neutrals with a single emerald accent, Instrument Serif display type with Inter, semantic colour tokens with a full dark mode, ⌘K search, 8-pt spacing, Lucide icons only. Documents are rendered as fixed-width "paper" (A4, A5, 80 mm thermal, 4×6 label, CR80 card) scaled to fit, then rasterised to PDF/PNG.
+Minimal, elegant: white surfaces with black pill buttons and a blue link accent, pastel-sky hero, Inter with tight bold headlines, semantic colour tokens with a full dark mode, ⌘K search, 8-pt spacing, Lucide icons only. Documents are rendered as fixed-width "paper" (A4, A5, 80 mm thermal, 4×6 label, CR80 card) scaled to fit, then rasterised to PDF/PNG.
 
 ## Notes
 

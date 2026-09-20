@@ -13,7 +13,7 @@ export default function JsonBase64() {
   const [input, setInput] = useState(SAMPLE);
   const [indent, setIndent] = useState("2");
   const [sortKeys, setSortKeys] = useState(false);
-  const [b64in, setB64in] = useState("India Biz Tools · ₹1,180.00");
+  const [b64in, setB64in] = useState("Kaagazo · ₹1,180.00");
   const [dir, setDir] = useState<"encode" | "decode">("encode");
   const [urlSafe, setUrlSafe] = useState(false);
 

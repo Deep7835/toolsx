@@ -82,7 +82,7 @@ export default function InvoiceLike({ config }: { config: InvoiceConfig }) {
   const grand = c.showTax ? totals.rounded : Math.round(totals.taxable);
   const upiText = c.showUpi && upi.vpa ? upiLink({ vpa: upi.vpa, name: upi.payee || business.name, amount: grand, note: `${number}` }) : "";
 
-  const shareText = `${c.shareIntro ?? c.title} ${number}\nFrom: ${business.name}\nTo: ${client.name}\nDate: ${fmtDate(date)}\nAmount: ${inr(grand)}${upiText ? `\nPay via UPI: ${upiText}` : ""}\n\n— Sent via India Biz Tools`;
+  const shareText = `${c.shareIntro ?? c.title} ${number}\nFrom: ${business.name}\nTo: ${client.name}\nDate: ${fmtDate(date)}\nAmount: ${inr(grand)}${upiText ? `\nPay via UPI: ${upiText}` : ""}\n\n— Sent via Kaagazo`;
 
   const setB = (k: keyof Party, v: string) => setBusiness({ ...business, [k]: v });
   const setC = (k: keyof Party, v: string) => setClient({ ...client, [k]: v });

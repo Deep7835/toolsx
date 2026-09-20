@@ -1,5 +1,5 @@
-/* India Biz Tools service worker — offline-first for the app shell, network-first for pages. */
-const VERSION = "ibt-v1";
+/* Kaagazo service worker — offline-first for the app shell, network-first for pages. */
+const VERSION = "kaagazo-v2";
 const SHELL = ["/", "/tools", "/categories", "/offline", "/manifest.webmanifest", "/icon.svg"];
 
 self.addEventListener("install", (e) => {

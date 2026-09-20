@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
+import { BRAND } from "@/lib/brand";
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "India Biz Tools",
-    short_name: "BizTools",
+    name: BRAND.name,
+    short_name: BRAND.name,
     description: "115 free, private business utilities for Indian MSMEs.",
     start_url: "/",
     display: "standalone",

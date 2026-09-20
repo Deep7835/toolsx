@@ -53,8 +53,8 @@ export default function GstCalendar() {
   const next = all.filter((d) => d.scheme.includes(scheme) && d.date >= today)[0];
   const byMonth = list.reduce<Record<string, Due[]>>((a, d) => { const k = d.date.slice(0, 7); (a[k] ??= []).push(d); return a; }, {});
   const ics = () => {
-    const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//India Biz Tools//GST Calendar//EN"];
-    list.forEach((d, i) => { const dt = d.date.replace(/-/g, ""); lines.push("BEGIN:VEVENT", `UID:gst-${fy}-${i}@indiabiztools`, `DTSTART;VALUE=DATE:${dt}`, `DTEND;VALUE=DATE:${dt}`, `SUMMARY:GST due: ${d.form}`, `DESCRIPTION:${d.desc}`, "BEGIN:VALARM", "TRIGGER:-P3D", "ACTION:DISPLAY", `DESCRIPTION:${d.form} due in 3 days`, "END:VALARM", "END:VEVENT"); });
+    const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Kaagazo//GST Calendar//EN"];
+    list.forEach((d, i) => { const dt = d.date.replace(/-/g, ""); lines.push("BEGIN:VEVENT", `UID:gst-${fy}-${i}@kaagazo`, `DTSTART;VALUE=DATE:${dt}`, `DTEND;VALUE=DATE:${dt}`, `SUMMARY:GST due: ${d.form}`, `DESCRIPTION:${d.desc}`, "BEGIN:VALARM", "TRIGGER:-P3D", "ACTION:DISPLAY", `DESCRIPTION:${d.form} due in 3 days`, "END:VALARM", "END:VEVENT"); });
     lines.push("END:VCALENDAR"); downloadText(lines.join("\r\n"), `gst-calendar-fy${fy}-${String(fy + 1).slice(2)}.ics`, "text/calendar");
   };
 

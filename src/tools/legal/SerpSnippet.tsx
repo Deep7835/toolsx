@@ -9,9 +9,9 @@ const px = (s: string, size: number) => { const c = document.createElement("canv
 
 export default function SerpSnippet() {
   const [title, setTitle] = useState("GST Invoice Generator with UPI QR — Free for Indian Shops");
-  const [desc, setDesc] = useState("Create GST-compliant invoices with a dynamic UPI QR code in under a minute. No login, 100% private, free PDF download. Built for Bharat MSMEs.");
+  const [desc, setDesc] = useState("Create GST-compliant invoices with a dynamic UPI QR code in under a minute. No login, 100% private, free PDF download. Built for Indian small businesses.");
   const [url, setUrl] = useState("https://www.example.in/tools/gst-invoice");
-  const [site, setSite] = useState("India Biz Tools");
+  const [site, setSite] = useState("Kaagazo");
   const [device, setDevice] = useState<"desktop" | "mobile">("desktop");
   const tPx = typeof window !== "undefined" ? px(title, 20) : 0;
   const dPx = typeof window !== "undefined" ? px(desc, 14) : 0;

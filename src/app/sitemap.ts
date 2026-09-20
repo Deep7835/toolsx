@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { TOOLS } from "@/lib/registry";
 import { CATEGORIES } from "@/lib/categories";
-const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://indiabiztools.example";
+const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://kaagazo.com";
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return [

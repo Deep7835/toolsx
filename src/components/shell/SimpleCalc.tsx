@@ -93,7 +93,7 @@ export function SimpleCalc({ spec }: { spec: CalcSpec }) {
     </>
   );
 
-  const shareText = r.share ?? `${r.primary.label}: ${r.primary.value}${r.rows ? "\n" + r.rows.filter(Boolean).map((row) => { const [k, val] = row as [ReactNode, ReactNode]; return `${String(k)}: ${String(val)}`; }).join("\n") : ""}\n— via India Biz Tools`;
+  const shareText = r.share ?? `${r.primary.label}: ${r.primary.value}${r.rows ? "\n" + r.rows.filter(Boolean).map((row) => { const [k, val] = row as [ReactNode, ReactNode]; return `${String(k)}: ${String(val)}`; }).join("\n") : ""}\n— via Kaagazo`;
 
   const results = (
     <>

@@ -4,67 +4,80 @@
 
 /* ---------- Semantic design tokens ---------- */
 :root {
-  --bg: #fafaf9;
+  --bg: #ffffff;
   --surface: #ffffff;
-  --surface-2: #f5f5f4;
-  --surface-3: #eeedeb;
-  --border: #e7e5e4;
-  --border-strong: #d6d3d1;
+  --surface-2: #f5f6f8;
+  --surface-3: #eceef2;
+  --border: #e8eaef;
+  --border-strong: #d5d8e0;
 
-  --ink: #1c1917;
-  --ink-2: #44403c;
-  --muted: #6b6560;
-  --faint: #a8a29e;
+  --ink: #0b0b0d;
+  --ink-2: #3a3d45;
+  --muted: #6b7080;
+  --faint: #a2a7b4;
 
-  --accent: #047857;
-  --accent-hover: #065f46;
-  --accent-soft: #ecfdf5;
-  --accent-text: #047857;
+  --accent: #0b0b0d;          /* primary buttons: black */
+  --accent-hover: #26282e;
+  --accent-soft: #eef3ff;     /* light blue chip */
+  --accent-text: #2563eb;     /* links & highlights: blue */
   --on-accent: #ffffff;
 
-  --danger: #b91c1c;
+  --danger: #dc2626;
   --danger-soft: #fef2f2;
-  --warn: #b45309;
+  --warn: #d97706;
   --warn-soft: #fffbeb;
-  --info: #1d4ed8;
+  --info: #2563eb;
   --info-soft: #eff6ff;
 
-  --ring: #047857;
-  --shadow-sm: 0 1px 2px rgb(28 25 23 / 0.04), 0 1px 3px rgb(28 25 23 / 0.06);
-  --shadow-md: 0 4px 12px rgb(28 25 23 / 0.06), 0 1px 3px rgb(28 25 23 / 0.06);
-  --shadow-lg: 0 16px 40px rgb(28 25 23 / 0.10), 0 2px 6px rgb(28 25 23 / 0.06);
+  --ring: #2563eb;
+  --shadow-sm: 0 1px 2px rgb(16 18 24 / 0.04), 0 1px 3px rgb(16 18 24 / 0.05);
+  --shadow-md: 0 6px 16px rgb(16 18 24 / 0.06), 0 1px 3px rgb(16 18 24 / 0.05);
+  --shadow-lg: 0 24px 60px rgb(16 18 24 / 0.12), 0 4px 12px rgb(16 18 24 / 0.06);
+
+  /* pastel sky used by the hero */
+  --sky-1: #cfe2ff;
+  --sky-2: #e3d7ff;
+  --sky-3: #ffd8ea;
+  --sky-4: #cdeaff;
+  --cloud: rgb(255 255 255 / 0.9);
 }
 
 .dark {
-  --bg: #0c0a09;
-  --surface: #171412;
-  --surface-2: #1f1b18;
-  --surface-3: #292420;
-  --border: #292420;
-  --border-strong: #3d3631;
+  --bg: #0b0b0d;
+  --surface: #141418;
+  --surface-2: #1b1b21;
+  --surface-3: #24242b;
+  --border: #24242b;
+  --border-strong: #35353e;
 
-  --ink: #f5f5f4;
-  --ink-2: #d6d3d1;
-  --muted: #a8a29e;
-  --faint: #6b6560;
+  --ink: #f5f6f8;
+  --ink-2: #d3d5dc;
+  --muted: #9a9fad;
+  --faint: #5f6473;
 
-  --accent: #10b981;
-  --accent-hover: #34d399;
-  --accent-soft: #052e22;
-  --accent-text: #34d399;
-  --on-accent: #052e22;
+  --accent: #f5f6f8;
+  --accent-hover: #ffffff;
+  --accent-soft: #151d33;
+  --accent-text: #8ab4ff;
+  --on-accent: #0b0b0d;
 
   --danger: #f87171;
   --danger-soft: #2a1414;
   --warn: #fbbf24;
   --warn-soft: #2a2010;
-  --info: #60a5fa;
+  --info: #8ab4ff;
   --info-soft: #101a2e;
 
-  --ring: #34d399;
-  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
-  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.5);
-  --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.6);
+  --ring: #8ab4ff;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.5);
+  --shadow-md: 0 6px 16px rgb(0 0 0 / 0.5);
+  --shadow-lg: 0 24px 60px rgb(0 0 0 / 0.6);
+
+  --sky-1: #1a2340;
+  --sky-2: #251b3f;
+  --sky-3: #351c33;
+  --sky-4: #14263a;
+  --cloud: rgb(255 255 255 / 0.06);
 }
 
 @theme inline {
@@ -92,7 +105,7 @@
   --color-ring: var(--ring);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-instrument), ui-serif, Georgia, serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --shadow-sm: var(--shadow-sm);
@@ -119,7 +132,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-sans);
-  font-feature-settings: "cv11", "ss01", "tnum";
+  font-feature-settings: "cv11", "ss01", "ss03", "tnum";
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   min-height: 100dvh;
@@ -133,7 +146,7 @@ body {
   border-radius: 6px;
 }
 
-.font-display { font-family: var(--font-display); letter-spacing: -0.01em; }
+.font-display { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.035em; }
 .tabular { font-variant-numeric: tabular-nums; }
 
 /* subtle hairline for section dividers */
@@ -152,6 +165,37 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.55; cursor: p
   ::-webkit-scrollbar { width: 10px; height: 10px; }
   ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 999px; border: 3px solid var(--bg); }
   ::-webkit-scrollbar-track { background: transparent; }
+}
+
+/* ---------- Pastel sky (hero) ---------- */
+.sky {
+  background:
+    radial-gradient(55% 60% at 12% 18%, var(--sky-1) 0%, transparent 62%),
+    radial-gradient(45% 50% at 88% 12%, var(--sky-2) 0%, transparent 60%),
+    radial-gradient(40% 45% at 78% 72%, var(--sky-3) 0%, transparent 58%),
+    radial-gradient(55% 55% at 22% 86%, var(--sky-4) 0%, transparent 60%),
+    linear-gradient(180deg, var(--sky-1) 0%, var(--sky-2) 55%, var(--sky-3) 100%);
+}
+.cloud {
+  position: absolute;
+  border-radius: 9999px;
+  background: var(--cloud);
+  filter: blur(36px);
+  pointer-events: none;
+}
+.cloud::after {
+  content: "";
+  position: absolute;
+  inset: 18% 22%;
+  border-radius: inherit;
+  background: var(--cloud);
+  filter: blur(14px);
+}
+.frame-lines {
+  background-image: linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to left, var(--border) 1px, transparent 1px);
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  background-position: left, right;
 }
 
 /* ---------- Motion ---------- */
