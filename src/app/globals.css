@@ -229,3 +229,28 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.55; cursor: p
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 .h-13 { height: 3.25rem; }
+
+/* ---------- Article prose ---------- */
+.prose-kg { font-size: 16px; line-height: 1.75; color: var(--ink-2); }
+.prose-kg > :first-child { margin-top: 0; }
+.prose-kg h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.03em; color: var(--ink); margin: 2.4em 0 0.7em; line-height: 1.2; scroll-margin-top: 96px; }
+.prose-kg h3 { font-size: 19px; font-weight: 600; letter-spacing: -0.015em; color: var(--ink); margin: 1.8em 0 0.5em; scroll-margin-top: 96px; }
+.prose-kg p { margin: 0 0 1.1em; }
+.prose-kg a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: color-mix(in oklab, var(--accent-text) 40%, transparent); }
+.prose-kg a:hover { text-decoration-color: var(--accent-text); }
+.prose-kg strong { color: var(--ink); font-weight: 600; }
+.prose-kg ul, .prose-kg ol { margin: 0 0 1.2em; padding-left: 1.4em; }
+.prose-kg li { margin: 0.35em 0; }
+.prose-kg li::marker { color: var(--muted); }
+.prose-kg blockquote { margin: 1.4em 0; padding: 0.9em 1.2em; border-left: 3px solid var(--accent-text); background: var(--surface-2); border-radius: 0 12px 12px 0; color: var(--ink); }
+.prose-kg blockquote p { margin: 0; }
+.prose-kg code { font-family: var(--font-mono); font-size: 0.88em; background: var(--surface-2); padding: 0.15em 0.4em; border-radius: 6px; color: var(--ink); }
+.prose-kg pre { background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px; padding: 1em 1.2em; overflow: auto; margin: 0 0 1.4em; }
+.prose-kg pre code { background: none; padding: 0; }
+.prose-kg hr { border: 0; border-top: 1px solid var(--border); margin: 2.4em 0; }
+.prose-kg .table-wrap { overflow-x: auto; margin: 1.4em 0; border: 1px solid var(--border); border-radius: 12px; }
+.prose-kg table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.prose-kg th { text-align: left; background: var(--surface-2); color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; padding: 10px 14px; }
+.prose-kg td { padding: 10px 14px; border-top: 1px solid var(--border); vertical-align: top; }
+.prose-kg td:first-child { color: var(--ink); font-weight: 500; }
+.prose-kg img { border-radius: 12px; }

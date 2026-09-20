@@ -29,6 +29,7 @@ export function Footer() {
             <h3 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">Company</h3>
             <ul className="mt-4 grid gap-2.5 text-sm">
               <li><Link href="/about" className="text-ink-2 hover:text-ink transition-colors">About</Link></li>
+              <li><Link href="/blog" className="text-ink-2 hover:text-ink transition-colors">Blog</Link></li>
               <li><Link href="/guides" className="text-ink-2 hover:text-ink transition-colors">Guides</Link></li>
               <li><Link href="/privacy-policy" className="text-ink-2 hover:text-ink transition-colors">Privacy</Link></li>
               <li><Link href="/terms" className="text-ink-2 hover:text-ink transition-colors">Terms</Link></li>

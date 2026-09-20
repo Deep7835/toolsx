@@ -8,11 +8,14 @@ import { CategoryIcon } from "@/components/layout/icons";
 import { HomeSearch } from "@/components/layout/HomeSearch";
 import { AppMockup } from "@/components/layout/AppMockup";
 import { BRAND } from "@/lib/brand";
+import { getAllPosts } from "@/lib/blog";
+import { PostCard } from "@/components/layout/PostCard";
 
 const quick = [["Create GST bill", "gst-invoice"], ["UPI QR standee", "upi-standee"], ["Payroll slip", "wage-slip"], ["Shipping label", "shipping-label"], ["EMI calculator", "emi-calculator"], ["Income tax", "income-tax"]];
 
 export default function Home() {
   const popular = POPULAR_SLUGS.map((s) => toolBySlug(s)!);
+  const posts = getAllPosts().slice(0, 3).map(({ html, toc, faqs, ...m }) => { void html; void toc; void faqs; return m; });
   return (
     <>
       {/* Hero */}
@@ -130,6 +133,20 @@ export default function Home() {
           })}
         </div>
       </section>
+
+      {/* Blog */}
+      {posts.length ? (
+        <section className="mx-auto mt-24 max-w-7xl px-4 sm:px-6">
+          <div className="flex items-end justify-between">
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">From the blog</p>
+              <h2 className="mt-2 text-3xl font-bold tracking-[-0.03em] text-ink sm:text-4xl">What’s changing this month</h2>
+            </div>
+            <Link href="/blog" className="hidden items-center gap-1 text-sm font-medium text-ink hover:underline sm:inline-flex">All articles <ArrowRight className="h-4 w-4" /></Link>
+          </div>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{posts.map((p) => <PostCard key={p.slug} post={p} />)}</div>
+        </section>
+      ) : null}
 
       {/* CTA */}
       <section className="px-3 mt-24 sm:px-4">

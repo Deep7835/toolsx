@@ -13,9 +13,9 @@ import { cn } from "@/lib/cn";
 const nav = [
   { href: "/tools", label: "Tools" },
   { href: "/categories", label: "Categories" },
+  { href: "/blog", label: "Blog" },
   { href: "/guides", label: "Guides" },
   { href: "/favorites", label: "Favourites" },
-  { href: "/about", label: "Company" },
 ];
 
 export function Header() {

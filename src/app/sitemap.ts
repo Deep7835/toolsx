@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { TOOLS } from "@/lib/registry";
 import { CATEGORIES } from "@/lib/categories";
+import { getAllPosts } from "@/lib/blog";
 const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://kaagazo.com";
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -10,6 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/categories`, lastModified: now, priority: 0.7 },
     ...CATEGORIES.map((c) => ({ url: `${BASE}/categories/${c.id}`, lastModified: now, priority: 0.7 })),
     ...TOOLS.map((t) => ({ url: `${BASE}/tools/${t.slug}`, lastModified: now, priority: 0.8 })),
+    { url: `${BASE}/blog`, lastModified: now, priority: 0.8 },
+    ...getAllPosts().map((p) => ({ url: `${BASE}/blog/${p.slug}`, lastModified: new Date(p.updated ?? p.date), priority: 0.7 })),
     ...["/about", "/guides", "/privacy-policy", "/terms", "/contact"].map((p) => ({ url: `${BASE}${p}`, lastModified: now, priority: 0.4 })),
   ];
 }
