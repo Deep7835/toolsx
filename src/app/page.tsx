@@ -7,6 +7,7 @@ import { ToolGrid } from "@/components/layout/ToolGrid";
 import { CategoryIcon } from "@/components/layout/icons";
 import { HomeSearch } from "@/components/layout/HomeSearch";
 import { AppMockup } from "@/components/layout/AppMockup";
+import { RotatingWord } from "@/components/layout/RotatingWord";
 import { BRAND } from "@/lib/brand";
 import { getAllPosts } from "@/lib/blog";
 import { PostCard } from "@/components/layout/PostCard";
@@ -34,7 +35,8 @@ export default function Home() {
                 <Sparkles className="h-3 w-3" /> {TOOLS.length} free tools · no login<span className="hidden sm:inline"> · 100% private</span>
               </p>
               <h1 className="mx-auto mt-6 max-w-4xl text-[44px] font-bold leading-[1.02] tracking-[-0.04em] text-ink sm:text-[64px] md:text-[76px]">
-                Business paperwork,<br className="hidden sm:block" /> done in a minute.
+                Business <RotatingWord words={["paperwork,", "calculations,", "payments,", "updates,"]} />
+                <br className="hidden sm:block" /> done in a minute.
               </h1>
               <p className="mx-auto mt-6 max-w-xl text-[15px] leading-relaxed text-ink-2 sm:text-lg">
                 {BRAND.name} gives Indian shops, freelancers and MSMEs every invoice, QR code, calculator and label they need — right in the browser, nothing uploaded.
