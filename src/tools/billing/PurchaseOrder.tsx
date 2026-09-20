@@ -1,0 +1,5 @@
+"use client";
+import InvoiceLike from "./InvoiceLike";
+export default function PurchaseOrder() {
+  return <InvoiceLike config={{ title: "PURCHASE ORDER", numberLabel: "PO number", numberPrefix: "PO-", fromLabel: "Buyer (your business)", toLabel: "Vendor / supplier", toPlaceholder: "Supplier company", showTax: true, showUpi: false, showDueDate: true, dueLabel: "Delivery by", filenamePrefix: "purchase-order", extra: [{ key: "payment", label: "Payment terms", placeholder: "e.g. 50% advance, balance on delivery", half: true }, { key: "shipvia", label: "Ship via", placeholder: "Road / courier", half: true }, { key: "shipto", label: "Ship to address", type: "textarea", placeholder: "Delivery address if different from buyer address" }], defaultNotes: "Please mention the PO number on your invoice and delivery challan.", defaultTerms: "Goods must match the specifications above. Damaged or short supply will be returned at vendor's cost.", accent: "#1e3a8a", shareIntro: "Purchase order", signatureLabel: "Authorised by" }} />;
+}

@@ -1,0 +1,5 @@
+"use client";
+import InvoiceLike from "./InvoiceLike";
+export default function ServiceQuote() {
+  return <InvoiceLike config={{ title: "QUOTATION", numberLabel: "Quote no.", numberPrefix: "QT-", fromLabel: "Your business", toLabel: "Prepared for", toPlaceholder: "Client / project owner", showTax: true, showUpi: false, showDueDate: true, dueLabel: "Valid until", filenamePrefix: "quotation", itemsLabel: "Materials & labour", extra: [{ key: "project", label: "Project / site", placeholder: "e.g. 2BHK interior — Sector 21", half: true }, { key: "timeline", label: "Timeline", placeholder: "e.g. 3–4 weeks", half: true }, { key: "scope", label: "Scope of work", type: "textarea", placeholder: "What is included and excluded" }], defaultNotes: "This estimate is based on the scope described. Changes in scope or material will be quoted separately.", defaultTerms: "40% advance to start work, 40% on completion of 60% work, 20% on handover. Prices exclude civil damage repair.", accent: "#7c2d12", shareIntro: "Quotation", signatureLabel: "Prepared by" }} />;
+}
