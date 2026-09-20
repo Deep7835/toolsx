@@ -20,7 +20,8 @@ npm run build && npm start
 | Variable | Purpose |
 |---|---|
 | `NEXT_PUBLIC_SITE_URL` | Canonical origin for sitemap, robots, canonical tags and OG image URLs (default `https://kaagazo.com`) |
-| `NEXT_PUBLIC_GA_ID` | Google Analytics 4 measurement ID — loads only after the visitor accepts analytics in the cookie banner (Consent Mode v2) |
+| `NEXT_PUBLIC_GA_ID` | Google Analytics 4 measurement ID (default `BRAND.ga4` in `src/lib/brand.ts`). Loads in Consent Mode v2 "advanced" setup: cookieless until the visitor accepts analytics in the cookie banner |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Search Console verification token (default in `src/lib/brand.ts`) |
 | `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Plausible domain — cookie-free analytics, loads without consent |
 | `NEXT_PUBLIC_FORM_ENDPOINT` | POST endpoint for the contact form (Formspree/Web3Forms/your own); without it the form falls back to `mailto:` |
 | `FORCE_HTTPS` | Set `false` to disable the http→https redirect in `src/proxy.ts` (on by default in production for non-localhost hosts) |
@@ -37,7 +38,7 @@ npm run cf:preview   # build + run the Worker locally in workerd
 npm run deploy       # build + deploy to kaagazo.com / www.kaagazo.com
 ```
 
-Public env vars (`NEXT_PUBLIC_*`, `FORCE_HTTPS`) go in `wrangler.jsonc` → `vars` and take effect on the next deploy. `src/proxy.ts` redirects `www.` → apex and http → https.
+`NEXT_PUBLIC_*` values are inlined at build time (export them in the shell or a local `.env.production` before `npm run deploy`); `FORCE_HTTPS` is a runtime var and goes in `wrangler.jsonc` → `vars`. Public IDs that should ship by default live in `src/lib/brand.ts`. `src/proxy.ts` redirects `www.` → apex and http → https.
 
 ## Launch checklist (done)
 

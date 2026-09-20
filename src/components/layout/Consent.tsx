@@ -7,32 +7,43 @@ import { useLocalStorage } from "@/lib/hooks";
 import { BRAND } from "@/lib/brand";
 
 type Choice = "granted" | "denied" | null;
-const GA = process.env.NEXT_PUBLIC_GA_ID;
+const GA = process.env.NEXT_PUBLIC_GA_ID ?? BRAND.ga4;
 const PLAUSIBLE = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
 
 const noopSub = () => () => {};
-/** Consent banner + analytics loader. Analytics scripts load only after "Accept". Plausible (cookieless) loads if configured. */
+/**
+ * Google tag bootstrap (Consent Mode v2, "advanced" setup). Runs before gtag.js so the consent default is the
+ * first dataLayer entry: analytics cookies stay denied (cookieless pings only) until the visitor accepts.
+ * Reads the stored choice synchronously so returning visitors who accepted are granted from the first hit.
+ */
+const gaBootstrap = (id: string) =>
+  `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}` +
+  `var c=null;try{c=JSON.parse(localStorage.getItem('ibt:consent'))}catch(e){}` +
+  `gtag('consent','default',{analytics_storage:c==='granted'?'granted':'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});` +
+  `gtag('js',new Date());gtag('config','${id}',{anonymize_ip:true});`;
+
+/** Consent banner + analytics loader. The Google tag loads on every page in consent-denied mode; analytics cookies switch on only after "Accept". Plausible (cookieless) loads if configured. */
 export function Consent() {
   const [choice, setChoice] = useLocalStorage<Choice>("ibt:consent", null);
   const mounted = useSyncExternalStore(noopSub, () => true, () => false);
 
-  // Google Consent Mode v2: keep denied until the user accepts
+  // Google Consent Mode v2: push an update whenever the stored choice changes (default is set in gaBootstrap)
   useEffect(() => {
-    if (!GA) return;
+    if (!GA || choice === null) return;
     type G = (...a: unknown[]) => void;
     const w = window as unknown as { dataLayer?: unknown[]; gtag?: G };
     w.dataLayer = w.dataLayer || [];
     w.gtag = w.gtag || function (...args: unknown[]) { w.dataLayer!.push(args); };
-    w.gtag("consent", choice === "granted" ? "update" : "default", { analytics_storage: choice === "granted" ? "granted" : "denied", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" });
+    w.gtag("consent", "update", { analytics_storage: choice === "granted" ? "granted" : "denied" });
   }, [choice]);
 
   return (
     <>
       {PLAUSIBLE ? <Script defer data-domain={PLAUSIBLE} src="https://plausible.io/js/script.js" strategy="afterInteractive" /> : null}
-      {GA && choice === "granted" ? (
+      {GA ? (
         <>
+          <Script id="ga-init" strategy="afterInteractive">{gaBootstrap(GA)}</Script>
           <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA}`} strategy="afterInteractive" />
-          <Script id="ga-init" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA}',{anonymize_ip:true});`}</Script>
         </>
       ) : null}
       {mounted && choice === null ? (

@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   openGraph: { type: "website", siteName: BRAND.name, locale: "en_IN", url: "/", title: `${BRAND.name} — ${BRAND.tagline}`, description: BRAND.description, images: [{ url: "/og/default", width: 1200, height: 630, alt: `${BRAND.name} — ${BRAND.tagline}` }] },
   twitter: { card: "summary_large_image", title: `${BRAND.name} — ${BRAND.tagline}`, description: BRAND.description, images: ["/og/default"] },
   robots: { index: true, follow: true },
+  verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? BRAND.googleSiteVerification },
 };
 
 export const viewport: Viewport = {
