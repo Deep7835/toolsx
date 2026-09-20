@@ -27,9 +27,21 @@ npm run build && npm start
 
 No server-side secrets are used anywhere; every tool runs client-side.
 
+## Deploy (Cloudflare Workers)
+
+The site runs on Cloudflare Workers via [OpenNext](https://opennext.js.org/cloudflare) — config in `wrangler.jsonc` and `open-next.config.ts`. Prerendered pages and the generated OG images are served as static assets (`staticAssetsIncrementalCache`), so no KV/R2/D1 bindings are needed.
+
+```bash
+npx wrangler login   # once
+npm run cf:preview   # build + run the Worker locally in workerd
+npm run deploy       # build + deploy to kaagazo.com / www.kaagazo.com
+```
+
+Public env vars (`NEXT_PUBLIC_*`, `FORCE_HTTPS`) go in `wrangler.jsonc` → `vars` and take effect on the next deploy. `src/proxy.ts` redirects `www.` → apex and http → https.
+
 ## Launch checklist (done)
 
-Privacy policy · Terms · no front-end secrets · HTTPS redirect + HSTS/security headers · cookie-consent banner gating analytics · meta titles/descriptions + canonicals on every route · per-page social preview images (`/og/blog/*`, `/og/tool/*`, `/og/default`) · SVG favicon + generated Apple touch icon · sitemap.xml + robots.txt · alt text on images · images served via `next/image` (AVIF/WebP, lazy) · lazy-loaded tool chunks (shared JS ≈ 128 KB gz) · WCAG-AA colour contrast on all tokens · mobile-first layout · custom 404 with search · zero broken internal links (crawled 163 pages) · validated forms (GSTIN/PAN/IFSC/UPI, contact) · honeypot + timing bot protection · analytics hooks · one primary CTA per page.
+Privacy policy · Terms · no front-end secrets · HTTPS redirect + HSTS/security headers · cookie-consent banner gating analytics · meta titles/descriptions + canonicals on every route · per-page social preview images (`/og/blog/*`, `/og/tool/*`, `/og/default`) · SVG favicon + generated Apple touch icon · sitemap.xml + robots.txt · alt text on images · pre-rendered 1200×630 + 600×315 preview images (no runtime optimiser), lazy-loaded via `next/image` · lazy-loaded tool chunks (shared JS ≈ 128 KB gz) · WCAG-AA colour contrast on all tokens · mobile-first layout · custom 404 with search · zero broken internal links (crawled 163 pages) · validated forms (GSTIN/PAN/IFSC/UPI, contact) · honeypot + timing bot protection · analytics hooks · one primary CTA per page.
 
 ## Structure
 

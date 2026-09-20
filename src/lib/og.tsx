@@ -35,15 +35,15 @@ const SKY: Record<string, [string, string, string]> = {
 };
 const skyFor = (seed: string) => { const k = ["a", "b", "c", "d"][seed.split("").reduce((a, c) => a + c.charCodeAt(0), 0) % 4]; return SKY[k]; };
 
-export interface OgInput { title: string; eyebrow?: string; footer?: string; tags?: string[]; seed?: string; kicker?: string }
+export interface OgInput { title: string; eyebrow?: string; footer?: string; tags?: string[]; seed?: string; kicker?: string; /** 1 = 1200×630, 0.5 = 600×315 */ scale?: number }
 
-function Mark() {
+function Mark({ k }: { k: number }) {
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-      <div style={{ display: "flex", width: 44, height: 44, borderRadius: 12, background: "#0b0b0d", alignItems: "center", justifyContent: "center" }}>
-        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ffffff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M7 4h7l4 4v12H7z" /><path d="M14 4v4h4M10 13h5M10 17h5" /></svg>
+    <div style={{ display: "flex", alignItems: "center", gap: 14 * k }}>
+      <div style={{ display: "flex", width: 44 * k, height: 44 * k, borderRadius: 12 * k, background: "#0b0b0d", alignItems: "center", justifyContent: "center" }}>
+        <svg viewBox="0 0 24 24" width={26 * k} height={26 * k} fill="none" stroke="#ffffff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M7 4h7l4 4v12H7z" /><path d="M14 4v4h4M10 13h5M10 17h5" /></svg>
       </div>
-      <div style={{ display: "flex", fontSize: 30, fontWeight: 700, letterSpacing: -1.2, color: "#0b0b0d" }}>{BRAND.wordmark}</div>
+      <div style={{ display: "flex", fontSize: 30 * k, fontWeight: 700, letterSpacing: -1.2 * k, color: "#0b0b0d" }}>{BRAND.wordmark}</div>
     </div>
   );
 }
@@ -53,31 +53,33 @@ export async function renderOg(input: OgInput): Promise<ImageResponse> {
   const [s1, s2, s3] = skyFor(input.seed ?? input.title);
   const node = iconFor(input.tags ?? []);
   const title = input.title.length > 96 ? input.title.slice(0, 94).replace(/\s+\S*$/, "") + "…" : input.title;
-  const size = title.length > 70 ? 54 : title.length > 46 ? 62 : 72;
+  const k = input.scale ?? 1;
+  const W = Math.round(1200 * k), H = Math.round(630 * k);
+  const size = (title.length > 70 ? 54 : title.length > 46 ? 62 : 72) * k;
   const element: ReactNode = (
-    <div style={{ width: 1200, height: 630, display: "flex", position: "relative", background: `linear-gradient(135deg, ${s1} 0%, ${s2} 55%, ${s3} 100%)`, fontFamily: "Inter" }}>
+    <div style={{ width: W, height: H, display: "flex", position: "relative", background: `linear-gradient(135deg, ${s1} 0%, ${s2} 55%, ${s3} 100%)`, fontFamily: "Inter" }}>
       {/* clouds */}
-      <div style={{ position: "absolute", left: -120, top: 40, width: 620, height: 260, borderRadius: 999, background: "rgba(255,255,255,0.75)", filter: "blur(60px)" }} />
-      <div style={{ position: "absolute", right: -80, bottom: -60, width: 560, height: 280, borderRadius: 999, background: "rgba(255,255,255,0.7)", filter: "blur(70px)" }} />
+      <div style={{ position: "absolute", left: -120 * k, top: 40 * k, width: 620 * k, height: 260 * k, borderRadius: 999, background: "rgba(255,255,255,0.75)", filter: `blur(${60 * k}px)` }} />
+      <div style={{ position: "absolute", right: -80 * k, bottom: -60 * k, width: 560 * k, height: 280 * k, borderRadius: 999, background: "rgba(255,255,255,0.7)", filter: `blur(${70 * k}px)` }} />
       {/* frame */}
-      <div style={{ position: "absolute", inset: 24, border: "1px solid rgba(11,11,13,0.08)", borderRadius: 28 }} />
-      <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "60px 64px", width: 820 }}>
-        <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
-          <Mark />
-          {input.eyebrow ? <div style={{ display: "flex", alignSelf: "flex-start", padding: "8px 16px", borderRadius: 999, background: "rgba(11,11,13,0.06)", color: "#3a3d45", fontSize: 20, fontWeight: 500, letterSpacing: 1.5, textTransform: "uppercase" }}>{input.eyebrow}</div> : null}
+      <div style={{ position: "absolute", inset: 24 * k, border: "1px solid rgba(11,11,13,0.08)", borderRadius: 28 * k }} />
+      <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", padding: `${60 * k}px ${64 * k}px`, width: 820 * k }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 28 * k }}>
+          <Mark k={k} />
+          {input.eyebrow ? <div style={{ display: "flex", alignSelf: "flex-start", padding: `${8 * k}px ${16 * k}px`, borderRadius: 999, background: "rgba(11,11,13,0.06)", color: "#3a3d45", fontSize: 20 * k, fontWeight: 500, letterSpacing: 1.5 * k, textTransform: "uppercase" }}>{input.eyebrow}</div> : null}
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 18 * k }}>
           <div style={{ display: "flex", fontSize: size, fontWeight: 700, lineHeight: 1.06, letterSpacing: -size * 0.035, color: "#0b0b0d" }}>{title}</div>
-          {input.kicker ? <div style={{ display: "flex", fontSize: 24, color: "#3a3d45", fontWeight: 500 }}>{input.kicker}</div> : null}
+          {input.kicker ? <div style={{ display: "flex", fontSize: 24 * k, color: "#3a3d45", fontWeight: 500 }}>{input.kicker}</div> : null}
         </div>
-        <div style={{ display: "flex", fontSize: 22, color: "#6b7080", fontWeight: 500 }}>{input.footer ?? `${BRAND.domain} · free tools for Indian small businesses`}</div>
+        <div style={{ display: "flex", fontSize: 22 * k, color: "#6b7080", fontWeight: 500 }}>{input.footer ?? `${BRAND.domain} · free tools for Indian small businesses`}</div>
       </div>
-      <div style={{ display: "flex", flex: 1, alignItems: "center", justifyContent: "center", paddingRight: 40 }}>
-        <div style={{ display: "flex", width: 300, height: 300, borderRadius: 48, background: "rgba(255,255,255,0.85)", alignItems: "center", justifyContent: "center", boxShadow: "0 30px 80px rgba(11,11,13,0.12)" }}>
-          <Icon node={node} />
+      <div style={{ display: "flex", flex: 1, alignItems: "center", justifyContent: "center", paddingRight: 40 * k }}>
+        <div style={{ display: "flex", width: 300 * k, height: 300 * k, borderRadius: 48 * k, background: "rgba(255,255,255,0.85)", alignItems: "center", justifyContent: "center", boxShadow: `0 ${30 * k}px ${80 * k}px rgba(11,11,13,0.12)` }}>
+          <Icon node={node} size={150 * k} />
         </div>
       </div>
     </div>
   );
-  return new ImageResponse(element, { width: 1200, height: 630, fonts: [{ name: "Inter", data: bold, weight: 700, style: "normal" }, { name: "Inter", data: medium, weight: 500, style: "normal" }] });
+  return new ImageResponse(element, { width: W, height: H, fonts: [{ name: "Inter", data: bold, weight: 700, style: "normal" }, { name: "Inter", data: medium, weight: 500, style: "normal" }] });
 }

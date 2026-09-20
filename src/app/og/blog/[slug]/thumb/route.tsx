@@ -11,5 +11,5 @@ export async function GET(_req: Request, { params }: { params: Promise<{ slug: s
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
-  return renderOg({ title: post.title, eyebrow: post.kind === "trending" ? "Trending" : "Guide", tags: post.tags, seed: post.slug, footer: `${BRAND.domain} · ${post.readMinutes} min read` });
+  return renderOg({ scale: 0.5, title: post.title, eyebrow: post.kind === "trending" ? "Trending" : "Guide", tags: post.tags, seed: post.slug, footer: `${BRAND.domain} · ${post.readMinutes} min read` });
 }

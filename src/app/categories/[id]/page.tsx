@@ -6,6 +6,7 @@ import { toolsByCategory } from "@/lib/registry";
 import { ToolGrid } from "@/components/layout/ToolGrid";
 import { PageHeader } from "@/components/layout/PageHeader";
 
+export const dynamicParams = false;
 export function generateStaticParams() { return CATEGORIES.map((c) => ({ id: c.id })); }
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;

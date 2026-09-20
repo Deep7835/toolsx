@@ -11,7 +11,7 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
-  images: { formats: ["image/avif", "image/webp"], minimumCacheTTL: 60 * 60 * 24 * 30 },
+  images: { loader: "custom", loaderFile: "./src/lib/image-loader.ts", deviceSizes: [640, 1200], imageSizes: [] },
   async headers() {
     return [
       { source: "/(.*)", headers: securityHeaders },

@@ -8,6 +8,7 @@ import { ToolRenderer } from "@/components/shell/ToolRenderer";
 import { ToolBadge, Badge } from "@/components/ui/Badge";
 import { FavButton } from "@/components/layout/FavButton";
 
+export const dynamicParams = false;
 export function generateStaticParams() { return TOOLS.map((t) => ({ slug: t.slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
