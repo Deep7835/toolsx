@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, Flame, BookOpen } from "lucide-react";
 import type { PostMeta } from "@/lib/blog";
 import { fmtDate } from "@/lib/format";
@@ -6,7 +7,9 @@ import { cn } from "@/lib/cn";
 
 export function PostCard({ post, big }: { post: PostMeta; big?: boolean }) {
   return (
-    <article className={cn("group relative flex flex-col rounded-2xl border border-border bg-surface p-5 shadow-sm transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-border-strong", big ? "sm:p-7" : "")}>
+    <article className={cn("group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-sm transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-border-strong")}>
+      <Image src={`/og/blog/${post.slug}`} alt="" width={1200} height={630} sizes={big ? "(max-width: 1024px) 100vw, 640px" : "(max-width: 640px) 100vw, 400px"} className="aspect-[1200/630] w-full border-b border-border object-cover" />
+      <div className={cn("flex flex-1 flex-col p-5", big ? "sm:p-7" : "")}>
       <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.1em]">
         {post.kind === "trending" ? <span className="inline-flex items-center gap-1 rounded-full bg-warn-soft px-2 py-0.5 text-warn"><Flame className="h-3 w-3" /> Trending</span> : <span className="inline-flex items-center gap-1 rounded-full bg-accent-soft px-2 py-0.5 text-accent-text"><BookOpen className="h-3 w-3" /> Guide</span>}
         <span className="text-muted">{post.readMinutes} min read</span>
@@ -18,6 +21,7 @@ export function PostCard({ post, big }: { post: PostMeta; big?: boolean }) {
       <div className="mt-auto flex items-center justify-between pt-4 text-xs text-muted">
         <span>{post.updated ? `Updated ${fmtDate(post.updated)}` : fmtDate(post.date)}</span>
         <span className="inline-flex items-center gap-1 text-ink opacity-0 -translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0">Read <ArrowUpRight className="h-3.5 w-3.5" /></span>
+      </div>
       </div>
     </article>
   );

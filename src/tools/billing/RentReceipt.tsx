@@ -5,6 +5,8 @@ import { PAPER } from "@/components/shell/PaperPreview";
 import { FieldGroup, Input, NumberInput, Row, Select, Toggle } from "@/components/ui/Field";
 import { inr, numberToWordsINR, fmtDate } from "@/lib/format";
 import { Eyebrow } from "../shared/doc";
+import { ValidatedInput } from "@/components/ui/ValidatedInput";
+import { vPAN } from "@/lib/validate";
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -37,7 +39,7 @@ export default function RentReceipt() {
           <Input label="Tenant name" value={tenant} onChange={(e) => setTenant(e.target.value)} />
           <Input label="Landlord name" value={landlord} onChange={(e) => setLandlord(e.target.value)} />
         </Row>
-        <Input label="Landlord PAN" hint="required if annual rent > ₹1,00,000" placeholder="ABCDE1234F" value={pan} onChange={(e) => setPan(e.target.value.toUpperCase())} maxLength={10} />
+        <ValidatedInput label="Landlord PAN" hint="required if annual rent > ₹1,00,000" placeholder="ABCDE1234F" value={pan} onChange={(e) => setPan(e.target.value.toUpperCase())} maxLength={10} validate={vPAN} autoCapitalize="characters" />
         <Input label="Rented property address" value={address} onChange={(e) => setAddress(e.target.value)} />
         <Toggle checked={commercial} onChange={setCommercial} label="Commercial property" help="Changes wording from residential to commercial premises." />
       </FieldGroup>

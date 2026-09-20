@@ -18,7 +18,7 @@ export function HomeSearch() {
     >
       <div className="flex items-center gap-2 rounded-2xl border border-black/5 bg-white p-1.5 shadow-[0_1px_2px_rgb(0_0_0/0.06),0_16px_40px_-16px_rgb(0_0_0/0.3)] focus-within:ring-4 focus-within:ring-ring/15 transition dark:border-white/10 dark:bg-surface">
         <Search className="ml-3 h-5 w-5 shrink-0 text-muted" />
-        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search tools (e.g. ‘UPI QR’, ‘GST calc’, ‘barcode’, ‘wage’)…" className="h-11 w-full bg-transparent text-[15px] text-ink placeholder:text-faint outline-none" aria-label="Search tools" />
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search tools (e.g. ‘UPI QR’, ‘GST calc’, ‘barcode’, ‘wage’)…" className="h-11 w-full bg-transparent text-[15px] text-ink placeholder:text-muted outline-none" aria-label="Search tools" />
         <button type="submit" className="h-11 shrink-0 rounded-xl bg-accent px-5 text-sm font-medium text-on-accent transition-colors hover:bg-accent-hover cursor-pointer">Search</button>
       </div>
       {q && results.length ? (

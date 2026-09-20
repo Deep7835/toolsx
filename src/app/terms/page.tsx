@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ProsePage } from "@/components/layout/Prose";
-export const metadata: Metadata = { title: "Terms of service" };
+export const metadata: Metadata = { title: "Terms of service", description: "Terms for using Kaagazo’s free business tools: lawful use, no professional advice, simulated documents, liability.", alternates: { canonical: "/terms" } };
 export default function Terms() {
   return (
     <ProsePage eyebrow="Legal" title="Terms of service">

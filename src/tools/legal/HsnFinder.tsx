@@ -27,7 +27,7 @@ export default function HsnFinder() {
     <div className="grid gap-5">
       <Card>
         <CardBody className="grid gap-4">
-          <div className="relative"><Search className="pointer-events-none absolute left-4 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-muted" /><input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search by product, service or code — e.g. ‘rice’, ‘salon’, ‘8471’, ‘cement’" className="h-13 w-full rounded-2xl border border-border bg-surface pl-12 pr-4 text-[15px] text-ink shadow-sm placeholder:text-faint hover:border-border-strong focus:border-accent focus:outline-none focus:ring-4 focus:ring-accent/10 transition" aria-label="Search HSN/SAC" autoFocus /></div>
+          <div className="relative"><Search className="pointer-events-none absolute left-4 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-muted" /><input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search by product, service or code — e.g. ‘rice’, ‘salon’, ‘8471’, ‘cement’" className="h-13 w-full rounded-2xl border border-border bg-surface pl-12 pr-4 text-[15px] text-ink shadow-sm placeholder:text-muted hover:border-border-strong focus:border-accent focus:outline-none focus:ring-4 focus:ring-accent/10 transition" aria-label="Search HSN/SAC" autoFocus /></div>
           <div className="grid gap-3 sm:grid-cols-3">
             <Segmented value={kind} onChange={setKind} options={[{ value: "all", label: "All" }, { value: "HSN", label: "Goods" }, { value: "SAC", label: "Services" }]} size="sm" />
             <Select aria-label="Category" value={cat} onChange={(e) => setCat(e.target.value)} options={[{ value: "all", label: "All categories" }, ...cats.map((c) => ({ value: c, label: c }))]} />

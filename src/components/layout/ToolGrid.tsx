@@ -38,7 +38,7 @@ export function ToolGrid({ tools = TOOLS, showFilters = true, lockedCategory }: 
               value={q}
               onChange={(e) => { setQ(e.target.value); const sp = new URLSearchParams(params.toString()); if (e.target.value) sp.set("q", e.target.value); else sp.delete("q"); router.replace(`${pathname}?${sp.toString()}`, { scroll: false }); }}
               placeholder="Search by name, keyword or task — e.g. “invoice”, “salary”, “QR”"
-              className="h-13 w-full rounded-2xl border border-border bg-surface pl-12 pr-4 text-[15px] text-ink shadow-sm placeholder:text-faint hover:border-border-strong focus:border-accent focus:outline-none focus:ring-4 focus:ring-accent/10 transition"
+              className="h-13 w-full rounded-2xl border border-border bg-surface pl-12 pr-4 text-[15px] text-ink shadow-sm placeholder:text-muted hover:border-border-strong focus:border-accent focus:outline-none focus:ring-4 focus:ring-accent/10 transition"
               aria-label="Search tools"
             />
           </div>

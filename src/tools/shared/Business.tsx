@@ -2,6 +2,8 @@
 import { useLocalStorage } from "@/lib/hooks";
 import { FieldGroup, Input, Row, Textarea } from "@/components/ui/Field";
 import { LogoUpload } from "@/components/shell/LogoUpload";
+import { ValidatedInput } from "@/components/ui/ValidatedInput";
+import { vGSTIN } from "@/lib/validate";
 
 export interface Business { name: string; gstin: string; address: string; phone: string; email: string; website?: string; tagline?: string }
 export const DEFAULT_BUSINESS: Business = { name: "Bharat General Store", gstin: "", address: "12, Main Market, New Delhi 110001", phone: "98765 43210", email: "", website: "", tagline: "" };
@@ -19,7 +21,7 @@ export function BusinessFields({ title = "Your business", showGstin = true, show
     <FieldGroup title={title}>
       <Row>
         <Input label="Business name" value={business.name} onChange={(e) => set("name", e.target.value)} />
-        {showGstin ? <Input label="GSTIN" hint="optional" value={business.gstin} onChange={(e) => set("gstin", e.target.value.toUpperCase())} maxLength={15} /> : <Input label="Phone" type="tel" value={business.phone} onChange={(e) => set("phone", e.target.value)} />}
+        {showGstin ? <ValidatedInput label="GSTIN" hint="optional" value={business.gstin} onChange={(e) => set("gstin", e.target.value.toUpperCase())} maxLength={15} validate={vGSTIN} autoCapitalize="characters" /> : <Input label="Phone" type="tel" value={business.phone} onChange={(e) => set("phone", e.target.value)} />}
       </Row>
       {showTagline ? <Input label="Tagline" hint="optional" value={business.tagline ?? ""} onChange={(e) => set("tagline", e.target.value)} /> : null}
       <Textarea label="Address" rows={2} value={business.address} onChange={(e) => set("address", e.target.value)} />

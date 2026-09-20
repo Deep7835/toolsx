@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import { PageHeader } from "@/components/layout/PageHeader";
 
-export const metadata: Metadata = { title: "Guides" };
+export const metadata: Metadata = { title: "Guides", description: "Plain-language explainers and reference tables — UPI MDR, GST calendar, HSN codes, tax regimes — that pair with the tools.", alternates: { canonical: "/guides" } };
 
 const guides = [
   { href: "/tools/upi-mdr-guide", title: "UPI MDR 2026 complete guide", blurb: "How the 0.4% merchant rate, ₹300 cap and P2PM exemptions work, with examples." },

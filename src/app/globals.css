@@ -14,7 +14,7 @@
   --ink: #0b0b0d;
   --ink-2: #3a3d45;
   --muted: #6b7080;
-  --faint: #a2a7b4;
+  --faint: #7d8290;
 
   --accent: #0b0b0d;          /* primary buttons: black */
   --accent-hover: #26282e;
@@ -22,10 +22,10 @@
   --accent-text: #2563eb;     /* links & highlights: blue */
   --on-accent: #ffffff;
 
-  --danger: #dc2626;
+  --danger: #b91c1c;
   --danger-soft: #fef2f2;
-  --warn: #d97706;
-  --warn-soft: #fffbeb;
+  --warn: #a1560a;
+  --warn-soft: #fef3c7;
   --info: #2563eb;
   --info-soft: #eff6ff;
 
@@ -53,7 +53,7 @@
   --ink: #f5f6f8;
   --ink-2: #d3d5dc;
   --muted: #9a9fad;
-  --faint: #5f6473;
+  --faint: #7c8190;
 
   --accent: #f5f6f8;
   --accent-hover: #ffffff;

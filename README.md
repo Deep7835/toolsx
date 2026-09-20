@@ -15,7 +15,21 @@ npm run dev        # http://localhost:3000
 npm run build && npm start
 ```
 
-Set `NEXT_PUBLIC_SITE_URL` for correct sitemap/robots URLs in production.
+### Environment variables (all optional)
+
+| Variable | Purpose |
+|---|---|
+| `NEXT_PUBLIC_SITE_URL` | Canonical origin for sitemap, robots, canonical tags and OG image URLs (default `https://kaagazo.com`) |
+| `NEXT_PUBLIC_GA_ID` | Google Analytics 4 measurement ID — loads only after the visitor accepts analytics in the cookie banner (Consent Mode v2) |
+| `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Plausible domain — cookie-free analytics, loads without consent |
+| `NEXT_PUBLIC_FORM_ENDPOINT` | POST endpoint for the contact form (Formspree/Web3Forms/your own); without it the form falls back to `mailto:` |
+| `FORCE_HTTPS` | Set `false` to disable the http→https redirect in `src/proxy.ts` (on by default in production for non-localhost hosts) |
+
+No server-side secrets are used anywhere; every tool runs client-side.
+
+## Launch checklist (done)
+
+Privacy policy · Terms · no front-end secrets · HTTPS redirect + HSTS/security headers · cookie-consent banner gating analytics · meta titles/descriptions + canonicals on every route · per-page social preview images (`/og/blog/*`, `/og/tool/*`, `/og/default`) · SVG favicon + generated Apple touch icon · sitemap.xml + robots.txt · alt text on images · images served via `next/image` (AVIF/WebP, lazy) · lazy-loaded tool chunks (shared JS ≈ 128 KB gz) · WCAG-AA colour contrast on all tokens · mobile-first layout · custom 404 with search · zero broken internal links (crawled 163 pages) · validated forms (GSTIN/PAN/IFSC/UPI, contact) · honeypot + timing bot protection · analytics hooks · one primary CTA per page.
 
 ## Structure
 

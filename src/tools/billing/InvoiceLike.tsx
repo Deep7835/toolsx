@@ -12,6 +12,8 @@ import { Button } from "@/components/ui/Button";
 import { Link2 } from "lucide-react";
 import { copyText } from "@/lib/export";
 import { useToast } from "@/components/ui/Toast";
+import { ValidatedInput } from "@/components/ui/ValidatedInput";
+import { vGSTIN, vIFSC, vVPA } from "@/lib/validate";
 
 export interface ExtraField { key: string; label: string; type?: "text" | "date" | "textarea"; placeholder?: string; half?: boolean }
 
@@ -92,7 +94,7 @@ export default function InvoiceLike({ config }: { config: InvoiceConfig }) {
       <FieldGroup title={c.fromLabel}>
         <Row>
           <Input label="Business name" value={business.name} onChange={(e) => setB("name", e.target.value)} />
-          <Input label="GSTIN" hint="optional" placeholder="22AAAAA0000A1Z5" value={business.gstin} onChange={(e) => setB("gstin", e.target.value.toUpperCase())} maxLength={15} />
+          <ValidatedInput label="GSTIN" hint="optional" placeholder="22AAAAA0000A1Z5" value={business.gstin} onChange={(e) => setB("gstin", e.target.value.toUpperCase())} maxLength={15} validate={vGSTIN} autoCapitalize="characters" />
         </Row>
         <Textarea label="Address" value={business.address} onChange={(e) => setB("address", e.target.value)} rows={2} />
         <Row>
@@ -105,7 +107,7 @@ export default function InvoiceLike({ config }: { config: InvoiceConfig }) {
       <FieldGroup title={c.toLabel}>
         <Row>
           <Input label="Name" placeholder={c.toPlaceholder ?? "Customer / company"} value={client.name} onChange={(e) => setC("name", e.target.value)} />
-          <Input label="GSTIN" hint="optional" value={client.gstin} onChange={(e) => setC("gstin", e.target.value.toUpperCase())} maxLength={15} />
+          <ValidatedInput label="GSTIN" hint="optional" value={client.gstin} onChange={(e) => setC("gstin", e.target.value.toUpperCase())} maxLength={15} validate={vGSTIN} autoCapitalize="characters" />
         </Row>
         <Textarea label="Address" value={client.address} onChange={(e) => setC("address", e.target.value)} rows={2} />
         <Row>
@@ -147,7 +149,7 @@ export default function InvoiceLike({ config }: { config: InvoiceConfig }) {
       {c.showUpi ? (
         <FieldGroup title="UPI payment QR">
           <Row>
-            <Input label="UPI ID (VPA)" placeholder="shop@okicici" value={upi.vpa} onChange={(e) => setUpi({ ...upi, vpa: e.target.value.trim() })} />
+            <ValidatedInput label="UPI ID (VPA)" placeholder="shop@okicici" value={upi.vpa} onChange={(e) => setUpi({ ...upi, vpa: e.target.value.trim() })} validate={vVPA} autoCapitalize="none" />
             <Input label="Payee name" placeholder={business.name} value={upi.payee} onChange={(e) => setUpi({ ...upi, payee: e.target.value })} />
           </Row>
           <p className="text-xs text-muted -mt-1">A dynamic QR with the exact bill amount is embedded. Works with GPay, PhonePe, Paytm and BHIM.</p>
@@ -159,7 +161,7 @@ export default function InvoiceLike({ config }: { config: InvoiceConfig }) {
           <Row>
             <Input label="Account holder" value={bank.name} onChange={(e) => setBank({ ...bank, name: e.target.value })} />
             <Input label="Account number" value={bank.acc} onChange={(e) => setBank({ ...bank, acc: e.target.value })} />
-            <Input label="IFSC" value={bank.ifsc} onChange={(e) => setBank({ ...bank, ifsc: e.target.value.toUpperCase() })} />
+            <ValidatedInput label="IFSC" value={bank.ifsc} onChange={(e) => setBank({ ...bank, ifsc: e.target.value.toUpperCase() })} validate={vIFSC} maxLength={11} autoCapitalize="characters" />
             <Input label="Bank & branch" value={bank.branch} onChange={(e) => setBank({ ...bank, branch: e.target.value })} />
           </Row>
         ) : null}

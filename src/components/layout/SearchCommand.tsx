@@ -75,7 +75,7 @@ export function SearchProvider({ children }: { children: ReactNode }) {
                   if (e.key === "Enter" && results[idx]) go(results[idx].slug);
                 }}
                 placeholder="Search 115 tools — GST, invoice, EMI, QR, salary…"
-                className="h-14 w-full bg-transparent text-[15px] text-ink placeholder:text-faint outline-none"
+                className="h-14 w-full bg-transparent text-[15px] text-ink placeholder:text-muted outline-none"
                 aria-label="Search tools"
               />
               <kbd className="hidden sm:inline-flex h-6 items-center rounded-md border border-border bg-surface-2 px-1.5 text-[11px] text-muted">esc</kbd>

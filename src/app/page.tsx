@@ -45,8 +45,8 @@ export default function Home() {
                 <Link href="/tools" className="inline-flex h-12 items-center gap-2 rounded-xl bg-accent px-6 text-[15px] font-medium text-on-accent shadow-[0_1px_2px_rgb(0_0_0/0.25),0_12px_28px_-10px_rgb(0_0_0/0.55)] transition-colors hover:bg-accent-hover">
                   Open the toolbox <ArrowUpRight className="h-4 w-4" />
                 </Link>
-                <Link href="/tools/gst-invoice" className="inline-flex h-12 items-center gap-2 rounded-xl border border-black/5 bg-white px-6 text-[15px] font-medium text-ink shadow-[0_1px_2px_rgb(0_0_0/0.06),0_12px_28px_-12px_rgb(0_0_0/0.25)] transition-colors hover:bg-surface-2 dark:border-white/10 dark:bg-surface">
-                  Make a GST invoice
+                <Link href="/tools/gst-invoice" className="inline-flex h-12 items-center gap-1.5 px-3 text-[15px] font-medium text-ink-2 underline-offset-4 hover:text-ink hover:underline">
+                  or make a GST invoice <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
               <div className="mx-auto mt-8 max-w-2xl">

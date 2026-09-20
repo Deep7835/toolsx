@@ -7,11 +7,15 @@ import { toolBySlug } from "@/lib/registry";
 import { fmtDate } from "@/lib/format";
 import { BRAND } from "@/lib/brand";
 import { PostCard } from "@/components/layout/PostCard";
+import Image from "next/image";
+import { ArticleCta } from "@/components/layout/ArticleCta";
 
 export function generateStaticParams() { return getAllPosts().map((p) => ({ slug: p.slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params; const p = getPost(slug);
-  return p ? { title: p.title, description: p.description, openGraph: { title: p.title, description: p.description, type: "article", publishedTime: p.date, modifiedTime: p.updated } } : { title: "Article" };
+  if (!p) return { title: "Article" };
+  const image = { url: `/og/blog/${p.slug}`, width: 1200, height: 630, alt: p.title };
+  return { title: p.title, description: p.description, alternates: { canonical: `/blog/${p.slug}` }, openGraph: { title: p.title, description: p.description, type: "article", url: `/blog/${p.slug}`, publishedTime: p.date, modifiedTime: p.updated, images: [image] }, twitter: { card: "summary_large_image", title: p.title, description: p.description, images: [image.url] } };
 }
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -22,7 +26,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   const related = getAllPosts().filter((p) => p.slug !== post.slug && p.tags.some((t) => post.tags.includes(t))).slice(0, 3).map(({ html, toc, faqs, ...m }) => { void html; void toc; void faqs; return m; });
   const base = process.env.NEXT_PUBLIC_SITE_URL ?? `https://${BRAND.domain}`;
   const ld = [
-    { "@context": "https://schema.org", "@type": "Article", headline: post.title, description: post.description, datePublished: post.date, dateModified: post.updated ?? post.date, author: { "@type": "Organization", name: BRAND.name }, publisher: { "@type": "Organization", name: BRAND.name }, mainEntityOfPage: `${base}/blog/${post.slug}`, wordCount: post.words },
+    { "@context": "https://schema.org", "@type": "Article", headline: post.title, description: post.description, image: `${base}/og/blog/${post.slug}`, datePublished: post.date, dateModified: post.updated ?? post.date, author: { "@type": "Organization", name: BRAND.name, url: base }, publisher: { "@type": "Organization", name: BRAND.name, logo: { "@type": "ImageObject", url: `${base}/icon.svg` } }, mainEntityOfPage: `${base}/blog/${post.slug}`, wordCount: post.words },
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: base }, { "@type": "ListItem", position: 2, name: "Blog", item: `${base}/blog` }, { "@type": "ListItem", position: 3, name: post.title, item: `${base}/blog/${post.slug}` }] },
     post.faqs.length ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: post.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) } : null,
   ].filter(Boolean);
 
@@ -41,9 +46,15 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         <p className="mt-4 text-[17px] leading-relaxed text-ink-2">{post.description}</p>
         <p className="mt-4 text-xs text-muted">Published {fmtDate(post.date, "long")}{post.updated ? ` · Updated ${fmtDate(post.updated, "long")}` : ""} · {post.readMinutes} min read · {BRAND.name} editorial</p>
       </header>
+      <figure className="mt-8 max-w-3xl overflow-hidden rounded-2xl border border-border shadow-sm">
+        <Image src={`/og/blog/${post.slug}`} alt={`${post.title} — illustration`} width={1200} height={630} priority sizes="(max-width: 768px) 100vw, 768px" className="h-auto w-full" />
+      </figure>
 
       <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_300px]">
-        <article className="prose-kg min-w-0 max-w-3xl" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="min-w-0 max-w-3xl">
+          <article className="prose-kg" dangerouslySetInnerHTML={{ __html: post.html }} />
+          <ArticleCta tool={tools[0] ?? null} />
+        </div>
         <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
           {post.toc.length ? (
             <div className="rounded-2xl border border-border bg-surface p-5">

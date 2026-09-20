@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ProsePage } from "@/components/layout/Prose";
 import { BRAND } from "@/lib/brand";
-export const metadata: Metadata = { title: "About" };
+export const metadata: Metadata = { title: "About", description: "Why Kaagazo exists: free, private, browser-based paperwork and calculators for Indian shops, freelancers and MSMEs.", alternates: { canonical: "/about" } };
 export default function About() {
   return (
     <ProsePage eyebrow="Company" title={`About ${BRAND.name}`} description="A free, private toolbox for the people who run India’s shops, clinics, agencies and side hustles.">

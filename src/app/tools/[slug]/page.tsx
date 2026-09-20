@@ -12,7 +12,9 @@ export function generateStaticParams() { return TOOLS.map((t) => ({ slug: t.slug
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const t = toolBySlug(slug);
-  return t ? { title: t.name, description: t.description } : { title: "Tool" };
+  if (!t) return { title: "Tool" };
+  const image = { url: `/og/tool/${t.slug}`, width: 1200, height: 630, alt: t.name };
+  return { title: t.name, description: t.description, alternates: { canonical: `/tools/${t.slug}` }, openGraph: { title: t.name, description: t.description, url: `/tools/${t.slug}`, images: [image] }, twitter: { card: "summary_large_image", title: t.name, description: t.description, images: [image.url] } };
 }
 
 export default async function ToolPage({ params }: { params: Promise<{ slug: string }> }) {

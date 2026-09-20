@@ -6,15 +6,23 @@ import { Footer } from "@/components/layout/Footer";
 import { SearchProvider } from "@/components/layout/SearchCommand";
 import { ToastProvider } from "@/components/ui/Toast";
 import { PwaRegister } from "@/components/layout/PwaRegister";
+import { Consent } from "@/components/layout/Consent";
 import { BRAND } from "@/lib/brand";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap", axes: ["opsz"] });
 
+const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? `https://${BRAND.domain}`;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE),
   title: { default: `${BRAND.name} — ${BRAND.tagline}`, template: `%s · ${BRAND.name}` },
   description: BRAND.description,
   applicationName: BRAND.name,
   manifest: "/manifest.webmanifest",
+  alternates: { canonical: "/" },
+  openGraph: { type: "website", siteName: BRAND.name, locale: "en_IN", url: "/", title: `${BRAND.name} — ${BRAND.tagline}`, description: BRAND.description, images: [{ url: "/og/default", width: 1200, height: 630, alt: `${BRAND.name} — ${BRAND.tagline}` }] },
+  twitter: { card: "summary_large_image", title: `${BRAND.name} — ${BRAND.tagline}`, description: BRAND.description, images: ["/og/default"] },
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
@@ -39,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main id="main" className="flex-1">{children}</main>
             <Footer />
             <PwaRegister />
+            <Consent />
           </SearchProvider>
         </ToastProvider>
       </body>

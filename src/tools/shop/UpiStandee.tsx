@@ -6,6 +6,8 @@ import { FieldGroup, Input, Row, Segmented, Select, Toggle } from "@/components/
 import { Qr, upiLink } from "@/components/shell/Qr";
 import { useLocalStorage } from "@/lib/hooks";
 import { useBusiness } from "../shared/Business";
+import { ValidatedInput } from "@/components/ui/ValidatedInput";
+import { vVPA } from "@/lib/validate";
 
 const DEFAULT_UPI = { vpa: "", payee: "" };
 const THEMES: Record<string, { bg: string; fg: string; accent: string; label: string }> = {
@@ -35,7 +37,7 @@ export default function UpiStandee() {
     <>
       <FieldGroup title="UPI details">
         <Row>
-          <Input label="UPI ID (VPA)" placeholder="shop@okicici" value={upi.vpa} onChange={(e) => setUpi({ ...upi, vpa: e.target.value.trim() })} help="Static QR — customers enter the amount themselves." />
+          <ValidatedInput label="UPI ID (VPA)" placeholder="shop@okicici" value={upi.vpa} onChange={(e) => setUpi({ ...upi, vpa: e.target.value.trim() })} help="Static QR — customers enter the amount themselves." validate={vVPA} autoCapitalize="none" />
           <Input label="Display name" placeholder={business.name} value={upi.payee} onChange={(e) => setUpi({ ...upi, payee: e.target.value })} />
         </Row>
         <Input label="Fixed amount" hint="optional" prefix="₹" type="number" inputMode="decimal" value={amount || ""} onChange={(e) => setAmount(parseFloat(e.target.value) || 0)} help="Leave blank for a normal open-amount standee." />

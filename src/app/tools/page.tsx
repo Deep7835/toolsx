@@ -4,7 +4,7 @@ import { TOOLS } from "@/lib/registry";
 import { ToolGrid } from "@/components/layout/ToolGrid";
 import { PageHeader } from "@/components/layout/PageHeader";
 
-export const metadata: Metadata = { title: "All tools", description: `Browse all ${TOOLS.length} free business tools for Indian MSMEs.` };
+export const metadata: Metadata = { title: "All tools", description: `Browse all ${TOOLS.length} free, private business tools for Indian MSMEs — invoices, QR codes, calculators, labels, legal and SEO helpers.`, alternates: { canonical: "/tools" } };
 
 export default function ToolsPage() {
   return (

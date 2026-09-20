@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { PostCard } from "@/components/layout/PostCard";
 import { BlogList } from "./BlogList";
 
-export const metadata: Metadata = { title: "Blog", description: "Plain-language guides on GST, tax, payroll, UPI, marketplaces and running a small business in India — updated for 2026." };
+export const metadata: Metadata = { title: "Blog", description: "Plain-language guides on GST, tax, payroll, UPI, marketplaces and running a small business in India — updated for 2026.", alternates: { canonical: "/blog" } };
 
 export default function BlogPage() {
   const posts = getAllPosts();
