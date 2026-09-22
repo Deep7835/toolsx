@@ -9,7 +9,7 @@ export function Barcode({ value, format = "CODE128", width = 2, height = 60, dis
   useEffect(() => {
     if (!ref.current) return;
     try {
-      JsBarcode(ref.current, value || "0", { format, width, height, displayValue, fontSize, margin, lineColor: "#000", background: "#fff", font: "Inter, monospace", textMargin: 2 });
+      JsBarcode(ref.current, value || "0", { format, width, height, displayValue, fontSize, margin, lineColor: "#000", background: "#fff", font: "ui-monospace, Menlo, monospace", textMargin: 2 });
       ref.current.removeAttribute("data-error");
     } catch {
       ref.current.setAttribute("data-error", "1");

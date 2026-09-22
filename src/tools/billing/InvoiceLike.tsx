@@ -176,7 +176,7 @@ export default function InvoiceLike({ config }: { config: InvoiceConfig }) {
   );
 
   const preview = (
-    <div className="min-h-[1123px] p-12 text-[12.5px] leading-snug" style={{ fontFamily: "Inter, ui-sans-serif, system-ui" }}>
+    <div className="min-h-[1123px] p-12 text-[12.5px] leading-snug" style={{ fontFamily: "var(--font-sans)" }}>
       {/* Header */}
       <div className="flex items-start justify-between gap-8 border-b-2 pb-6" style={{ borderColor: c.accent }}>
         <div className="flex items-start gap-4 min-w-0">

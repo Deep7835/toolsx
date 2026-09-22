@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -9,7 +9,8 @@ import { PwaRegister } from "@/components/layout/PwaRegister";
 import { Consent } from "@/components/layout/Consent";
 import { BRAND } from "@/lib/brand";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap", axes: ["opsz"] });
+/** Uncut Sans Variable (SIL OFL) — self-hosted, single file for weights 300–700 + italic axis. */
+const uncut = localFont({ src: "../assets/fonts/UncutSans-Variable.ttf", variable: "--font-uncut", display: "swap", weight: "300 700", preload: true });
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? `https://${BRAND.domain}`;
 
@@ -36,7 +37,7 @@ const themeScript = `(function(){try{var t=localStorage.getItem('ibt:theme');var
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
+    <html lang="en" className={uncut.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

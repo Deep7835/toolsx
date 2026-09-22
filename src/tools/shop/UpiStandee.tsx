@@ -56,7 +56,7 @@ export default function UpiStandee() {
   );
 
   const preview = (
-    <div style={{ background: t.bg, color: t.fg, width, height: width * 1.414, padding: 40 * s, fontFamily: "Inter, ui-sans-serif" }} className="flex flex-col items-center text-center">
+    <div style={{ background: t.bg, color: t.fg, width, height: width * 1.414, padding: 40 * s, fontFamily: "var(--font-sans)" }} className="flex flex-col items-center text-center">
       <div style={{ fontSize: 26 * s }} className="font-semibold tracking-tight leading-tight">{upi.payee || business.name}</div>
       {showPhone && business.phone ? <div style={{ fontSize: 12 * s, opacity: 0.75 }} className="mt-1">{business.phone}</div> : null}
       <div style={{ fontSize: 44 * s, color: t.accent, marginTop: 28 * s }} className="font-display leading-none">{headline}</div>

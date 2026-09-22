@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { ArrowLeft, ChevronRight, Lock } from "lucide-react";
+import { ArrowLeft, BookOpen, ChevronRight, Lock } from "lucide-react";
 import { TOOLS, toolBySlug, toolsByCategory } from "@/lib/registry";
 import { categoryById } from "@/lib/categories";
+import { getToolArticle } from "@/lib/tool-content";
+import { getAllPosts } from "@/lib/blog";
+import { BRAND } from "@/lib/brand";
 import { ToolRenderer } from "@/components/shell/ToolRenderer";
 import { ToolBadge, Badge } from "@/components/ui/Badge";
 import { FavButton } from "@/components/layout/FavButton";
@@ -23,9 +26,19 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const t = toolBySlug(slug);
   if (!t) notFound();
   const cat = categoryById(t.category);
-  const related = toolsByCategory(t.category).filter((x) => x.slug !== t.slug).slice(0, 4);
+  const related = toolsByCategory(t.category).filter((x) => x.slug !== t.slug).slice(0, 5);
+  const article = getToolArticle(t.slug);
+  const faqs = article?.faqs.length ? article.faqs : (t.faqs ?? []);
+  const guides = getAllPosts().filter((p) => p.tools.includes(t.slug)).slice(0, 5);
+  const base = process.env.NEXT_PUBLIC_SITE_URL ?? `https://${BRAND.domain}`;
+  const jsonLd = [
+    { "@context": "https://schema.org", "@type": "WebApplication", name: t.name, url: `${base}/tools/${t.slug}`, description: t.description, applicationCategory: "BusinessApplication", operatingSystem: "Any (web browser)", browserRequirements: "Requires JavaScript", isAccessibleForFree: true, offers: { "@type": "Offer", price: "0", priceCurrency: "INR" }, image: `${base}/og/tool/${t.slug}`, publisher: { "@type": "Organization", name: BRAND.name, url: base } },
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: base }, { "@type": "ListItem", position: 2, name: "Tools", item: `${base}/tools` }, { "@type": "ListItem", position: 3, name: cat.name, item: `${base}/categories/${cat.id}` }, { "@type": "ListItem", position: 4, name: t.name, item: `${base}/tools/${t.slug}` }] },
+    ...(faqs.length ? [{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }] : []),
+  ];
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <nav className="flex items-center gap-1.5 text-xs text-muted" aria-label="Breadcrumb">
         <Link href="/tools" className="inline-flex items-center gap-1 hover:text-ink"><ArrowLeft className="h-3.5 w-3.5" /> Tools</Link>
         <ChevronRight className="h-3 w-3" />
@@ -53,49 +66,72 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         <Lock className="h-3.5 w-3.5 text-accent-text" /> 100% client-side. Nothing you type is uploaded or stored on a server.
       </p>
 
-      {t.steps?.length || t.faqs?.length ? (
-        <section className="mt-14 grid gap-10 lg:grid-cols-2">
+      <div className="mt-14 grid gap-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16">
+        <div className="min-w-0 max-w-3xl">
           {t.steps?.length ? (
-            <div>
-              <h2 className="font-display text-2xl text-ink">How to use</h2>
+            <section aria-labelledby="how-to">
+              <h2 id="how-to" className="font-display text-2xl text-ink">How to use</h2>
               <ol className="mt-4 grid gap-3">
                 {t.steps.map((s, i) => (
                   <li key={i} className="flex gap-3 text-sm text-ink-2"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent-soft text-[11px] font-semibold text-accent-text tabular">{i + 1}</span><span className="leading-relaxed">{s}</span></li>
                 ))}
               </ol>
-            </div>
+            </section>
           ) : null}
-          {t.faqs?.length ? (
-            <div>
-              <h2 className="font-display text-2xl text-ink">Questions</h2>
+
+          {article ? (
+            <article className={`prose-kg ${t.steps?.length ? "mt-12" : ""}`} dangerouslySetInnerHTML={{ __html: article.html }} />
+          ) : null}
+
+          {faqs.length ? (
+            <section className="mt-12" aria-labelledby="faq">
+              <h2 id="faq" className="font-display text-2xl text-ink">Frequently asked questions</h2>
               <div className="mt-4 divide-y divide-border rounded-2xl border border-border bg-surface">
-                {t.faqs.map((f, i) => (
+                {faqs.map((f, i) => (
                   <details key={i} className="group px-5 py-4">
                     <summary className="cursor-pointer list-none text-sm font-medium text-ink flex justify-between gap-4">{f.q}<ChevronRight className="h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-90" /></summary>
                     <p className="mt-2 text-sm leading-relaxed text-muted">{f.a}</p>
                   </details>
                 ))}
               </div>
-            </div>
+            </section>
           ) : null}
-        </section>
-      ) : null}
+        </div>
 
-      {related.length ? (
-        <section className="mt-14">
-          <h2 className="font-display text-2xl text-ink">More in {cat.name}</h2>
-          <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {related.map((r) => (
-              <li key={r.slug}>
-                <Link href={`/tools/${r.slug}`} className="block rounded-2xl border border-border bg-surface p-4 transition-colors hover:border-border-strong">
-                  <span className="block text-sm font-semibold text-ink">{r.name}</span>
-                  <span className="mt-1 block line-clamp-2 text-xs text-muted">{r.description}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
+        <aside className="space-y-10 self-start lg:sticky lg:top-24">
+          {related.length ? (
+            <section aria-labelledby="related">
+              <h2 id="related" className="text-xs font-semibold uppercase tracking-[0.08em] text-muted">More in {cat.name}</h2>
+              <ul className="mt-3 divide-y divide-border rounded-2xl border border-border bg-surface">
+                {related.map((r) => (
+                  <li key={r.slug}>
+                    <Link href={`/tools/${r.slug}`} className="block px-4 py-3 transition-colors hover:bg-surface-2">
+                      <span className="block text-sm font-semibold text-ink">{r.name}</span>
+                      <span className="mt-0.5 block line-clamp-2 text-xs text-muted">{r.description}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <Link href={`/categories/${cat.id}`} className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-accent-text hover:underline">All {cat.name} tools <ChevronRight className="h-3.5 w-3.5" /></Link>
+            </section>
+          ) : null}
+          {guides.length ? (
+            <section aria-labelledby="guides">
+              <h2 id="guides" className="text-xs font-semibold uppercase tracking-[0.08em] text-muted">Guides that use this tool</h2>
+              <ul className="mt-3 grid gap-2">
+                {guides.map((p) => (
+                  <li key={p.slug}>
+                    <Link href={`/blog/${p.slug}`} className="flex gap-3 rounded-2xl border border-border bg-surface px-4 py-3 transition-colors hover:border-border-strong">
+                      <BookOpen className="mt-0.5 h-4 w-4 shrink-0 text-accent-text" strokeWidth={1.75} />
+                      <span className="min-w-0"><span className="block text-sm font-medium leading-snug text-ink">{p.title}</span><span className="mt-1 block text-xs text-muted">{p.readMinutes} min read</span></span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
+        </aside>
+      </div>
     </div>
   );
 }

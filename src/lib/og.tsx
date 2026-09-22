@@ -6,8 +6,8 @@ import { Receipt, Landmark, Users, TrendingUp, QrCode, Package, Store, Image as 
 import { BRAND } from "./brand";
 
 const fontCache: Record<string, Buffer> = {};
-async function font(name: "Inter-Bold" | "Inter-Medium") {
-  if (!fontCache[name]) fontCache[name] = await fs.readFile(path.join(process.cwd(), "src", "assets", "fonts", `${name}.woff`));
+async function font(name: "UncutSans-Bold" | "UncutSans-Medium") {
+  if (!fontCache[name]) fontCache[name] = await fs.readFile(path.join(process.cwd(), "src", "assets", "fonts", `${name}.ttf`));
   return fontCache[name];
 }
 
@@ -49,7 +49,7 @@ function Mark({ k }: { k: number }) {
 }
 
 export async function renderOg(input: OgInput): Promise<ImageResponse> {
-  const [bold, medium] = await Promise.all([font("Inter-Bold"), font("Inter-Medium")]);
+  const [bold, medium] = await Promise.all([font("UncutSans-Bold"), font("UncutSans-Medium")]);
   const [s1, s2, s3] = skyFor(input.seed ?? input.title);
   const node = iconFor(input.tags ?? []);
   const title = input.title.length > 96 ? input.title.slice(0, 94).replace(/\s+\S*$/, "") + "…" : input.title;
@@ -57,7 +57,7 @@ export async function renderOg(input: OgInput): Promise<ImageResponse> {
   const W = Math.round(1200 * k), H = Math.round(630 * k);
   const size = (title.length > 70 ? 54 : title.length > 46 ? 62 : 72) * k;
   const element: ReactNode = (
-    <div style={{ width: W, height: H, display: "flex", position: "relative", background: `linear-gradient(135deg, ${s1} 0%, ${s2} 55%, ${s3} 100%)`, fontFamily: "Inter" }}>
+    <div style={{ width: W, height: H, display: "flex", position: "relative", background: `linear-gradient(135deg, ${s1} 0%, ${s2} 55%, ${s3} 100%)`, fontFamily: "Uncut Sans" }}>
       {/* clouds */}
       <div style={{ position: "absolute", left: -120 * k, top: 40 * k, width: 620 * k, height: 260 * k, borderRadius: 999, background: "rgba(255,255,255,0.75)", filter: `blur(${60 * k}px)` }} />
       <div style={{ position: "absolute", right: -80 * k, bottom: -60 * k, width: 560 * k, height: 280 * k, borderRadius: 999, background: "rgba(255,255,255,0.7)", filter: `blur(${70 * k}px)` }} />
@@ -81,5 +81,5 @@ export async function renderOg(input: OgInput): Promise<ImageResponse> {
       </div>
     </div>
   );
-  return new ImageResponse(element, { width: W, height: H, fonts: [{ name: "Inter", data: bold, weight: 700, style: "normal" }, { name: "Inter", data: medium, weight: 500, style: "normal" }] });
+  return new ImageResponse(element, { width: W, height: H, fonts: [{ name: "Uncut Sans", data: bold, weight: 700, style: "normal" }, { name: "Uncut Sans", data: medium, weight: 500, style: "normal" }] });
 }

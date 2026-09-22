@@ -104,8 +104,8 @@
   --color-info-soft: var(--info-soft);
   --color-ring: var(--ring);
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-uncut), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-uncut), ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --shadow-sm: var(--shadow-sm);
@@ -132,7 +132,8 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-sans);
-  font-feature-settings: "cv11", "ss01", "ss03", "tnum";
+  font-feature-settings: "tnum", "kern";
+  font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   min-height: 100dvh;
@@ -146,7 +147,9 @@ body {
   border-radius: 6px;
 }
 
-.font-display { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.035em; }
+.font-display { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; }
+/* Uncut Sans carries italics on an `ital` axis rather than a separate face */
+em, i, .italic { font-style: normal; font-variation-settings: "ital" 11; }
 .tabular { font-variant-numeric: tabular-nums; }
 
 /* subtle hairline for section dividers */

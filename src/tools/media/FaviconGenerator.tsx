@@ -18,7 +18,7 @@ export default function FaviconGenerator() {
   const [bg, setBg] = useState("#047857");
   const [fg, setFg] = useState("#ffffff");
   const [radius, setRadius] = useState(22);
-  const [font, setFont] = useState("Inter, system-ui, sans-serif");
+  const [font, setFont] = useState("var(--font-sans)");
   const [weight, setWeight] = useState("700");
   const [img, setImg] = useState("");
   const [pad, setPad] = useState(10);
@@ -32,7 +32,7 @@ export default function FaviconGenerator() {
     ctx.beginPath(); ctx.roundRect(0, 0, size, size, r); ctx.fillStyle = bg; ctx.fill();
     return new Promise<HTMLCanvasElement>((res) => {
       if (mode === "image" && img) { const i = new Image(); i.onload = () => { ctx.save(); ctx.beginPath(); ctx.roundRect(0, 0, size, size, r); ctx.clip(); const p = (pad / 100) * size; const s = size - p * 2; const ratio = Math.min(s / i.width, s / i.height); const w = i.width * ratio, h = i.height * ratio; ctx.drawImage(i, (size - w) / 2, (size - h) / 2, w, h); ctx.restore(); res(c); }; i.src = img; }
-      else { ctx.fillStyle = fg; ctx.textAlign = "center"; ctx.textBaseline = "middle"; const t = text.slice(0, 3) || "A"; ctx.font = `${weight} ${size * (t.length === 1 ? 0.62 : t.length === 2 ? 0.5 : 0.38)}px ${font}`; ctx.fillText(t, size / 2, size / 2 + size * 0.03); res(c); }
+      else { ctx.fillStyle = fg; ctx.textAlign = "center"; ctx.textBaseline = "middle"; const t = text.slice(0, 3) || "A"; const fam = font.startsWith("var(") ? getComputedStyle(document.body).fontFamily : font; ctx.font = `${weight} ${size * (t.length === 1 ? 0.62 : t.length === 2 ? 0.5 : 0.38)}px ${fam}`; ctx.fillText(t, size / 2, size / 2 + size * 0.03); res(c); }
     });
   };
   useEffect(() => { if (canvas.current) draw(256, canvas.current); });
@@ -60,7 +60,7 @@ export default function FaviconGenerator() {
         <CardBody className="grid gap-6">
           <Segmented value={mode} onChange={setMode} options={[{ value: "text", label: "Initials" }, { value: "image", label: "From logo" }]} size="sm" />
           <FieldGroup title="Icon">
-            {mode === "text" ? <><Input label="Letters (1–3)" value={text} onChange={(e) => setText(e.target.value.slice(0, 3))} maxLength={3} /><div className="grid grid-cols-2 gap-4"><Select label="Font" value={font} onChange={(e) => setFont(e.target.value)} options={[{ value: "Inter, system-ui, sans-serif", label: "Sans (Inter)" }, { value: "'Instrument Serif', Georgia, serif", label: "Serif" }, { value: "ui-monospace, Menlo, monospace", label: "Mono" }]} /><Select label="Weight" value={weight} onChange={(e) => setWeight(e.target.value)} options={[{ value: "400", label: "Regular" }, { value: "600", label: "Semibold" }, { value: "700", label: "Bold" }, { value: "900", label: "Black" }]} /></div></> : <><LogoUpload value={img} onChange={setImg} label="Logo image" hint="PNG with transparency works best" /><Range label="Padding" value={pad} onChange={setPad} min={0} max={30} step={1} format={(v) => `${v}%`} /></>}
+            {mode === "text" ? <><Input label="Letters (1–3)" value={text} onChange={(e) => setText(e.target.value.slice(0, 3))} maxLength={3} /><div className="grid grid-cols-2 gap-4"><Select label="Font" value={font} onChange={(e) => setFont(e.target.value)} options={[{ value: "var(--font-sans)", label: "Sans (Uncut Sans)" }, { value: "'Instrument Serif', Georgia, serif", label: "Serif" }, { value: "ui-monospace, Menlo, monospace", label: "Mono" }]} /><Select label="Weight" value={weight} onChange={(e) => setWeight(e.target.value)} options={[{ value: "400", label: "Regular" }, { value: "600", label: "Semibold" }, { value: "700", label: "Bold" }, { value: "900", label: "Black" }]} /></div></> : <><LogoUpload value={img} onChange={setImg} label="Logo image" hint="PNG with transparency works best" /><Range label="Padding" value={pad} onChange={setPad} min={0} max={30} step={1} format={(v) => `${v}%`} /></>}
             <div className="grid grid-cols-2 gap-4"><ColorField label="Background" value={bg} onChange={setBg} />{mode === "text" ? <ColorField label="Text" value={fg} onChange={setFg} /> : null}</div>
             <Range label="Corner radius" value={radius} onChange={setRadius} min={0} max={100} step={2} format={(v) => `${v}%`} />
           </FieldGroup>
