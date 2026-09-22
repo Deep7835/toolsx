@@ -11,7 +11,7 @@ export function generateStaticParams() { return CATEGORIES.map((c) => ({ id: c.i
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const c = CATEGORIES.find((x) => x.id === id);
-  return c ? { title: c.name, description: `${c.description} Free, private tools for Indian small businesses.`, alternates: { canonical: `/categories/${c.id}` } } : { title: "Category" };
+  return c ? { title: c.name, description: `${c.description} Free, private tools for Indian small businesses.`, alternates: { canonical: `/categories/${c.id}` }, robots: { index: false, follow: true } } : { title: "Category", robots: { index: false, follow: true } };
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ id: string }> }) {

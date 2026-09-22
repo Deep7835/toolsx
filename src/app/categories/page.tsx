@@ -6,7 +6,7 @@ import { TOOLS } from "@/lib/registry";
 import { CategoryIcon } from "@/components/layout/icons";
 import { PageHeader } from "@/components/layout/PageHeader";
 
-export const metadata: Metadata = { title: "Tool categories", description: "Browse 115 free tools by job: billing, GST & tax, HR & payroll, finance, marketing & QR, logistics, shop, media, freelancer and legal.", alternates: { canonical: "/categories" } };
+export const metadata: Metadata = { title: "Tool categories", description: "Browse 115 free tools by job: billing, GST & tax, HR & payroll, finance, marketing & QR, logistics, shop, media, freelancer and legal.", alternates: { canonical: "/categories" }, robots: { index: false, follow: true } };
 
 export default function CategoriesPage() {
   return (
