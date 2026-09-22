@@ -37,6 +37,8 @@ The codes made here are **static**: the URL is encoded directly, they work forev
 
 Add UTM parameters to the URL (`?utm_source=poster&utm_medium=qr&utm_campaign=diwali`) and read the visits in your analytics. The [meta tag generator](/tools/meta-tags) and [SERP preview](/tools/serp-preview) tools help make the landing page itself look right once people arrive.
 
+For a shop, the two QRs that matter most are the payment code and the review code — the checklists are in [UPI QR standee best practices](/blog/upi-qr-standee-best-practices) and [Google AI Mode and local SEO](/blog/google-ai-mode-local-seo-for-indian-businesses-2026).
+
 ## Related tools
 
 - [WhatsApp direct link & QR](/tools/whatsapp-direct) — chat links with pre-filled text.

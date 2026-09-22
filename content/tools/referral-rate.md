@@ -35,6 +35,8 @@ A salon with 900 active clients won 120 new clients last quarter, 48 of them ref
 - Cash rewards to individuals who are not employees can attract TDS under Section 194R (benefits/perquisites) above ₹20,000 a year per person — rare for consumers, relevant for B2B referral partners; the [TDS calculator](/tools/tds-calculator) covers the mechanics.
 - Do not incentivise *reviews* — Google prohibits it. Referrals and reviews are different programmes; the [review request builder](/tools/google-review) handles the latter.
 
+Referral messages sent by SMS or WhatsApp fall under the consent and template rules in [TRAI's new anti-spam rules](/blog/trai-anti-spam-rules-2026-businesses-that-call-or-message-customers); the neighbourhood-store version of a referral engine is described in [Quick commerce vs the kirana](/blog/quick-commerce-vs-kirana-how-to-compete).
+
 ## Related tools
 
 - [CAC calculator](/tools/cac-calculator) — referred vs paid acquisition cost.

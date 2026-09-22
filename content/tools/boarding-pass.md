@@ -32,6 +32,8 @@ For a real trip, the only valid boarding pass is the one issued by the airline a
 
 Agencies should send the airline's e-ticket and PNR as the official document and use the mock pass only as a **summary card** with the agency's own name on it. Never reproduce an airline's logo, and never issue a document that could be mistaken for a boarding pass at security. Add "Itinerary summary — check in with the airline" as the message line. For the commercial side of travel, the [service quote](/tools/service-quote) tool covers package quotations and the [currency converter](/tools/currency-converter) handles foreign-currency components.
 
+If the card is for a real trip you are organising, the accommodation side is covered by the [hotel voucher](/tools/hotel-voucher) tool, and pricing a package for clients is walked through in [How to write a quotation that gets accepted](/blog/quotation-format-how-to-write-a-quotation).
+
 ## Related tools
 
 - [Movie ticket slip](/tools/movie-ticket) — the other classic ticket layout for events.

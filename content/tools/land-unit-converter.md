@@ -57,6 +57,8 @@ Even within a state, revenue records may use a local variant; always confirm the
 - For carpet vs built-up vs super built-up, expect loading of 20–35% in apartments; convert all three before comparing per-sq-ft rates.
 - Circle-rate calculators on state registration portals use sq m — convert first, then check stamp duty.
 
+Buying or leasing property for a business also raises structure and cash questions — see [Proprietorship vs LLP vs Private Limited](/blog/proprietorship-vs-llp-vs-private-limited-2026) on who should hold the asset, and [Cash transaction limits under income tax](/blog/cash-transaction-limits-income-tax-269st-40a3) before any part of the price is paid in cash.
+
 ## Related tools
 
 - [Percentage calculator](/tools/percentage-calculator) — loading percentages and price differences.

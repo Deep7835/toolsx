@@ -47,6 +47,8 @@ If you also supply power or telephony, the [electricity bill](/tools/electricity
 - Print a [WiFi QR](/tools/wifi-qr) card for each new installation — it cuts support calls about passwords.
 - Track downtime credits; customers who feel fairly treated renew, and your on-time metrics matter when you pitch societies.
 
+Small ISPs registering for GST for the first time will find the documents, fees and timeline in [GST registration online in 2026](/blog/gst-registration-online-step-by-step-2026), and the monthly return rhythm in [GST due dates FY 2026-27](/blog/gst-filing-calendar-fy-2026-27-due-dates).
+
 ## Related tools
 
 - [Telecom bill](/tools/telecom-bill) — voice and SMS billing.

@@ -41,6 +41,8 @@ The [meta tag generator](/tools/meta-tags) and [SERP preview](/tools/serp-previe
 
 Reading time helps size blog posts, privacy policies and terms. A [privacy policy](/tools/privacy-policy-generator) of 1,200 words is a six-minute read — long enough to be complete, short enough to be read. For legal pages, the DPDP Rules expect notices to be clear and in plain language; length is not a virtue.
 
+For the pages where length and clarity matter most — policies and notices — the DPDP expectations are summarised in [DPDP Rules 2025](/blog/dpdp-rules-2025-checklist-for-small-websites), and for search snippets the local-SEO playbook is in [Google AI Mode and local SEO](/blog/google-ai-mode-local-seo-for-indian-businesses-2026).
+
 ## Related tools
 
 - [Meta tag generator](/tools/meta-tags) — title and description with pixel limits.

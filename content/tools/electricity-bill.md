@@ -46,6 +46,8 @@ Electricity supplied by a DISCOM is exempt from GST. When a landlord recovers el
 - For solar rooftop with net metering, show import and export units separately.
 - Pass on **subsidies** if the connection is subsidised; charging full tariff on a subsidised meter is a common dispute.
 
+Landlords issuing these bills alongside rent should also read [HRA exemption: rent receipts, landlord PAN](/blog/hra-exemption-rent-receipts-landlord-pan), since tenants will ask for both documents together at tax time.
+
 ## Related tools
 
 - [Society maintenance invoice](/tools/society-maintenance) — monthly charges for flats and commercial blocks.

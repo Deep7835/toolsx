@@ -41,6 +41,8 @@ If your conversion rate moves from 4% to 5%, it rose by **one percentage point**
 - A 20% discount followed by 20% markup does not return to the start: ₹100 → ₹80 → ₹96.
 - To undo a p% increase you need a p ÷ (1 + p) decrease: undoing +25% needs −20%.
 
+For the statutory percentages that changed recently, see [GST 2.0 rate changes](/blog/gst-2-0-new-rates-what-changed-for-small-business), [TDS rates and thresholds for FY 2026-27](/blog/tds-rates-and-thresholds-fy-2026-27) and [Professional tax 2026: state-wise slabs](/blog/professional-tax-state-wise-slabs).
+
 ## Related tools
 
 - [Discount calculator](/tools/discount-calculator) — stacked offers and effective %.

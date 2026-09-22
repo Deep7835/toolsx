@@ -34,6 +34,8 @@ Marketplaces track seller defect rates and suppress listings above thresholds (t
 
 Well-run small warehouses reach 99%+; 97–99% is common for small sellers packing by hand; below 95% signals a process problem rather than bad luck. Each point of accuracy on 1,000 orders is 10 fewer returns.
 
+Barcode choices for SKUs — when a free code is enough and when you need GS1 — are explained in [Barcodes for your products](/blog/barcode-ean-gs1-india-for-products), and the marketplace defect thresholds in [Pricing for Amazon, Flipkart and Meesho](/blog/marketplace-pricing-amazon-flipkart-fees).
+
 ## Related tools
 
 - [On-time delivery rate](/tools/on-time-delivery) — the other half of the perfect order.

@@ -36,6 +36,8 @@ Variance % = (Actual − Budget) ÷ Budget × 100. Sales budgeted ₹10 lakh, ac
 - Include statutory dates — GST, TDS, advance tax, bonus — so cash timing matches; the [GST filing calendar](/tools/gst-calendar) and [advance tax calculator](/tools/advance-tax) supply them.
 - Check your forecasts afterwards with the [forecast accuracy](/tools/forecast-accuracy) tool; budgets improve when forecast error is measured.
 
+For the statutory cost lines that changed this year — the EPF ceiling, GST slabs, TDS thresholds — see [EPF wage ceiling is now ₹25,000](/blog/epf-wage-ceiling-25000-what-changes-for-payroll) and [TDS rates and thresholds for FY 2026-27](/blog/tds-rates-and-thresholds-fy-2026-27) before you build next year's budget.
+
 ## Related tools
 
 - [Forecast accuracy](/tools/forecast-accuracy) — how good the budget's revenue line was.

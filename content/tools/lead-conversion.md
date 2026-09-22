@@ -40,6 +40,8 @@ A 15% rate on ₹100 leads is a [CAC](/tools/cac-calculator) of ₹667; raising 
 | Referrals | 30–60% |
 | B2B quotes | 20–35% (see [win rate](/tools/win-rate)) |
 
+Two things that raise conversion for free: fresh reviews and a visible profile — the local-search playbook is in [Google AI Mode and local SEO for Indian businesses](/blog/google-ai-mode-local-seo-for-indian-businesses-2026) — and a WhatsApp presence that costs nothing to run, covered in [WhatsApp Business per-message pricing](/blog/whatsapp-business-per-message-pricing-2026).
+
 ## Related tools
 
 - [Marketing funnel calculator](/tools/marketing-funnel) — stage-by-stage drop-off.

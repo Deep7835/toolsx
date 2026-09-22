@@ -38,6 +38,8 @@ If your society is registered, print the GSTIN and the member's GSTIN (for comme
 - For collection, a UPI QR per flat with the exact amount avoids the "which flat paid ₹4,200?" problem. Pair with the [payment receipt](/tools/payment-receipt) generator so members get acknowledgement.
 - Recover common-area electricity fairly using the [electricity bill](/tools/electricity-bill) tool when units are sub-metered.
 
+Societies handling members' personal data (phone numbers, vehicle details, CCTV) now have obligations under the DPDP framework; the practical checklist is in [DPDP Rules 2025](/blog/dpdp-rules-2025-checklist-for-small-websites). Recovering arrears follows the same logic as any commercial debt — see [Cheque bounce: what to do](/blog/cheque-bounce-section-138-what-to-do) when a member's cheque is returned.
+
 ## Related tools
 
 - [Electricity bill](/tools/electricity-bill) — sub-metering for shops or common areas.

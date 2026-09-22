@@ -40,6 +40,8 @@ You can also encode a **hidden** network (the phone still joins if the SSID is m
 - Add the SSID in text beneath the QR for guests on older phones who still type it in.
 - If you also want a QR for your Instagram or Google reviews, make one with the [URL QR generator](/tools/url-qr) and the [Google review request builder](/tools/google-review), and keep them visually distinct so customers scan the right one.
 
+Router and admin credentials are part of basic security hygiene; the OTP and account-takeover scams targeting small businesses are described in [GST scam calls, fake notices and OTP fraud](/blog/gst-scam-calls-and-fake-notices), and website-side hardening in [WordPress security checklist](/blog/wordpress-7-1-1-click2shell-update-now-checklist).
+
 ## Related tools
 
 - [UPI QR standee](/tools/upi-standee) — the payment QR beside it.

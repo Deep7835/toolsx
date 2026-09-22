@@ -38,6 +38,8 @@ Recognition is the cheapest retention tool a business has, and a well-designed c
 - Ivory, cream or linen-textured card between 250 and 300 gsm gives the right feel; avoid glossy photo paper.
 - Gold foil or embossed seals can be added by any local printer — leave the seal area blank in the design if you plan to.
 
+Recognition works best when it is part of a fair, compliant workplace — the employer-side changes under the new labour framework are summarised in [The four Labour Codes are in force](/blog/labour-codes-2025-what-small-employers-must-change).
+
 ## Related tools
 
 - [Internship certificate maker](/tools/internship-certificate) — completion credentials for interns.

@@ -39,6 +39,8 @@ Out of 85 responses last month: 39 gave 5, 27 gave 4, 12 gave 3, 5 gave 2, 2 gav
 - Above 85%: protect it; use it in marketing with permission, and watch for survey bias (only happy customers answering).
 - Track CSAT next to [order accuracy](/tools/order-accuracy) and [on-time delivery](/tools/on-time-delivery); operational metrics usually move first.
 
+Collecting feedback by message must respect consent and frequency norms — the rules are summarised in [TRAI's new anti-spam rules](/blog/trai-anti-spam-rules-2026-businesses-that-call-or-message-customers) and the cost side in [WhatsApp Business per-message pricing](/blog/whatsapp-business-per-message-pricing-2026).
+
 ## Related tools
 
 - [NPS calculator](/tools/nps-calculator) — relationship-level loyalty.

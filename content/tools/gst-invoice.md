@@ -5,9 +5,9 @@ A GST invoice is the one document every registered business in India must get ri
 
 ## Who needs a GST invoice, and when
 
-If you are registered under GST, every taxable supply to a business customer needs a tax invoice, and every supply to a consumer above ₹200 needs one too (below that you may issue a consolidated invoice at day end). Composition dealers issue a **bill of supply** instead, without tax columns — the generator handles this when you leave the GSTIN blank or turn tax off. Unregistered sellers below the ₹40 lakh goods / ₹20 lakh services threshold can still use it to raise a plain bill; the tax section simply disappears.
+If you are registered under GST, every B2B supply needs a tax invoice, and so does every consumer sale above ₹200 (smaller ones can go on a consolidated day-end invoice). Composition dealers issue a **bill of supply** instead, without tax columns — the generator handles this when you leave the GSTIN blank or turn tax off. Unregistered sellers below the ₹40 lakh goods / ₹20 lakh services threshold can still use it to raise a plain bill; the tax section simply disappears.
 
-Timing matters. For goods, the invoice must be issued at or before removal or delivery; for services, within 30 days of supply (45 days for banks and NBFCs). If your aggregate turnover crossed ₹5 crore in any year since 2017-18, the invoice must also be reported on the e-invoice portal to get an IRN — see [our e-invoicing guide](/blog/e-invoicing-2026-are-you-covered) for the 30-day reporting rule.
+Issue it at or before delivery for goods and within 30 days for services. Above ₹5 crore turnover the invoice must also be reported to the e-invoice portal for an IRN — see [our e-invoicing guide](/blog/e-invoicing-2026-are-you-covered).
 
 ## What a compliant invoice must contain
 
@@ -39,14 +39,13 @@ The full list, with examples of what an officer looks for, is in [GST invoice fo
 
 Since 22 September 2025 most goods and services fall in the 5% or 18% slab, with 40% reserved for tobacco, pan masala, aerated drinks and luxury cars, and 0% or 3% for a small list. If you are billing an old order at 12% or 28%, type a custom rate. For inclusive pricing the base is **MRP ÷ (1 + rate)**: a ₹1,180 item at 18% has a taxable value of ₹1,000 and GST of ₹180. Run quick what-ifs in the [GST calculator](/tools/gst-calculator), and read the rate-wise worked examples in [How to calculate GST from MRP](/blog/gst-on-mrp-inclusive-price-calculation).
 
-Rounding is done on the final invoice value under Section 170, to the nearest rupee, not per line — the generator follows this.
 
 ## Mistakes that cost money
 
 - **Wrong tax type.** Charging CGST + SGST on an inter-state sale (or vice versa) means paying the correct tax again and claiming a refund of the wrong one.
 - **Duplicate or skipped numbers.** GSTR-1 asks for the invoice series; gaps invite questions. Let the tool number sequentially and never reuse a number after a cancellation — issue a [credit note](/tools/credit-note) instead.
 - **Missing buyer GSTIN on B2B sales.** The buyer loses ITC and will push the bill back. Check the 15-character format with [How to verify a GSTIN](/blog/how-to-verify-gstin-number-format).
-- **Cash above ₹2 lakh.** Section 269ST bars accepting ₹2 lakh or more in cash from one person in a day, even across several invoices — put the QR on the bill and take UPI. Details in [cash transaction limits](/blog/cash-transaction-limits-income-tax-269st-40a3).
+- **Cash above ₹2 lakh.** Section 269ST bars it even across several invoices — put the QR on the bill and take UPI; see [cash transaction limits](/blog/cash-transaction-limits-income-tax-269st-40a3).
 
 ## Related tools
 
@@ -72,8 +71,5 @@ It uses NPCI's standard `upi://pay` link with your VPA, name and the invoice amo
 
 ### Where are my invoices stored?
 
-Nowhere but your device. Business details and the running invoice number sit in your browser's local storage; each invoice is generated on the fly for download. If you need a permanent archive, save the PDFs to Drive or your accounting software.
+Only on your device — business details and the running invoice number sit in your browser's local storage, and each PDF is generated on the fly. Save the PDFs to Drive or your accounting software for a permanent archive.
 
-### Can I edit an invoice after sending it?
-
-Legally you should not alter an issued invoice. If the value or tax changes, issue a credit or debit note referencing the original number; the deadline for credit notes is 30 November of the following financial year or the annual return date, whichever is earlier.

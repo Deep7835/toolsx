@@ -34,6 +34,8 @@ CAGR smooths the path — a business that grew 60% one year and shrank 10% the n
 - Negative CAGR is valid — a decline from ₹80 lakh to ₹60 lakh over 3 years is −9.1% a year.
 - For returns, remember tax: equity long-term gains at 12.5%, and slab rates on interest, so a 12% pre-tax CAGR may be 10.5% post-tax — the [income tax calculator](/tools/income-tax) shows the slab.
 
+Growth that crosses compliance thresholds changes your obligations: [E-invoicing in 2026](/blog/e-invoicing-2026-are-you-covered) explains what happens at ₹5 crore, and [Which ITR form to file](/blog/which-itr-form-small-business-freelancer) covers the audit and return changes as a business scales.
+
 ## Related tools
 
 - [Revenue growth rate](/tools/revenue-growth) — month-on-month and year-on-year change.

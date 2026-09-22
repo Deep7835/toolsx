@@ -35,6 +35,8 @@ Fitness and physical well-being services attract **18% GST** (SAC 9997). Registr
 - **Track retention**: a gym that keeps 60% of members past month three is healthy; measure it with the [customer retention rate](/tools/retention-rate) calculator.
 - **Price plans on capacity**: know your peak-hour utilisation with the [capacity utilization](/tools/capacity-utilization) tool before discounting evening slots.
 
+Studios registering for GST or choosing a business structure will find the steps in [GST registration online in 2026](/blog/gst-registration-online-step-by-step-2026) and [Proprietorship vs LLP vs Private Limited](/blog/proprietorship-vs-llp-vs-private-limited-2026); the Shop and Establishment licence most gyms need is covered in [Shop and Establishment licence guide](/blog/shop-and-establishment-licence-registration-guide).
+
 ## Related tools
 
 - [Staff ID card creator](/tools/staff-id-card) — trainer and staff badges in the same style.

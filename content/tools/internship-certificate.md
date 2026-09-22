@@ -41,6 +41,8 @@ Interns collect certificates the way employees collect payslips: colleges demand
 - Include the mentor's designation and a way to verify — email on the letterhead, or a QR from the [URL QR generator](/tools/url-qr) pointing to a verification page.
 - Send a PDF **and** a printed copy; colleges still file paper.
 
+Employers converting interns to full-time roles should check the payroll implications in [EPF wage ceiling is now ₹25,000](/blog/epf-wage-ceiling-25000-what-changes-for-payroll) and [Salary slip format: every component explained](/blog/salary-slip-format-components-explained).
+
 ## Related tools
 
 - [Experience letter generator](/tools/experience-letter) — for employees and converted interns.

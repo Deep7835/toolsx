@@ -34,6 +34,8 @@ Web designers, agencies and freelancers spend hours turning screenshots into som
 - End with scope, timeline and price, quoted on the [service quote builder](/tools/service-quote); ask for an advance against a [proforma invoice](/tools/proforma-invoice).
 - Include your rate logic if challenged: the [freelance rate calculator](/tools/freelance-rate) makes it defensible.
 
+Agencies invoicing for this work should know the freelancer tax and GST rules in [Freelancer taxes in India: 44ADA, GST, LUT](/blog/freelancer-taxes-india-44ada-gst), and the quotation structure in [How to write a quotation that gets accepted](/blog/quotation-format-how-to-write-a-quotation).
+
 ## Related tools
 
 - [Meta tag generator](/tools/meta-tags) — recommended titles and descriptions for each page.

@@ -34,6 +34,8 @@ Include GST on ad invoices as a cost unless you claim it as ITC, and use revenue
 - **Cut the losers weekly**; scale the winners slowly (20–30% budget steps).
 - Watch the funnel after the click with the [marketing funnel calculator](/tools/marketing-funnel).
 
+Seasonal campaigns need a plan before the spend — the eight-week timeline is in [Festive season 2026 checklist](/blog/festive-season-2026-retail-checklist-diwali) — and which AI ad tools are worth paying for is covered in [AI for the small shop in 2026](/blog/ai-for-kirana-and-small-shops-2026).
+
 ## Related tools
 
 - [ROI calculator](/tools/roi-calculator) — profit-based return on the campaign.

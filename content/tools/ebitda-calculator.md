@@ -32,6 +32,8 @@ Example: revenue ₹1.2 crore, PAT ₹12 lakh, interest ₹4 lakh, tax ₹4.5 la
 
 For a full picture of profitability metrics — gross, contribution, operating, net — start with the [profit margin calculator](/tools/profit-margin) and the [gross margin calculator](/tools/gross-margin).
 
+If you are preparing an EBITDA-based loan proposal, the schemes, rates and eligibility are compared in [MSME loan schemes in 2026](/blog/msme-loan-schemes-2026-mudra-pmegp-cgtmse), and the structure question (proprietorship, LLP or company) that affects tax below the EBITDA line is in [Proprietorship vs LLP vs Private Limited](/blog/proprietorship-vs-llp-vs-private-limited-2026).
+
 ## Related tools
 
 - [Net profit margin](/tools/net-profit-margin) — after interest, tax and depreciation.

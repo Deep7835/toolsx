@@ -34,6 +34,8 @@ Define "resolved" from the **customer's** view: no repeat contact about the same
 - **Cost to serve**: contacts × cost per contact ÷ orders — often 2–5% of revenue in e-commerce.
 - **Retention**: customers with an unresolved first contact churn at multiples of the base rate; the [retention rate calculator](/tools/retention-rate) will show it a quarter later.
 
+Clear, published policies are what let staff resolve issues on the spot; the disclosure rules for online sellers are in [DPDP Rules 2025 and the e-commerce checklist](/blog/dpdp-rules-2025-checklist-for-small-websites), and the messaging norms in [TRAI's new anti-spam rules](/blog/trai-anti-spam-rules-2026-businesses-that-call-or-message-customers).
+
 ## Related tools
 
 - [First response time](/tools/first-response-time) — speed of the first reply.

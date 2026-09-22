@@ -37,6 +37,8 @@ End-to-end conversion is 0.09%. The weakest step here is impressions → clicks 
 - **Bottom (decision)**: payment friction (put a [UPI QR](/tools/upi-standee) or link in the chat), delivery clarity, a deadline on the offer.
 - **After the sale**: retention and referral turn one order into several — the [retention rate](/tools/retention-rate) and [referral rate](/tools/referral-rate) tools measure that second funnel.
 
+The top of most local funnels is now Google's AI-driven results and WhatsApp — see [Google AI Mode and local SEO](/blog/google-ai-mode-local-seo-for-indian-businesses-2026) and [WhatsApp Business per-message pricing](/blog/whatsapp-business-per-message-pricing-2026) for how to feed the first stage cheaply.
+
 ## Related tools
 
 - [Lead conversion rate](/tools/lead-conversion) — the single-step version.

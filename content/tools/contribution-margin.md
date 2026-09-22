@@ -45,6 +45,8 @@ Semi-variable costs (electricity for machines, overtime) can be split; when in d
 
 Compute a weighted contribution margin ratio across your sales mix (each product's ratio × its share of revenue) and divide fixed costs by it for overall break-even revenue. A shift in mix towards high-contribution items lowers break-even without any price change — the quiet lever behind "add-on" selling in cafés and accessory racks in electronics stores.
 
+For marketplace sellers, the fee stack that sits inside variable cost is worked through in [Pricing for Amazon, Flipkart and Meesho](/blog/marketplace-pricing-amazon-flipkart-fees); for a café or shop starting out, the full cost structure is in [How to start a small business in India in 2026](/blog/how-to-start-a-small-business-in-india-2026).
+
 ## Related tools
 
 - [Profit margin & break-even](/tools/profit-margin) — gross and net margin with break-even.

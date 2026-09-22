@@ -31,6 +31,8 @@ Showing a film to the public — even free, even in a society clubhouse — requ
 - Announce the show with a poster made from the same colour theme and share via the [social media post generator](/tools/social-post).
 - Collect feedback after the show with a QR to a form, generated with the [URL QR generator](/tools/url-qr).
 
+If the screening is a paid event, the registration and invoicing basics are in [GST registration online in 2026](/blog/gst-registration-online-step-by-step-2026) and the document choice in [Invoice vs bill vs receipt vs quotation](/blog/invoice-vs-bill-vs-receipt-vs-quotation).
+
 ## Related tools
 
 - [Boarding pass slip](/tools/boarding-pass) — the other ticket-style layout for invitations.
