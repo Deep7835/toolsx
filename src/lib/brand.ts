@@ -10,4 +10,6 @@ export const BRAND = {
   ga4: "G-6GNEHLKQC1",
   /** Google Search Console verification token (public). */
   googleSiteVerification: "bWjMJgGOzbwzGz3Ugl-ieDsCd0gmD-nJqh275rQ_EHs",
+  /** Bing Webmaster Tools token (public). Empty unless verified by meta tag — importing from Search Console needs none. */
+  bingSiteVerification: "",
 };

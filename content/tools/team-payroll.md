@@ -51,6 +51,7 @@ The month's summary shows total gross, total deductions, total net payable, and 
 - [Employee cost calculator](/tools/employee-cost) — annual loaded cost per hire.
 - [Professional tax calculator](/tools/professional-tax) — state-wise PT.
 - [Business days calculator](/tools/business-days) — paid days in a month with holidays.
+- [Leave balance calculator](/tools/leave-balance) — LWP and encashment inputs.
 
 ## FAQ
 

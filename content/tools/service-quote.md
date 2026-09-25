@@ -54,6 +54,7 @@ Follow up on day 2 and day 7. Quotes with a deadline and a follow-up convert far
 - [Freelance rate calculator](/tools/freelance-rate) — the rate behind the quote.
 - [Win rate calculator](/tools/win-rate) — which quotes you win.
 - [Letterhead generator](/tools/letterhead) — cover letter for formal proposals.
+- [Terms & Conditions generator](/tools/terms-generator) — the terms your quote refers to.
 
 ## FAQ
 

@@ -44,6 +44,7 @@ Payloads often contain names, phone numbers, GSTINs and amounts — personal dat
 - [Barcode & QR scanner](/tools/barcode-scanner) — decode QR payloads.
 - [Password generator](/tools/password-generator) — API keys and secrets.
 - [Meta tag generator](/tools/meta-tags) — the rest of the `<head>`.
+- [GSTIN validator](/tools/gstin-validator) — check GST numbers in an e-invoice payload.
 
 ## FAQ
 

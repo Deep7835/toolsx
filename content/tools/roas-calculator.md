@@ -43,6 +43,7 @@ Seasonal campaigns need a plan before the spend — the eight-week timeline is i
 - [Gross margin calculator](/tools/gross-margin) — the margin that sets break-even ROAS.
 - [Marketing funnel calculator](/tools/marketing-funnel) — conversion after the click.
 - [Engagement rate calculator](/tools/engagement-rate) — for organic content alongside ads.
+- [Referral rate calculator](/tools/referral-rate) — the channel with no ad spend at all.
 
 ## FAQ
 

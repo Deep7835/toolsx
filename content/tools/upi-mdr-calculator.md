@@ -42,7 +42,7 @@ The shop-level checklist, including how to talk to customers about it, is in [UP
 
 ## Related tools
 
-- [UPI MDR 2026 complete guide](/tools/upi-mdr-guide) — every rule, category and exemption.
+- [UPI MDR 2026 complete guide](/tools/upi-mdr-guide) — every rule, category and exemption, with worked examples by merchant type.
 - [UPI QR standee](/tools/upi-standee) — keep accepting UPI at the counter.
 - [Payment receipt](/tools/payment-receipt) — dynamic QR with the exact amount.
 - [Profit margin calculator](/tools/profit-margin) — MDR as a per-unit cost.

@@ -49,6 +49,7 @@ Marketplaces measure "return due to defect" and suspend listings above roughly 1
 - [Credit note](/tools/credit-note) — for goods rejected by customers.
 - [Purchase order](/tools/purchase-order) — put AQL terms on supplier orders.
 - [Gross margin calculator](/tools/gross-margin) — the margin quality losses eat into.
+- [Capacity utilisation](/tools/capacity-utilization) — overloaded lines make more defects.
 
 ## FAQ
 

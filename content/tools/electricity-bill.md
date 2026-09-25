@@ -54,6 +54,7 @@ Landlords issuing these bills alongside rent should also read [HRA exemption: re
 - [Rent receipt](/tools/rent-receipt) — for the rent component.
 - [Payment receipt](/tools/payment-receipt) — acknowledge payment of the bill.
 - [Broadband bill](/tools/broadband-bill) and [telecom bill](/tools/telecom-bill) — the other shared utilities.
+- [Society maintenance invoice](/tools/society-maintenance) — common-area charges for flats.
 - [Percentage calculator](/tools/percentage-calculator) — split shared fixed charges by area or usage.
 
 ## FAQ

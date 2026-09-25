@@ -48,6 +48,7 @@ Rate changes under GST 2.0 moved hundreds of items between slabs; if your master
 - [GST calculator](/tools/gst-calculator) — the rate applied to a price.
 - [Price tag generator](/tools/price-tag-generator) — print the right inclusive price after finding the rate.
 - [Purchase order](/tools/purchase-order) — put HSN on POs so suppliers invoice correctly.
+- [GSTIN validator](/tools/gstin-validator) — check the supplier's GST number while you are at it.
 - [GST filing calendar](/tools/gst-calendar) — the HSN summary goes into GSTR-1 each month.
 
 ## FAQ

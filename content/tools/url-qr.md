@@ -22,7 +22,7 @@ The codes made here are **static**: the URL is encoded directly, they work forev
 - **Order on WhatsApp** — the [wa.me link](/tools/whatsapp-direct) with a pre-filled message.
 - **Payments** — use the [UPI QR standee](/tools/upi-standee), not a URL; payment QRs follow a different standard.
 - **Product information**: care instructions, warranty registration, authenticity check.
-- **Event tickets and certificates**: verification pages, as on the [award certificate](/tools/award-certificate).
+- **Event tickets and certificates**: verification pages, as on the [award certificate](/tools/award-certificate), the [movie ticket](/tools/movie-ticket) or a [boarding-pass invitation](/tools/boarding-pass).
 - **Job postings, catalogues, brochure PDFs**: keep printed matter short and link the rest.
 
 ## Print and placement rules

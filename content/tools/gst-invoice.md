@@ -44,13 +44,13 @@ Since 22 September 2025 most goods and services fall in the 5% or 18% slab, with
 
 - **Wrong tax type.** Charging CGST + SGST on an inter-state sale (or vice versa) means paying the correct tax again and claiming a refund of the wrong one.
 - **Duplicate or skipped numbers.** GSTR-1 asks for the invoice series; gaps invite questions. Let the tool number sequentially and never reuse a number after a cancellation — issue a [credit note](/tools/credit-note) instead.
-- **Missing buyer GSTIN on B2B sales.** The buyer loses ITC and will push the bill back. Check the 15-character format with [How to verify a GSTIN](/blog/how-to-verify-gstin-number-format).
+- **Missing or wrong buyer GSTIN on B2B sales.** The buyer loses ITC and will push the bill back. Check it with the [GSTIN validator](/tools/gstin-validator).
 - **Cash above ₹2 lakh.** Section 269ST bars it even across several invoices — put the QR on the bill and take UPI; see [cash transaction limits](/blog/cash-transaction-limits-income-tax-269st-40a3).
 
 ## Related tools
 
 - [Proforma invoice](/tools/proforma-invoice) for quotes and advance requests before the tax invoice.
-- [Payment receipt](/tools/payment-receipt) to acknowledge cash, UPI or bank transfers against an invoice.
+- [Payment receipt](/tools/payment-receipt) to acknowledge cash, UPI or bank transfers — or to issue an "invoice cum receipt" when the bill is paid at the counter.
 - [Credit note](/tools/credit-note) and [debit note](/tools/debit-note) to correct an issued invoice under Section 34.
 - [Delivery challan](/tools/delivery-challan) when goods move without a sale — job work, branch transfers, approval basis.
 - [UPI QR standee](/tools/upi-standee) for a counter QR that works for any amount.

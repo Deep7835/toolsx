@@ -13,6 +13,7 @@ import { BRAND } from "@/lib/brand";
 const uncut = localFont({ src: "../assets/fonts/UncutSans-Variable.ttf", variable: "--font-uncut", display: "swap", weight: "300 700", preload: true });
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? `https://${BRAND.domain}`;
+const BING = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION ?? BRAND.bingSiteVerification;
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE),
@@ -24,7 +25,10 @@ export const metadata: Metadata = {
   openGraph: { type: "website", siteName: BRAND.name, locale: "en_IN", url: "/", title: `${BRAND.name} — ${BRAND.tagline}`, description: BRAND.description, images: [{ url: "/og/default", width: 1200, height: 630, alt: `${BRAND.name} — ${BRAND.tagline}` }] },
   twitter: { card: "summary_large_image", title: `${BRAND.name} — ${BRAND.tagline}`, description: BRAND.description, images: ["/og/default"] },
   robots: { index: true, follow: true },
-  verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? BRAND.googleSiteVerification },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? BRAND.googleSiteVerification,
+    ...(BING ? { other: { "msvalidate.01": BING } } : {}),
+  },
 };
 
 export const viewport: Viewport = {

@@ -134,6 +134,7 @@ const RAW: ToolMeta[] = [
   t("robots-txt", "Robots.txt Generator", "Create a valid robots.txt file to direct search crawlers and manage indexing rules.", "legal", "SEO", "CRAWL DIRECTIVES"),
   t("schema-markup", "Schema Markup Generator", "Generate Schema.org structured data for Local Business, Product, Article, FAQ, and HowTo pages.", "legal", "SEO", "SCHEMA.ORG CODE"),
   t("meta-tags", "Meta Tag Generator", "Generate HTML Title, Meta Description, Canonical, and Open Graph social tags with live preview.", "legal", "SEO", "META TAGS & OG"),
+  t("gstin-validator", "GSTIN Validator & Format Checker", "Verify a GST number's 15-character format and check digit, and decode the state, PAN and taxpayer type.", "tax", "GST COMPLIANCE", "GSTIN CHECK", { keywords: ["gst number check", "verify gstin", "gstin format", "gst number validator", "sample gstin"] }),
   t("serp-preview", "SERP Snippet Preview", "Simulate how your title tag and meta description look in Google Search on desktop and mobile.", "legal", "SEO", "GOOGLE SERP"),
   t("employee-cost", "Employee Cost Calculator (Fully-Loaded CTC)", "Calculate total annual employee cost including PF, ESI, Gratuity, and Bonus provisions.", "hr", "OPERATIONS", "CTC ANALYSIS"),
   t("statutory-bonus", "Statutory Bonus Calculator", "Estimate employee bonus under the Payment of Bonus Act, 1965 based on wage ceilings.", "hr", "PAYROLL", "COMPLIANCE"),

@@ -17,6 +17,12 @@ Customers ask for receipts most often when they pay cash, when a company is reim
 
 The full set of limits is in [Cash transaction limits under income tax](/blog/cash-transaction-limits-income-tax-269st-40a3).
 
+## What an "invoice cum receipt" is
+
+Customers often ask for an *invoice cum receipt* — a single document that both bills the sale and acknowledges that it has been paid. It is perfectly valid: issue the tax invoice as usual and mark it **PAID**, stating the mode, date and reference of the payment on the same page. That is what a counter bill from a restaurant or a retail POS slip already is.
+
+Use one document when payment is received at the time of supply (cash, UPI or card at the counter). Use two — a [GST invoice](/tools/gst-invoice) now and a receipt later — when the customer pays on credit, pays in instalments, or needs each payment acknowledged separately for their own books. Either way the GST is charged once, on the invoice; the receipt itself carries no fresh tax.
+
 ## What the receipt should show
 
 | Element | Why |
@@ -42,6 +48,7 @@ The full set of limits is in [Cash transaction limits under income tax](/blog/ca
 - **Advances for services**: GST is payable on the advance in the month received; use the receipt as your Rule 50 voucher and show the tax component.
 - **Security deposits**: not a supply, no GST; mark it clearly as refundable.
 - **Rent**: use the dedicated [rent receipt generator](/tools/rent-receipt), which adds the landlord's PAN for HRA claims.
+- **Clinics**: consultation fees, issued with the [prescription](/tools/medical-prescription); **hotels and homestays**: advances against a [booking voucher](/tools/hotel-voucher); **gyms and studios**: fees against a [membership card](/tools/gym-membership).
 - **Tuition, memberships, subscriptions**: itemise the period covered so the customer's employer or insurer accepts it.
 
 ## Related tools
@@ -53,6 +60,10 @@ The full set of limits is in [Cash transaction limits under income tax](/blog/ca
 - [Barcode & QR scanner](/tools/barcode-scanner) — verify a customer's UPI QR before you pay a supplier.
 
 ## FAQ
+
+### Can one document be both an invoice and a receipt?
+
+Yes — an "invoice cum receipt" is a tax invoice marked as paid, with the payment mode, date and reference on it. It is the normal counter bill for cash and UPI sales. Issue separate documents when the customer pays later or in parts.
 
 ### Is a payment receipt mandatory under GST?
 

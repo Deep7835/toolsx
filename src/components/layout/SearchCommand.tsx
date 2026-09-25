@@ -74,7 +74,7 @@ export function SearchProvider({ children }: { children: ReactNode }) {
                   if (e.key === "ArrowUp") { e.preventDefault(); setIdx((i) => Math.max(0, i - 1)); }
                   if (e.key === "Enter" && results[idx]) go(results[idx].slug);
                 }}
-                placeholder="Search 115 tools — GST, invoice, EMI, QR, salary…"
+                placeholder={`Search ${TOOLS.length} tools — GST, invoice, EMI, QR, salary…`}
                 className="h-14 w-full bg-transparent text-[15px] text-ink placeholder:text-muted outline-none"
                 aria-label="Search tools"
               />

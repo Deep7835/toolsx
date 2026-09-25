@@ -5,7 +5,7 @@ Whether you are adding GST to a quote, backing it out of an MRP, or checking whe
 
 ## The GST slabs in 2026
 
-The GST Council's "GST 2.0" rationalisation collapsed the four main slabs into two, plus a demerit rate:
+The GST Council's September 2025 rationalisation — called **GST 2.0**, and often "GST 3.0 reforms" in the press — collapsed the four main slabs into two, plus a demerit rate:
 
 | Rate | What falls here |
 |---|---|

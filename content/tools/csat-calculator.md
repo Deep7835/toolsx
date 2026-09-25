@@ -45,6 +45,7 @@ Collecting feedback by message must respect consent and frequency norms — the 
 
 - [NPS calculator](/tools/nps-calculator) — relationship-level loyalty.
 - [First contact resolution rate](/tools/fcr-rate) — support quality driver.
+- [Engagement rate calculator](/tools/engagement-rate) — how satisfied customers behave publicly.
 - [First response time](/tools/first-response-time) — speed driver.
 - [Google review request builder](/tools/google-review) — turn satisfaction into reviews.
 - [Customer retention rate](/tools/retention-rate) — the outcome CSAT predicts.

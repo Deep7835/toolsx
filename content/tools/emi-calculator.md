@@ -37,6 +37,7 @@ A "12% flat" loan charges interest on the original principal for the whole tenur
 - [Late payment interest](/tools/late-payment-interest) — cost of delaying suppliers vs borrowing.
 - [Depreciation calculator](/tools/depreciation-calculator) — for the asset the loan buys.
 - [Profit margin & break-even](/tools/profit-margin) — can the business carry the EMI?
+- [EBITDA calculator](/tools/ebitda-calculator) — the coverage ratio your bank will compute.
 - [SIP calculator](/tools/sip-calculator) — the opposite question: what monthly saving builds.
 
 ## FAQ

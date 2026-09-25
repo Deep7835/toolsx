@@ -36,6 +36,9 @@ export const CONTENT: Record<string, { steps?: string[]; faqs?: { q: string; a: 
     steps: ["Pick the marketplace and courier, and paste the AWB number.", "Fill the delivery and return addresses.", "Mark COD amount if applicable and note the parcel weight.", "Download PDF for a 4×6 thermal printer, or PNG."],
     faqs: [{ q: "Will the barcode scan?", a: "The AWB is encoded as Code 128, the format courier scanners expect. Print at 100% scale without ‘fit to page’." }, { q: "Can I use this for marketplace orders?", a: "Amazon/Flipkart generate their own labels for platform-fulfilled orders; use this for self-ship, Meesho supplier orders, or your own website orders." }],
   },
+  "gstin-validator": {
+    steps: ["Type or paste the 15-character GST number — spaces and dashes are ignored.", "Read the verdict: format, state code and check digit are validated instantly.", "Check the decoded details — state, PAN, taxpayer type and how many registrations that PAN holds in the state.", "Open the GST portal link to confirm the registration is active and see the legal name."],
+  },
   "hsn-finder": {
     faqs: [{ q: "How many digits do I need?", a: "Turnover up to ₹5 crore: 4-digit HSN on B2B invoices. Above ₹5 crore: 6 digits on all invoices. Exports need 8 digits." }, { q: "Are these rates current?", a: "They reflect the GST 2.0 structure effective 22 September 2025. Always cross-check the CBIC schedule for specific products." }],
   },

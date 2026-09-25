@@ -47,6 +47,7 @@ Societies handling members' personal data (phone numbers, vehicle details, CCTV)
 - [Late payment interest](/tools/late-payment-interest) — verify interest on arrears.
 - [GST calculator](/tools/gst-calculator) — inclusive/exclusive maintenance amounts.
 - [Rent receipt](/tools/rent-receipt) — for members who let their flats.
+- [Broadband bill](/tools/broadband-bill) — societies that recover a shared leased line.
 
 ## FAQ
 

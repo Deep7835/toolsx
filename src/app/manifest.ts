@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
 import { BRAND } from "@/lib/brand";
+import { TOOLS } from "@/lib/registry";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: BRAND.name,
     short_name: BRAND.name,
-    description: "115 free, private business utilities for Indian MSMEs.",
+    description: `${TOOLS.length} free, private business utilities for Indian MSMEs.`,
     start_url: "/",
     display: "standalone",
     background_color: "#fafaf9",

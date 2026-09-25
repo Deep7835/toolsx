@@ -8,6 +8,8 @@ tags: [gst, billing, retail]
 tools: [gst-calculator, hsn-finder, gst-invoice, price-tag-generator]
 ---
 
+> The September 2025 rationalisation is called **GST 2.0** by the GST Council; you will also see it described as "GST 3.0 reforms" or "next-generation GST reforms" in the press and in trade circulars. All three names refer to the same slab structure described here.
+
 The GST Council's "next-generation" reform is the biggest change to indirect tax since GST launched in 2017. From **22 September 2025**, the 12% and 28% slabs were abolished. Almost everything now sits at **5% or 18%**, with a **40% demerit rate** for tobacco, pan masala, aerated drinks, large cars and online money gaming. A year in, searches for "new GST rate list" are still climbing every month because rate cards, POS systems and old invoice templates are still catching up.
 
 ## The new structure at a glance

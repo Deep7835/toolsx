@@ -1,6 +1,6 @@
 # Kaagazo
 
-Kaagazo (kaagazo.com) — 115 free, private, browser-based business utilities for Indian shops, freelancers and MSMEs — GST invoices, UPI QR standees, salary & tax calculators, barcodes, labels, legal policies, SEO helpers and more. Everything runs client-side; nothing is uploaded.
+Kaagazo (kaagazo.com) — 116 free, private, browser-based business utilities for Indian shops, freelancers and MSMEs — GST invoices, UPI QR standees, salary & tax calculators, barcodes, labels, legal policies, SEO helpers and more. Everything runs client-side; nothing is uploaded.
 
 ## Stack
 
@@ -50,7 +50,7 @@ Privacy policy · Terms · no front-end secrets · HTTPS redirect + HSTS/securit
 ```
 src/
   app/                 routes: /, /tools, /tools/[slug], /categories, /favorites, /guides, /m (digital menu), legal pages
-  lib/registry.ts      metadata for all 115 tools (name, category, keywords, FAQs)
+  lib/registry.ts      metadata for all 116 tools (name, category, keywords, FAQs)
   lib/content.ts       how-to steps & FAQs
   lib/format.ts        ₹ formatting, lakh/crore words, dates
   lib/tax.ts           income-tax slabs (new/old regime), surcharge, rebate

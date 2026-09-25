@@ -122,6 +122,7 @@ export const loaders: Record<string, Loader> = {
   "meta-tags": () => import("./legal/MetaTags"),
   "serp-preview": () => import("./legal/SerpSnippet"),
   "hsn-finder": () => import("./legal/HsnFinder"),
+  "gstin-validator": () => import("./legal/GstinValidator"),
   "gst-calendar": () => import("./legal/GstCalendar"),
   "upi-mdr-guide": () => import("./legal/UpiMdrGuide"),
 };

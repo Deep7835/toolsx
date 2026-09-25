@@ -5,8 +5,10 @@ date: "2026-09-21"
 kind: guide
 hero: true
 tags: [gst, compliance]
-tools: [gst-invoice, barcode-scanner, purchase-order]
+tools: [gstin-validator, gst-invoice, barcode-scanner, purchase-order]
 ---
+
+> Paste any number into the [GSTIN validator](/tools/gstin-validator) to check its format and check digit instantly, and to decode the state, PAN and taxpayer type.
 
 Every B2B invoice you accept carries your supplier's GSTIN, and under the IMS matching system a wrong or fake one means lost input tax credit. "GST number check" is searched hundreds of thousands of times a month because it is the cheapest fraud prevention there is: thirty seconds on the portal.
 

@@ -52,6 +52,7 @@ Closing stock is valued at cost or net realisable value, whichever is lower; obs
 - [Discount calculator](/tools/discount-calculator) — clear slow stock profitably.
 - [Purchase order](/tools/purchase-order) — smaller, frequent orders.
 - [EMI calculator](/tools/emi-calculator) — what the working-capital loan on your stock costs.
+- [Defect rate calculator](/tools/defect-rate) — stock written off as unsellable.
 
 ## FAQ
 

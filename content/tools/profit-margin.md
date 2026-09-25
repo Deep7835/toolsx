@@ -43,6 +43,8 @@ The pricing of a whole business, from rent to inventory to payment fees, is work
 - [Net profit margin](/tools/net-profit-margin) — the bottom line after all expenses.
 - [Contribution margin](/tools/contribution-margin) — unit economics and break-even sensitivity.
 - [Seller pricing workflow](/tools/seller-pricing) — for Amazon, Flipkart and Meesho listings.
+- [EBITDA calculator](/tools/ebitda-calculator) — operating profit for lenders and buyers.
+- [Budget variance](/tools/budget-variance) — actual margin against plan.
 - [Discount calculator](/tools/discount-calculator) — offer math before you print tags.
 
 ## FAQ
