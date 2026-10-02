@@ -67,7 +67,19 @@ Penalties for non-registration are modest (₹1,000–₹10,000, more for repeat
 
 Notify changes (address, name, employee count) within 15–30 days, usually by amending online. On closure, inform within 15 days and surrender the certificate to avoid renewal demands.
 
+## Online or offline? It depends on the state
+
+Most large states now run the whole process online and issue a digitally signed certificate you print yourself — Maharashtra (Aaple Sarkar), Karnataka (e-Karmika), Delhi (Labour Department portal), Tamil Nadu, Telangana (TS-iPASS), Gujarat and Uttar Pradesh among them. Several of these have also moved to **deemed approval**: if nobody objects within the stated window, the certificate is generated automatically.
+
+Smaller states, union territories and some municipal corporations still work partly or wholly offline — a physical form at the municipal or labour office, the fee by challan, and a certificate collected in person. A few are hybrid: apply online, then submit self-attested documents at the counter before the certificate is released.
+
+Two things hold true either way: the application is to the **local authority** (municipal corporation or state labour department) for the specific premises, so two branches mean two registrations; and the certificate must be **displayed at the shop**, which inspectors do check.
+
 ## FAQ
+
+### Can I apply for a shop and establishment licence online?
+
+In most large states, yes — Maharashtra, Karnataka, Delhi, Tamil Nadu, Telangana, Gujarat and Uttar Pradesh all run online portals, several with deemed approval if there is no objection within the stated window. Some smaller states and municipal corporations are still offline or hybrid, where documents are submitted at the counter after applying online.
 
 ### Is a Shop Act licence needed for an online business run from home?
 In most states, yes, if you employ anyone or operate commercially from the premises; some states exempt sole operators. It also serves as business proof for a current account.

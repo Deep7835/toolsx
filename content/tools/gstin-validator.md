@@ -16,11 +16,11 @@ Take `27AAPFU0939F1ZV`:
 | 14 | `Z` | Fixed for every GSTIN |
 | 15 | `V` | Check digit, computed from the previous fourteen characters |
 
-Because the PAN sits inside the GSTIN, a supplier's GST number and their PAN must agree — a mismatch between the two on an invoice is a reliable sign that something was typed wrong or invented.
+Because the PAN sits inside the GSTIN, a supplier's GST number and their PAN must agree — a mismatch on an invoice is a reliable sign that something was typed wrong or invented.
 
 ## The check digit
 
-The last character is not decorative. Each of the first fourteen characters is converted to a value (0–9 then A–Z as 10–35), multiplied alternately by 1 and 2, the quotient and remainder of each product on division by 36 are added up, and the check digit is whatever brings the total to the next multiple of 36. A single mistyped character almost always breaks it — which is why this tool catches transposed digits that look perfectly plausible to the eye. When the check fails, it shows the number with the correct final character so you can see whether it was a simple slip.
+The last character is not decorative. Each of the first fourteen characters becomes a value (0–9, then A–Z as 10–35), multiplied alternately by 1 and 2; the quotient and remainder of each product on division by 36 are summed, and the check digit is whatever brings the total to the next multiple of 36. One mistyped character almost always breaks it, which is why this catches transpositions that look perfectly plausible. When the check fails, the tool shows the number with the correct final character so you can see whether it was a slip.
 
 ## How to use it
 
@@ -29,6 +29,14 @@ The last character is not decorative. Each of the first fourteen characters is c
 3. If it fails, the message names the reason — wrong length, bad state code, malformed PAN, missing Z, or a check-digit mismatch.
 4. Click through to the GST portal's search to confirm the registration is **active** and matches the legal name on the invoice.
 
+## Need a dummy GSTIN for testing?
+
+Developers building invoicing, ERP or billing software need GST numbers that **pass validation** without belonging to anyone. The generator on this page builds one for any state and taxpayer type: the state code is real, the PAN pattern is well formed, the 14th character is Z and the check digit is computed properly, so your validation logic accepts it — but the number is not a live registration and will return nothing on the GST portal.
+
+Use them in test environments, seed data, screenshots and documentation. Do **not** put one on an invoice, a vendor form or a website footer: issuing a document with a GST number that is not yours is a misrepresentation, and the portal check takes ten seconds for anyone who wants to look.
+
+If you only need a format example, `27AAPFU0939F1ZV` is the one used in GST documentation.
+
 ## Format valid is not the same as registered
 
 This tool proves a number is *well formed*. It cannot tell you whether the registration exists, is active, is suspended or cancelled, or belongs to the business named on the invoice — only the GST portal can, and it is free. Do both checks for any new supplier, because input tax credit depends on the supplier actually filing. The wider verification routine, including what to do when a GSTIN turns out to be cancelled, is in [How to verify a GST number (GSTIN)](/blog/how-to-verify-gstin-number-format).
@@ -36,10 +44,9 @@ This tool proves a number is *well formed*. It cannot tell you whether the regis
 ## When to check a GSTIN
 
 - **New supplier onboarding** — before the first [purchase order](/tools/purchase-order) goes out.
-- **Every B2B invoice you receive**, at least for large amounts; a wrong GSTIN on your purchase means your credit will not appear in GSTR-2B.
-- **Before invoicing a business customer** — a wrong GSTIN on the invoice you issue costs *them* the credit and gets the bill returned. The [GST invoice generator](/tools/gst-invoice) validates the field as you type.
-- **Marketplace and tender counterparties**, where a plausible-looking but invented number is a common fraud.
-- **Fake notices and calls** — scammers quote GST numbers that do not validate; the patterns are described in [GST scam calls, fake notices and OTP fraud](/blog/gst-scam-calls-and-fake-notices).
+- **Every B2B invoice you receive**: a wrong GSTIN on a purchase means the credit never appears in your GSTR-2B.
+- **Before invoicing a business customer** — a wrong GSTIN costs *them* the credit and gets the bill returned. The [GST invoice generator](/tools/gst-invoice) validates the field as you type.
+- **Marketplace and tender counterparties**, and **fake notices** — scammers quote numbers that do not validate; see [GST scam calls and fake notices](/blog/gst-scam-calls-and-fake-notices).
 
 ## Related tools
 
@@ -50,6 +57,10 @@ This tool proves a number is *well formed*. It cannot tell you whether the regis
 - [GST filing calendar](/tools/gst-calendar) — when the credit actually lands.
 
 ## FAQ
+
+### How do I know if a GST number is valid?
+
+Two separate checks. This page does the offline one instantly — the 15-character structure, a real state code and a correct check digit, which catches every typo and most invented numbers. The second check, whether the registration actually exists and is active, only the GST portal can answer; the button here takes you straight to it with the number filled in.
 
 ### Does this check whether the GST number is active?
 
@@ -69,4 +80,4 @@ No. The validation runs entirely in your browser; nothing is uploaded or logged.
 
 ### What is a sample GSTIN I can test with?
 
-`27AAPFU0939F1ZV` is the format example used in GST documentation, and the tool offers three more placeholder numbers with correct check digits. They are valid in structure but are not live registrations.
+`27AAPFU0939F1ZV` is the format example used in GST documentation, and the tool offers three more placeholder numbers with correct check digits. The generator will also build one for any state and taxpayer type. All of them are valid in structure and none is a live registration.

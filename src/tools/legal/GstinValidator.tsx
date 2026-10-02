@@ -1,7 +1,8 @@
 "use client";
 import { useMemo, useState } from "react";
-import { BadgeCheck, Copy, ShieldAlert, ShieldCheck } from "lucide-react";
+import { BadgeCheck, Copy, FlaskConical, ShieldAlert, ShieldCheck } from "lucide-react";
 import { Card, CardBody, CardHeader } from "@/components/ui/Card";
+import { Select } from "@/components/ui/Field";
 import { KV } from "@/components/ui/Stat";
 import { GST_STATES, PAN_HOLDER } from "@/data/gst-states";
 import { copyText } from "@/lib/export";
@@ -47,8 +48,20 @@ function analyse(raw: string): Result | null {
 /** Placeholder numbers with correct check digits — they follow the format but are not live registrations. */
 const SAMPLES = ["27AAPFU0939F1ZV", "07AAACP1234A1Z7", "29AAAFB5678C2ZG", "33AABCT9012D1ZT"];
 
+/** Build a structurally valid test GSTIN for a state. Format-correct, deliberately not a real registration. */
+function testGstin(stateCode: string, holder: string, seed: number) {
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const pick = (n: number) => letters[n % 26];
+  const pan = `AA${pick(seed)}${holder}${pick(seed + 7)}${String(1000 + ((seed * 37) % 9000))}${pick(seed + 13)}`;
+  const first14 = `${stateCode}${pan}1Z`;
+  return first14 + checkDigit(first14);
+}
+
 export default function GstinValidator() {
   const [raw, setRaw] = useState("");
+  const [genState, setGenState] = useState("27");
+  const [genHolder, setGenHolder] = useState("C");
+  const [seed, setSeed] = useState(3);
   const toast = useToast();
   const value = raw.replace(/\s|-/g, "").toUpperCase();
   const result = useMemo(() => analyse(raw), [raw]);
@@ -108,6 +121,24 @@ export default function GstinValidator() {
           </CardBody>
         </Card>
       ) : null}
+
+      <Card>
+        <CardHeader title="Need a test GSTIN?" description="For testing invoicing or ERP software. These are structurally valid with a correct check digit, and are deliberately not live registrations — never present one as a real GST number." />
+        <CardBody className="grid gap-3">
+          <div className="grid gap-3 sm:grid-cols-3">
+            <Select label="State" value={genState} onChange={(e) => setGenState(e.target.value)} options={Object.entries(GST_STATES).filter(([c]) => Number(c) <= 38).map(([c, n]) => ({ value: c, label: `${c} — ${n}` }))} />
+            <Select label="Type of taxpayer" value={genHolder} onChange={(e) => setGenHolder(e.target.value)} options={Object.entries(PAN_HOLDER).map(([k, v]) => ({ value: k, label: v }))} />
+            <div className="flex items-end"><button type="button" onClick={() => setSeed((n) => n + 1)} className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-border bg-surface px-4 text-sm font-medium text-ink hover:border-border-strong cursor-pointer"><FlaskConical className="h-4 w-4" /> Another one</button></div>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 rounded-2xl bg-surface-2 px-4 py-3">
+            <code className="font-mono text-lg tracking-[0.1em] text-ink">{testGstin(genState, genHolder, seed)}</code>
+            <div className="ml-auto flex gap-2">
+              <button type="button" onClick={() => copy(testGstin(genState, genHolder, seed))} className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-border bg-surface px-3 text-[13px] font-medium text-ink hover:border-border-strong cursor-pointer"><Copy className="h-3.5 w-3.5" /> Copy</button>
+              <button type="button" onClick={() => setRaw(testGstin(genState, genHolder, seed))} className="inline-flex h-9 items-center gap-1.5 rounded-lg bg-accent px-3 text-[13px] font-medium text-on-accent hover:bg-accent-hover cursor-pointer">Check it above</button>
+            </div>
+          </div>
+        </CardBody>
+      </Card>
 
       <Card>
         <CardHeader title="How the 15 characters break down" description="Example: 27AAPFU0939F1ZV" />

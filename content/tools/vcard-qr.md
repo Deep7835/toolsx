@@ -17,11 +17,20 @@ A visiting card that has to be typed into a phone is a visiting card that ends u
 
 Keep it lean: every extra field enlarges the QR and makes it harder to scan at small sizes. Name, company, one mobile, email and website is the sweet spot.
 
+## Two outputs: a .vcf file and a QR code
+
+The same contact details give you both, and they are used in different places:
+
+- A **.vcf file** (vCard 3.0) — the standard contact file that every phone, Outlook, Gmail and CRM imports. Attach it to an email, put it on a website as a "Save my contact" link, or send it in a chat. Download it with one tap here; no signup, no watermark.
+- A **QR code** carrying the same vCard — for printed things: visiting cards, standees, badges, slide decks. The customer points a camera and taps "Add contact".
+
+Most businesses want both: the file for digital sharing, the code for anything on paper.
+
 ## How to use the generator
 
 1. Fill in the fields; the preview updates as you type.
 2. Choose QR size, colour and error-correction level (M is the default; use H if you plan to place a small logo in the centre).
-3. Download PNG for print or SVG for designers, or copy the vCard text to attach as a `.vcf` file in emails.
+3. Download the **.vcf file** for digital sharing, PNG of the QR for print, or SVG for designers.
 4. Test with an iPhone and an Android before printing — both should show "Add to contacts".
 
 ## Where businesses use vCard QRs
@@ -53,6 +62,10 @@ A vCard QR works offline and requires no page to load; a link page (Linktree-sty
 - [Staff ID card creator](/tools/staff-id-card) — contact QR on badges.
 
 ## FAQ
+
+### Can I download a .vcf file, or is it only a QR code?
+
+Both. The tool produces a standard vCard 3.0 `.vcf` file you can download and share, and a QR code carrying the same details for anything printed.
 
 ### Does the vCard QR work on iPhone and Android?
 
