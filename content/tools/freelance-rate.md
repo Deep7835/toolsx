@@ -36,6 +36,7 @@ Registration is compulsory once receipts cross **₹20 lakh** (₹10 lakh in spe
 - Advance of 30–50% on a [proforma invoice](/tools/proforma-invoice); balance on delivery via a [GST invoice](/tools/gst-invoice) with a UPI QR or bank details.
 - Payment terms in writing; for registered MSMEs (Udyam covers freelancers as micro enterprises), the 45-day rule and interest apply — see [Section 43B(h)](/blog/section-43b-h-45-day-payment-rule) and the [late payment interest calculator](/tools/late-payment-interest).
 - Clients deduct 10% TDS under 194J on professional fees above ₹50,000 a year; claim it against your tax.
+- Foreign clients: file an [EDF with your bank](/blog/edf-filing-service-exporters-october-2026) within 30 days of the invoice month, and get the money in within nine months — both are FEMA obligations from 1 October 2026.
 
 ## Related tools
 

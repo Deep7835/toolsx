@@ -7,6 +7,10 @@ export interface PostMeta {
   slug: string;
   title: string;
   description: string;
+  /** Short title tag for search results (≈60 chars). Falls back to `title`. */
+  seoTitle?: string;
+  /** Short meta description (≈155 chars). Falls back to `description`. */
+  seoDescription?: string;
   date: string;      // ISO
   updated?: string;  // ISO
   kind: PostKind;
@@ -37,6 +41,8 @@ export function getAllPosts(): Post[] {
       slug: file.replace(/\.md$/, ""),
       title: String(data.title ?? file),
       description: String(data.description ?? ""),
+      seoTitle: data.seoTitle ? String(data.seoTitle) : undefined,
+      seoDescription: data.seoDescription ? String(data.seoDescription) : undefined,
       date: String(data.date ?? "2026-01-01"),
       updated: data.updated ? String(data.updated) : undefined,
       kind: (data.kind as PostKind) ?? "guide",

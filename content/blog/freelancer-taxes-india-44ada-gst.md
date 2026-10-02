@@ -50,6 +50,10 @@ You still need GST registration if turnover exceeds ₹20 lakh (exports count to
 
 **Note:** platforms like Upwork deduct their fee and, for Indian freelancers, TDS of 1% under 194-O — claim it.
 
+## 5a. EDF: the new FEMA filing on every export invoice
+
+From **1 October 2026**, every invoice you raise on a foreign client must also be declared to your bank on an **Export Declaration Form**, within 30 days of the end of the invoice month, and the money must come in within nine months. This is a FEMA filing, separate from GST, and it replaced SOFTEX for software exporters. The rules, deadlines and penalties are in [EDF filing is now compulsory for service exporters](/blog/edf-filing-service-exporters-october-2026).
+
 ## 6. Setting rates that survive tax
 
 A ₹1,200/hour rate at 25 billable hours a week sounds like ₹15 lakh a year, but after 18% GST (if you charge it and clients won't gross up), 10% TDS timing, and the non-billable half of your week, the in-hand reality is different. Work backwards from a target income with the [freelance rate calculator](/tools/freelance-rate).

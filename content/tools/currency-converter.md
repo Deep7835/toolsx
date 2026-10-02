@@ -21,6 +21,7 @@ Rates refresh from a public rate feed while you are online; the last fetched rat
 - **Invoicing**: you may bill in foreign currency, but GST law requires the INR value on the tax invoice using the RBI reference rate (or the rate notified by CBIC for customs) on the date of supply.
 - **Zero-rated exports**: services to overseas clients paid in convertible foreign exchange are exports — file a **Letter of Undertaking** to invoice without IGST, or pay and claim a refund. The steps, and the ₹20 lakh registration threshold, are in [Freelancer taxes in India: 44ADA, GST, LUT](/blog/freelancer-taxes-india-44ada-gst).
 - **FIRC/FIRA**: keep the bank's inward remittance certificate for each receipt; GST refunds and income-tax scrutiny ask for it.
+- **EDF**: since 1 October 2026 every service or software export invoice must be declared to your AD bank within 30 days of the invoice month, with the proceeds realised in nine months — see [EDF filing for service exporters](/blog/edf-filing-service-exporters-october-2026).
 - **Pricing**: build a 2–3% buffer for conversion cost and rate movement into the [freelance rate](/tools/freelance-rate).
 
 ## Importers
