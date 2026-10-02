@@ -17,11 +17,17 @@ Volumetric weight (kg) = L × W × H (cm) ÷ divisor.
 
 Chargeable weight = the higher of actual and volumetric, rounded **up** to the carrier's slab (usually 0.5 kg). The 40 × 30 × 20 cm box at divisor 5000 is 4.8 kg → billed as 5 kg; at Blue Dart's 4000 it is 6 kg.
 
+## Estimating the price, not just the weight
+
+Courier pricing in India is chargeable weight × your rate, and the rate is the part no calculator can know for you: it depends on your contract, the zone (local, regional, metro, rest of India, North-East and J&K), the mode (surface or air) and whether the shipment is prepaid or COD. Delhivery, Blue Dart, DTDC, Xpressbees and Ecom all publish slab rates per 500 g by zone for walk-in customers, and give aggregator or contract customers something lower.
+
+So: take the first slab rate from your own rate card or your aggregator dashboard, enter it here, and the tool prices the parcel at the correct chargeable weight. That is the number that is usually wrong when a seller is surprised by an invoice — not the rate, but the weight the rate was applied to.
+
 ## How to use the calculator
 
 1. Enter the parcel's length, width and height in cm and its actual weight.
 2. Pick the carrier divisor (or enter a custom one from your rate card).
-3. Read the volumetric weight, the chargeable weight after rounding, and — if you enter a rate per kg or per 500 g — the shipping cost.
+3. Read the volumetric weight, the chargeable weight after rounding, and — if you enter a rate per kg or per 500 g — the estimated freight.
 4. Try smaller dimensions; the tool shows the saving per parcel and per 100 parcels.
 5. Use the multi-parcel mode for a B2B consignment: total chargeable weight for several boxes.
 
@@ -65,6 +71,10 @@ Yes, up to the carrier's slab, typically 0.5 kg. A 1.1 kg chargeable weight is b
 ### Do couriers actually measure boxes?
 
 Yes, hubs use dimensioning scanners and bill the difference with a penalty if your declared dimensions are lower. Measure the packed parcel accurately.
+
+### How do I calculate Delhivery or Blue Dart charges?
+
+Chargeable weight × your slab rate for the destination zone. Use divisor 5000 for Delhivery, Xpressbees, DTDC and Ekart, and 4000 for Blue Dart; then enter the rate from your own rate card, since contract rates differ widely from published walk-in rates.
 
 ### Does the divisor apply to length in inches?
 

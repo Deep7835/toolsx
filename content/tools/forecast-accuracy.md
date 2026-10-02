@@ -23,6 +23,10 @@ Forecast ₹8,00,000, actual ₹9,20,000 → error +₹1,20,000, APE 13%, accura
 4. Use MAPE to size safety stock: at 13% MAPE on 500 units, keeping ~65 extra units covers a typical miss.
 5. Recheck after each quarter; forecasting improves fastest when errors are reviewed monthly.
 
+## Forecast bias: the number the tool also gives you
+
+Bias = (Forecast − Actual) ÷ Actual × 100. Positive means you forecast high, negative means you forecast low. Forecast ₹10,00,000 against actual ₹8,80,000 and the bias is **+13.6%** — you planned for 14% more demand than arrived, and that difference is sitting in your stockroom. The calculator shows bias beside accuracy on every calculation, and flags it once it passes 15% in either direction.
+
 ## Why bias matters more than accuracy
 
 Two shops both have 15% MAPE. One misses randomly in both directions; the other always forecasts 15% high because the owner "plans for growth". The first needs safety stock; the second needs to cut forecasts by 15% — and is quietly tying up cash in inventory every month. The bias line separates the two. Use the [inventory turnover calculator](/tools/inventory-turnover) to see the cash cost of chronic over-forecasting.

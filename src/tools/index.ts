@@ -48,7 +48,7 @@ export const loaders: Record<string, Loader> = {
   "forecast-accuracy": () => import("./calc/specs").then((m) => ({ default: m.make("forecast-accuracy") })),
   "revenue-growth": () => import("./calc/specs").then((m) => ({ default: m.make("revenue-growth") })),
   "engagement-rate": () => import("./calc/specs").then((m) => ({ default: m.make("engagement-rate") })),
-  "csat-calculator": () => import("./calc/specs").then((m) => ({ default: m.make("csat-calculator") })),
+  "csat-calculator": () => import("./calc/CsatCalculator"),
   "fcr-rate": () => import("./calc/specs").then((m) => ({ default: m.make("fcr-rate") })),
   "first-response-time": () => import("./calc/specs").then((m) => ({ default: m.make("first-response-time") })),
   "nps-calculator": () => import("./calc/specs").then((m) => ({ default: m.make("nps-calculator") })),

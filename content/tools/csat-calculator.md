@@ -3,17 +3,41 @@ updated: 2026-09-22
 ---
 "Was everything okay?" gets a nod from everyone; a one-question survey after the order gets the truth. Customer satisfaction score (CSAT) is the share of customers who rated a specific interaction — a delivery, a repair, a meal, a support chat — as satisfied. It is quick to collect on WhatsApp, easy to explain to staff, and the fastest feedback loop a small business can run. This calculator computes CSAT from your survey counts on a 1–5 (or 1–3, 1–7, 1–10) scale, shows the distribution, the trend, and the margin of error for small samples.
 
-## The formula
+## How to calculate CSAT
 
-CSAT = (Number of satisfied responses — typically 4 and 5 on a 5-point scale) ÷ Total responses × 100.
+CSAT = (Number of satisfied responses) ÷ (Total responses) × 100.
 
-Out of 85 responses last month: 39 gave 5, 27 gave 4, 12 gave 3, 5 gave 2, 2 gave 1 → CSAT = 66 ÷ 85 = **77.6%**. Mean score 4.13 out of 5. With 85 responses the margin of error is about ±9 points, so a move from 78% to 74% next month is noise; a move to 65% is a signal.
+Out of 85 responses last month: 39 gave 5, 27 gave 4, 12 gave 3, 5 gave 2, 2 gave 1 → CSAT = 66 ÷ 85 = **77.6%**. With 85 responses the margin of error is about ±9 points, so a move from 78% to 74% next month is noise; a move to 65% is a signal.
+
+## Two different numbers are both called CSAT
+
+This is the source of most confusion when two teams quote different figures from the same survey.
+
+| Method | What it is | How it reads |
+|---|---|---|
+| **CSAT percentage** (top-box) | Satisfied responses ÷ total × 100 | "Our CSAT is 78%" |
+| **Average rating** | Mean of every rating given | "We're at 4.13 out of 5" |
+
+The percentage is the standard for reporting and benchmarking; the average is more sensitive to a handful of angry 1s, which makes it useful for spotting a bad week. The calculator shows both from the same data, so you can report whichever your team uses without re-running the survey.
+
+## Which ratings count as "satisfied"?
+
+It depends on the scale, and the calculator applies the convention for each:
+
+| Scale | Counted as satisfied |
+|---|---|
+| 1–3 | Top box (3) |
+| 1–5 | Top 2 boxes (4 and 5) |
+| 1–7 | Top 2 boxes (6 and 7) |
+| 0–10 | Top 2 boxes (9 and 10) |
+
+Whatever you choose, keep it fixed. Switching from top-2-box to top-3-box mid-year will "improve" your CSAT by ten points without a single customer being happier.
 
 ## How to use the calculator
 
-1. Choose the scale and enter the count of responses at each level (or paste the ratings).
-2. Read CSAT, the mean score, the distribution and the sample's margin of error.
-3. Add previous periods to see the trend.
+1. Choose the scale — 1–3, 1–5, 1–7 or 0–10 — and enter how many people gave each rating.
+2. Read the CSAT percentage, the average rating, the distribution bars and the sample's margin of error.
+3. Check the "responses needed for ±5 points" line before you draw a conclusion from a small survey.
 4. Segment by touchpoint — delivery, in-store, support, product — or by staff member or branch.
 5. Pair with an open text question; the numbers say *how much*, the comments say *why*.
 
@@ -58,7 +82,11 @@ Collecting feedback by message must respect consent and frequency norms — the 
 
 ### Which ratings count as "satisfied"?
 
-The top two on a 5-point scale (4 and 5). On a 3-point scale, only the top; on a 10-point scale, 9–10 for a strict view or 7–10 for a lenient one — pick one and be consistent.
+The top two boxes on a 5-point scale (4 and 5), the top box on a 3-point scale, 6 and 7 on a 7-point scale, and 9 and 10 on a 0–10 scale. Pick one convention and never change it mid-year.
+
+### What is the difference between CSAT score and CSAT percentage?
+
+They are usually the same thing — the percentage of respondents who chose a satisfied rating. Some teams use "CSAT score" to mean the average rating instead (4.13 out of 5). The calculator shows both so there is no ambiguity.
 
 ### How many responses do I need?
 
