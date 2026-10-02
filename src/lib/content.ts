@@ -36,6 +36,9 @@ export const CONTENT: Record<string, { steps?: string[]; faqs?: { q: string; a: 
     steps: ["Pick the marketplace and courier, and paste the AWB number.", "Fill the delivery and return addresses.", "Mark COD amount if applicable and note the parcel weight.", "Download PDF for a 4×6 thermal printer, or PNG."],
     faqs: [{ q: "Will the barcode scan?", a: "The AWB is encoded as Code 128, the format courier scanners expect. Print at 100% scale without ‘fit to page’." }, { q: "Can I use this for marketplace orders?", a: "Amazon/Flipkart generate their own labels for platform-fulfilled orders; use this for self-ship, Meesho supplier orders, or your own website orders." }],
   },
+  "edf-filing": {
+    steps: ["Set your PAN, AD bank and AD code once, and say whether you export software or other services and whether you are in an SEZ — the tool then names the authority you file with.", "Add each invoice raised on a foreign client: number, date, client, country, currency, amount and SAC code.", "For foreign-currency invoices, enter the RBI reference rate for the invoice date so the rupee value is right.", "Read the deadlines: the EDF date is 30 days after the invoice month ends, and the realisation date is nine months from the invoice (twelve if billed in rupees).", "Download the CSV or print the month-wise summary and send it to your bank with the filing."],
+  },
   "gstin-validator": {
     steps: ["Type or paste the 15-character GST number — spaces and dashes are ignored.", "Read the verdict: format, state code and check digit are validated instantly.", "Check the decoded details — state, PAN, taxpayer type and how many registrations that PAN holds in the state.", "Open the GST portal link to confirm the registration is active and see the legal name."],
   },

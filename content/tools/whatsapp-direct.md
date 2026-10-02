@@ -33,7 +33,7 @@ Every "message us on WhatsApp" that makes a customer save your number first lose
 
 ## Costs, rules and etiquette
 
-- **Inbound is free.** Customer-initiated chats cost nothing on the WhatsApp Business app and open a free 24-hour service window on the API; only business-initiated template messages are charged — the 2026 per-message rates and how to keep spend near zero are in [WhatsApp Business per-message pricing](/blog/whatsapp-business-per-message-pricing-2026).
+- **Inbound is free.** Customer-initiated chats cost nothing on the WhatsApp Business app, and the API gives each number 1,000 free service replies a month. Since 1 October 2026 utility messages inside the 24-hour window are charged — see [WhatsApp just started charging for order updates](/blog/whatsapp-utility-messages-chargeable-october-2026) and the fuller rate guide in [WhatsApp Business per-message pricing](/blog/whatsapp-business-per-message-pricing-2026).
 - **Consent**: TRAI's 2026 anti-spam norms and WhatsApp's policies both require opt-in for promotional messages. A customer who clicks your link has consented to that conversation, not to a broadcast list — see [TRAI's new anti-spam rules](/blog/trai-anti-spam-rules-2026-businesses-that-call-or-message-customers).
 - **Reply fast**: the [first response time](/tools/first-response-time) calculator tracks it; under 15 minutes in business hours is the bar customers now expect.
 - **Catalogue and payments**: WhatsApp Business lets you attach a catalogue and, for many accounts, collect UPI payments in-chat; the [payment receipt](/tools/payment-receipt) tool closes the loop.

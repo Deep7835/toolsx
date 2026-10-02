@@ -7,6 +7,8 @@ tags: [msme, finance, compliance]
 tools: [late-payment-interest, emi-calculator, purchase-order, gst-invoice]
 ---
 
+> **Updated:** the Micro, Small and Medium Enterprises Development (Amendment) Act, 2026 received assent on 13 August 2026 and changes registration, TReDS and enforcement. See [The MSMED Amendment Act is law](/blog/msmed-amendment-act-2026-treds-penalties-dispute-resolution).
+
 Budget 2025 raised the investment and turnover limits that define micro, small and medium enterprises by **2.5× and 2× respectively**, effective **1 April 2025**. Overnight, thousands of "small" companies became "micro", and businesses that had outgrown the scheme became eligible again. "Udyam registration new limit" has been a rising search all year.
 
 ## The new thresholds

@@ -7,6 +7,8 @@ tags: [msme, income tax, finance]
 tools: [late-payment-interest, purchase-order, gst-invoice, business-days]
 ---
 
+> **Updated:** the MSMED Act was amended in August 2026 — TReDS settlement is now compulsory for central public sector enterprises, Facilitation Councils work to fixed timelines and Section 22 breaches carry money penalties. See [The MSMED Amendment Act is law](/blog/msmed-amendment-act-2026-treds-penalties-dispute-resolution).
+
 Since assessment year 2024-25, **Section 43B(h)** of the Income-tax Act denies buyers a deduction for any sum owed to a **micro or small enterprise** that is not paid within the time allowed by **Section 15 of the MSMED Act** — 45 days with a written agreement, 15 days without. The expense becomes deductible only in the year it is actually paid. Two March year-ends later, it is still one of the most-searched provisions by both CAs and suppliers, and the 2025 Act carries it forward (renumbered).
 
 ## How the clock works

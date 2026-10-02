@@ -44,6 +44,7 @@ Registration is compulsory once receipts cross **₹20 lakh** (₹10 lakh in spe
 - [Income tax calculator](/tools/income-tax) — the tax line in the rate.
 - [Advance tax calculator](/tools/advance-tax) — quarterly instalments.
 - [Currency converter](/tools/currency-converter) — foreign-client pricing.
+- [EDF filing helper](/tools/edf-filing) — the FEMA deadlines on every export invoice.
 - [Employee cost calculator](/tools/employee-cost) — what the client would pay an employee.
 
 ## FAQ

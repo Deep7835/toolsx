@@ -7,14 +7,16 @@ tags: [marketing, whatsapp]
 tools: [whatsapp-direct, google-review, social-post, payment-receipt]
 ---
 
+> **Updated 2 October 2026.** Meta changed this again on 1 October: utility messages sent inside the 24-hour service window are now **charged**, and each business number gets 1,000 free service replies a month. The table below has been corrected — the detail is in [WhatsApp just started charging for order updates](/blog/whatsapp-utility-messages-chargeable-october-2026).
+
 WhatsApp is the front desk of Indian small business, and Meta's pricing changes on **1 July 2025** made "WhatsApp Business API cost" a permanent top search. The short version: if you use the free **WhatsApp Business app**, nothing changed. If you use the **API** through a provider (Interakt, Wati, AiSensy, Gupshup, Zoho…), you now pay **per message delivered**, by category.
 
 ## The 2026 price sheet for India (approximate)
 
 | Message category | Price per message | When it's free |
 |---|---|---|
-| **Service** (replies to customers) | Free | Always, within the 24-hour customer-service window |
-| **Utility** (order updates, invoices, OTP-style alerts) | ≈ ₹0.10–0.12 | Free when sent inside an open 24-hour window |
+| **Service** (replies to customers) | ≈ ₹0.115 after the free allowance | **First 1,000 per business number each month** (from 1 October 2026) |
+| **Utility** (order updates, invoices, OTP-style alerts) | ≈ ₹0.115 | **No longer free inside the 24-hour window** (from 1 October 2026); still free in a 72-hour click-to-WhatsApp ad window |
 | **Authentication** (OTPs) | ≈ ₹0.10 | — |
 | **Marketing** (offers, promos, re-engagement) | ≈ ₹0.78–0.88 | Never |
 
@@ -23,7 +25,7 @@ Prices are set by Meta and vary slightly by provider mark-up; volume tiers reduc
 ## Where the money leaks
 
 1. **Templates mis-categorised as marketing.** "Your order is ready — also check our new arrivals!" is marketing, at 8× the utility price. Keep utility templates purely transactional.
-2. **Sending utility messages *outside* the 24-hour window.** A "payment received" message 26 hours after the customer last wrote to you is billed; the same message at hour 23 is free. Reply promptly.
+2. **Sending more utility messages than the order needs.** Since 1 October 2026 every utility message is billed, inside the service window or outside it, so "packed" and "shipped" are better merged into one message with the tracking link.
 3. **Blast campaigns to cold lists.** 5,000 marketing messages ≈ ₹4,400. Fine if it converts; expensive if it's a weekly habit. Meta also throttles marketing to users who ignore messages.
 4. **Provider platform fees** on top of Meta's rates — ₹1,000–5,000/month is typical. Compare before renewing.
 

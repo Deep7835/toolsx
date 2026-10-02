@@ -123,6 +123,7 @@ export const loaders: Record<string, Loader> = {
   "serp-preview": () => import("./legal/SerpSnippet"),
   "hsn-finder": () => import("./legal/HsnFinder"),
   "gstin-validator": () => import("./legal/GstinValidator"),
+  "edf-filing": () => import("./legal/EdfFiling"),
   "gst-calendar": () => import("./legal/GstCalendar"),
   "upi-mdr-guide": () => import("./legal/UpiMdrGuide"),
 };

@@ -55,7 +55,7 @@ Since 22 September 2025 most goods and services fall in the 5% or 18% slab, with
 - [Delivery challan](/tools/delivery-challan) when goods move without a sale — job work, branch transfers, approval basis.
 - [UPI QR standee](/tools/upi-standee) for a counter QR that works for any amount.
 
-Exporting services? Each foreign-client invoice now needs an [Export Declaration Form filed with your bank](/blog/edf-filing-service-exporters-october-2026) within 30 days of the invoice month.
+Exporting services? Each foreign-client invoice now needs an [Export Declaration Form filed with your bank](/blog/edf-filing-service-exporters-october-2026) within 30 days of the invoice month — the [EDF filing helper](/tools/edf-filing) tracks the dates.
 
 ## FAQ
 

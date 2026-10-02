@@ -49,6 +49,8 @@ Set reminders alongside GST dates using the [GST filing calendar](/tools/gst-cal
 - [Purchase order](/tools/purchase-order) — state TDS treatment in payment terms.
 - [GST invoice](/tools/gst-invoice) — invoices that show GST separately so TDS is computed on the right base.
 - [Rent receipt](/tools/rent-receipt) — for 194-IB rent by individuals.
+
+Buying property from an NRI no longer needs a TAN — the PAN-based Form 141 route started on 1 October 2026: [TDS on property purchase from an NRI](/blog/tds-property-purchase-nri-form-141-pan-no-tan).
 - [Advance tax calculator](/tools/advance-tax) — the payee's side: TDS credit against advance tax.
 - [Income tax calculator](/tools/income-tax) — where TDS credits settle.
 

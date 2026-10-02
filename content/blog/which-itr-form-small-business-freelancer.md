@@ -8,6 +8,8 @@ tags: [income tax, compliance, freelancing]
 tools: [income-tax, advance-tax, tds-calculator, in-hand-salary]
 ---
 
+> **Updated 2 October 2026:** CBDT has extended the AY 2026-27 tax audit report to 21 October and the audit-case ITR to 21 November — see [Tax audit deadline moved to 21 October](/blog/tax-audit-itr-due-date-extended-ay-2026-27).
+
 Picking the wrong ITR form is the most common reason a return is marked "defective" (Section 139(9)) and has to be re-filed. The form depends on the *sources* of income and their *size*, not on whether you are "small". Here is the decision table for **tax year 2025-26 (assessment year 2026-27)**, filed in 2026, and the same logic applies under the 2025 Act going forward.
 
 ## The decision table

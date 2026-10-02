@@ -44,6 +44,8 @@ Invoice ₹2,50,000, due 1 July 2026, paid 20 September 2026 (81 days late). MSM
 - [GST invoice generator](/tools/gst-invoice) — print payment terms and interest clauses.
 - [Purchase order](/tools/purchase-order) — agree the credit period in writing.
 - [Business days calculator](/tools/business-days) — count the window.
+
+The MSMED Act was amended in August 2026 — compulsory TReDS settlement by public sector buyers, fixed Facilitation Council timelines and graded penalties: [The MSMED Amendment Act is law](/blog/msmed-amendment-act-2026-treds-penalties-dispute-resolution).
 - [EMI calculator](/tools/emi-calculator) — compare with the cost of borrowing.
 
 ## FAQ

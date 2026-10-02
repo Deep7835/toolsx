@@ -10,6 +10,8 @@ tags: [compliance, freelancing, finance, msme]
 tools: [gst-invoice, currency-converter, freelance-rate, business-days, proforma-invoice]
 ---
 
+> **Companion pieces:** the step-by-step setup is in [Your first EDF is due on 30 November](/blog/edf-filing-deadline-30-november-what-to-do-now), the import side of the same regulations in [The other half of FEMA 2026](/blog/fema-2026-import-rules-payment-timelines-advance-remittance), and the [EDF filing helper](/tools/edf-filing) works out every deadline from your invoice list.
+
 If you invoiced a foreign client on or after **1 October 2026** — a design retainer, a consulting engagement, a SaaS subscription, an export of software — you now have a filing obligation you probably did not have last month. Under the **Foreign Exchange Management (Export and Import of Goods and Services) Regulations, 2026** (Notification No. FEMA 23(R)/2026-RB dated 13 January 2026, in force from 1 October 2026), every exporter of services must declare that invoice on an **Export Declaration Form** within 30 days of the end of the month in which it was raised.
 
 Goods exporters have filed EDFs for years — it happens automatically with the shipping bill. What changed on 1 October is that **services and software came into the same form**, and SOFTEX, the form software exporters filed through STPI, is gone.

@@ -50,6 +50,7 @@ The calendar applies the state rule for the QRMP 3B date automatically. A narrat
 - [GST calculator](/tools/gst-calculator) — check liability figures.
 - [Late payment interest](/tools/late-payment-interest) — 18% interest on delayed tax.
 - [Business days calculator](/tools/business-days) — count working days to a deadline.
+- [EDF filing helper](/tools/edf-filing) — the FEMA deadline that now sits alongside your GST dates.
 - [HSN/SAC finder](/tools/hsn-finder) — HSN summary in GSTR-1 needs correct codes.
 
 ## FAQ

@@ -52,6 +52,8 @@ Marketplace sellers must be GST-registered regardless of turnover. Platforms ded
 - [Shipping label generator](/tools/shipping-label) — 4×6 labels for self-ship orders.
 - [Barcode generator](/tools/barcode-generator) — EAN/GS1 codes for listings.
 
+Importing your stock? Payment timelines now follow your contract rather than a flat six months: [The other half of FEMA 2026](/blog/fema-2026-import-rules-payment-timelines-advance-remittance).
+
 ## FAQ
 
 ### Why is my margin lower than the platform's calculator shows?

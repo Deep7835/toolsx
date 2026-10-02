@@ -52,7 +52,7 @@ You still need GST registration if turnover exceeds ₹20 lakh (exports count to
 
 ## 5a. EDF: the new FEMA filing on every export invoice
 
-From **1 October 2026**, every invoice you raise on a foreign client must also be declared to your bank on an **Export Declaration Form**, within 30 days of the end of the invoice month, and the money must come in within nine months. This is a FEMA filing, separate from GST, and it replaced SOFTEX for software exporters. The rules, deadlines and penalties are in [EDF filing is now compulsory for service exporters](/blog/edf-filing-service-exporters-october-2026).
+From **1 October 2026**, every invoice you raise on a foreign client must also be declared to your bank on an **Export Declaration Form**, within 30 days of the end of the invoice month, and the money must come in within nine months. This is a FEMA filing, separate from GST, and it replaced SOFTEX for software exporters. The rules, deadlines and penalties are in [EDF filing is now compulsory for service exporters](/blog/edf-filing-service-exporters-october-2026), the practical setup in [Your first EDF is due on 30 November](/blog/edf-filing-deadline-30-november-what-to-do-now), and the [EDF filing helper](/tools/edf-filing) tracks every deadline for you.
 
 ## 6. Setting rates that survive tax
 
