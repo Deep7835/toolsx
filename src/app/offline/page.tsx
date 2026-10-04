@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { WifiOff } from "lucide-react";
-export const metadata = { title: "Offline" };
+export const metadata = {
+  title: "You are offline — Kaagazo",
+  description: "Kaagazo works offline for pages you have already opened. Reconnect to load new tools and guides.",
+  robots: { index: false, follow: false },
+};
 export default function Offline() {
   return (
     <div className="mx-auto max-w-md px-4 py-24 text-center">

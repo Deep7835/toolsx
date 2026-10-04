@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { BRAND } from "@/lib/brand";
 import { ContactForm } from "./ContactForm";
 
-export const metadata: Metadata = { title: "Contact", description: `Suggest a tool, report a wrong rate, or ask a question — the ${BRAND.name} team reads everything.`, alternates: { canonical: "/contact" } };
+export const metadata: Metadata = { title: "Contact Kaagazo — suggest a tool or report an error", description: `Suggest a tool, report a wrong rate, or ask a question — the ${BRAND.name} team reads everything.`, alternates: { canonical: "/contact" } };
 
 export default function Contact() {
   return (

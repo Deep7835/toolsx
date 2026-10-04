@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ProsePage } from "@/components/layout/Prose";
-export const metadata: Metadata = { title: "Privacy policy", description: "What Kaagazo collects (almost nothing), how local storage and optional analytics cookies work, and your rights under the DPDP Act.", alternates: { canonical: "/privacy-policy" } };
+export const metadata: Metadata = { title: "Privacy policy — what we collect and why", description: "What Kaagazo collects (almost nothing), how local storage and optional analytics cookies work, and your rights under the DPDP Act.", alternates: { canonical: "/privacy-policy" } };
 export default function Privacy() {
   return (
     <ProsePage eyebrow="Legal" title="Privacy policy" description="Short version: we can’t see your data, because it never leaves your device.">

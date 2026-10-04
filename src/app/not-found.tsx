@@ -1,8 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { HomeSearch } from "@/components/layout/HomeSearch";
 import { POPULAR_SLUGS, toolBySlug } from "@/lib/registry";
+
+export const metadata: Metadata = {
+  title: "Page not found",
+  description: "That page isn’t here. Search the 117 free Kaagazo tools, or pick one of the popular ones.",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

@@ -8,6 +8,7 @@ import { ToolGrid } from "@/components/layout/ToolGrid";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Empty } from "@/components/ui/Empty";
 
+
 export default function FavoritesPage() {
   const { favs } = useFavorites();
   const { recent } = useRecent();
