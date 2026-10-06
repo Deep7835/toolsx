@@ -3,14 +3,8 @@ import { cn } from "@/lib/cn";
 import { BRAND } from "@/lib/brand";
 
 export function Mark({ className }: { className?: string }) {
-  return (
-    <span className={cn("relative inline-flex h-8 w-8 items-center justify-center rounded-[9px] bg-ink text-bg dark:bg-accent dark:text-on-accent", className)} aria-hidden>
-      <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M7 4h7l4 4v12H7z" />
-        <path d="M14 4v4h4M10 13h5M10 17h5" />
-      </svg>
-    </span>
-  );
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img src="/logo.png" alt="" width={32} height={32} className={cn("h-8 w-8 shrink-0", className)} aria-hidden />;
 }
 
 export function Logo({ className, compact }: { className?: string; compact?: boolean }) {

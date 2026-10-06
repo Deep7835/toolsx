@@ -1,6 +1,6 @@
 /* Kaagazo service worker — offline-first for the app shell, network-first for pages. */
-const VERSION = "kaagazo-v2";
-const SHELL = ["/", "/tools", "/categories", "/offline", "/manifest.webmanifest", "/icon.svg"];
+const VERSION = "kaagazo-v3";
+const SHELL = ["/", "/tools", "/categories", "/offline", "/manifest.webmanifest", "/logo.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));

@@ -4,6 +4,7 @@ import path from "node:path";
 import { createElement, type ReactNode } from "react";
 import { Receipt, Landmark, Users, TrendingUp, QrCode, Package, Store, Image as ImageIcon, Briefcase, Scale, ShieldCheck, Megaphone, Sparkles, Calculator, FileText, Wallet, type IconNode } from "lucide";
 import { BRAND } from "./brand";
+import { LOGO_DATA_URI } from "./logo-data";
 
 const fontCache: Record<string, Buffer> = {};
 async function font(name: "UncutSans-Bold" | "UncutSans-Medium") {
@@ -40,9 +41,8 @@ export interface OgInput { title: string; eyebrow?: string; footer?: string; tag
 function Mark({ k }: { k: number }) {
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 14 * k }}>
-      <div style={{ display: "flex", width: 44 * k, height: 44 * k, borderRadius: 12 * k, background: "#0b0b0d", alignItems: "center", justifyContent: "center" }}>
-        <svg viewBox="0 0 24 24" width={26 * k} height={26 * k} fill="none" stroke="#ffffff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M7 4h7l4 4v12H7z" /><path d="M14 4v4h4M10 13h5M10 17h5" /></svg>
-      </div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={LOGO_DATA_URI} width={44 * k} height={44 * k} alt="" />
       <div style={{ display: "flex", fontSize: 30 * k, fontWeight: 700, letterSpacing: -1.2 * k, color: "#0b0b0d" }}>{BRAND.wordmark}</div>
     </div>
   );
