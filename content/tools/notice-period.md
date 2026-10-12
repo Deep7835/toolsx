@@ -41,6 +41,7 @@ Example: resign 1 October 2026 with 60 days' notice, 10 days' leave adjusted, 5 
 - [Leave balance calculator](/tools/leave-balance) — what can be adjusted or encashed.
 - [Business days calculator](/tools/business-days) — working days to the LWD.
 - [Experience letter generator](/tools/experience-letter) — HR: issue the relieving letter with the right date.
+- [Offer letter generator](/tools/offer-letter) — set a notice period you can actually enforce.
 - [In-hand salary calculator](/tools/in-hand-salary) — the new offer's real take-home.
 - [EPF & gratuity calculator](/tools/epf-gratuity) — what you carry with you.
 - [Statutory bonus calculator](/tools/statutory-bonus) — bonus due in the final settlement.

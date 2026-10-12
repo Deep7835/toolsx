@@ -45,6 +45,7 @@ The [EPF ceiling change](/blog/epf-wage-ceiling-25000-what-changes-for-payroll) 
 ## Related tools
 
 - [In-hand salary calculator](/tools/in-hand-salary) — the employee's view of the same CTC.
+- [Offer letter generator](/tools/offer-letter) — put the CTC you costed into a letter with its annexure.
 - [Team payroll calculator](/tools/team-payroll) — monthly payouts for the whole team.
 - [Statutory bonus calculator](/tools/statutory-bonus) — the exact bonus liability.
 - [EPF & gratuity calculator](/tools/epf-gratuity) — long-term liabilities.

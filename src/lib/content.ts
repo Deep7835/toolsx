@@ -39,6 +39,9 @@ export const CONTENT: Record<string, { steps?: string[]; faqs?: { q: string; a: 
   "edf-filing": {
     steps: ["Set your PAN, AD bank and AD code once, and say whether you export software or other services and whether you are in an SEZ — the tool then names the authority you file with.", "Add each invoice raised on a foreign client: number, date, client, country, currency, amount and SAC code.", "For foreign-currency invoices, enter the RBI reference rate for the invoice date so the rupee value is right.", "Read the deadlines: the EDF date is 30 days after the invoice month ends, and the realisation date is nine months from the invoice (twelve if billed in rupees).", "Download the CSV or print the month-wise summary and send it to your bank with the filing."],
   },
+  "offer-letter": {
+    steps: ["Pick a template — standard, startup, sales with variable pay, internship or fixed-term — then edit any line of it.", "Upload your logo and fill in the company details once; they are saved on this device and reused by the other Kaagazo letter tools.", "Enter the candidate's name, address, designation, reporting line, joining date and how long the offer stays open.", "Set the CTC and the basic percentage; the annexure splits it into basic, HRA, special allowance, employer PF and gratuity automatically.", "Download the PDF and send it, or print it for signature — the acceptance block is on the last page."],
+  },
   "gstin-validator": {
     steps: ["Type or paste the 15-character GST number — spaces and dashes are ignored.", "Read the verdict: format, state code and check digit are validated instantly.", "Check the decoded details — state, PAN, taxpayer type and how many registrations that PAN holds in the state.", "Open the GST portal link to confirm the registration is active and see the legal name."],
   },

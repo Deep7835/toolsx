@@ -47,6 +47,7 @@ Under the new regime, salary up to ₹12.75 lakh (₹12 lakh plus the ₹75,000 
 - [Professional tax calculator](/tools/professional-tax) — the state deduction line.
 - [EPF & gratuity calculator](/tools/epf-gratuity) — what the "invisible" CTC becomes at retirement.
 - [Notice period calculator](/tools/notice-period) — if the offer is tempting enough to leave.
+- [Offer letter generator](/tools/offer-letter) — for employers issuing the offer behind the CTC.
 
 ## FAQ
 

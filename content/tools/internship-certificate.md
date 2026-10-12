@@ -47,7 +47,8 @@ Employers converting interns to full-time roles should check the payroll implica
 
 - [Experience letter generator](/tools/experience-letter) — for employees and converted interns.
 - [Award certificate designer](/tools/award-certificate) — "Best intern" recognitions.
-- [Letterhead generator](/tools/letterhead) — the offer letter and the certificate on the same stationery.
+- [Offer letter generator](/tools/offer-letter) — the internship offer, with its own template.
+- [Letterhead generator](/tools/letterhead) — the same stationery across both.
 - [Staff ID card creator](/tools/staff-id-card) — temporary badges for interns.
 - [Digital signature maker](/tools/digital-signature) — a signature image for PDFs.
 

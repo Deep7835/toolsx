@@ -26,6 +26,7 @@ export const loaders: Record<string, Loader> = {
   "movie-ticket": () => import("./shop/MovieTicket"),
   "gym-membership": () => import("./shop/GymMembership"),
   "wage-slip": () => import("./hr/WageSlip"),
+  "offer-letter": () => import("./hr/OfferLetter"),
   "experience-letter": () => import("./hr/ExperienceLetter"),
   "award-certificate": () => import("./hr/AwardCertificate"),
   "internship-certificate": () => import("./hr/InternshipCertificate"),

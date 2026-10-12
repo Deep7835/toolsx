@@ -65,6 +65,7 @@ const RAW: ToolMeta[] = [
   t("password-generator", "Password Generator", "Create secure, random, high-entropy cryptographic passcodes for server and admin accounts.", "media", "SECURITY", "ADMIN UTILITY", { keywords: ["random", "secure"] }),
   t("password-strength", "Password Strength Checker", "Analyze real-time brute force cracking estimations and character entropy scoring.", "media", "SECURITY", "SEC ANALYSIS", { keywords: ["entropy", "crack time"] }),
   t("favicon-generator", "Favicon & App Icon Generator", "Create structured browser web app favicons and icon bundles from simple design fields.", "media", "BRANDING", "ASSET BUILDER", { keywords: ["icon", "pwa", "apple touch"] }),
+  t("offer-letter", "Offer Letter Generator", "Create a professional offer letter on your own letterhead — logo, company details, CTC annexure and five ready templates you can edit.", "hr", "HR LETTER", "OFFER LETTER", { keywords: ["offer letter format", "job offer letter template", "appointment letter generator", "offer letter pdf", "ctc breakup letter"], badge: "new" }),
   t("experience-letter", "Experience Letter Generator", "Draft corporate experience and relieving certificates with dynamic designations and dates.", "hr", "HR & STAFF", "HR LETTER", { keywords: ["relieving", "certificate"] }),
   t("award-certificate", "Award Certificate Designer", "Design customized corporate excellence awards and merit certificates for download.", "hr", "MILESTONES", "CREDENTIALS", { keywords: ["certificate", "appreciation"] }),
   t("internship-certificate", "Internship Certificate Maker", "Format high-quality training and internship completion credentials with project titles.", "hr", "HR & STAFF", "INTERNSHIP", { keywords: ["intern", "training"] }),
@@ -152,6 +153,7 @@ const RAW: ToolMeta[] = [
 
 /** Title tags for tools whose plain name does not earn the click in search results. */
 const SEO_TITLES: Record<string, string> = {
+  "offer-letter": "Offer Letter Generator — Free Format & PDF",
   "experience-letter": "Experience Letter Generator — Free PDF Format",
   "credit-note": "Free Credit Note Generator — GST Format PDF",
   "letterhead": "Letterhead Generator — Free A4 Design, PDF",

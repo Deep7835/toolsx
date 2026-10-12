@@ -29,7 +29,7 @@ Under the Companies Act, a company must print its name, CIN, registered office a
 - **Authorisation letters** for GST, bank and marketplace representatives.
 - **Declarations and undertakings** for tenders and vendor registration (attach with the [PDF merge tool](/tools/pdf-merge-split)).
 - **Quotation and proposal cover letters** — the price itself goes on the [service quote](/tools/service-quote).
-- **HR letters** — offer, appointment, [experience and relieving letters](/tools/experience-letter), [internship certificates](/tools/internship-certificate).
+- **HR letters** — [offer letters](/tools/offer-letter), appointment, [experience and relieving letters](/tools/experience-letter), [internship certificates](/tools/internship-certificate).
 - **Demand and legal notices** — the cheque-bounce notice under Section 138 must be sent in writing within 30 days; the timeline is in [Cheque bounce: what to do](/blog/cheque-bounce-section-138-what-to-do).
 - **Replies to notices** from GST or income-tax departments, on letterhead, with reference numbers.
 - **Medical and clinic letters** — referrals and fitness certificates alongside the [prescription builder](/tools/medical-prescription).

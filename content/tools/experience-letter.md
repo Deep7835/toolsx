@@ -45,6 +45,7 @@ Keep the tone neutral and factual. A letter is not a reference; if you cannot sa
 
 ## Related tools
 
+- [Offer letter generator](/tools/offer-letter) — the document at the other end of the employment.
 - [Letterhead generator](/tools/letterhead) — consistent stationery for every HR letter.
 - [Internship certificate maker](/tools/internship-certificate) — for trainees and interns.
 - [Notice period calculator](/tools/notice-period) — the last working day on the relieving letter.
