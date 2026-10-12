@@ -49,7 +49,7 @@ const entityLd = {
       name: BRAND.name,
       alternateName: ["Kaagazo.com", "Kaagazo Tools"],
       url: BASE,
-      logo: { "@type": "ImageObject", url: `${BASE}/icon.svg` },
+      logo: { "@type": "ImageObject", url: `${BASE}/logo-512.png`, width: 512, height: 512 },
       description: BRAND.description,
       email: BRAND.email,
       areaServed: { "@type": "Country", name: "India" },
