@@ -12,4 +12,10 @@ export const BRAND = {
   googleSiteVerification: "bWjMJgGOzbwzGz3Ugl-ieDsCd0gmD-nJqh275rQ_EHs",
   /** Bing Webmaster Tools token (public). Empty unless verified by meta tag — importing from Search Console needs none. */
   bingSiteVerification: "",
+  /**
+   * Profiles that confirm Kaagazo is its own entity. Google reads these as `sameAs` and uses them to
+   * separate the brand from the similarly spelled "Kaagaz" film and scanner app. Add each URL only
+   * once the profile exists and links back here — an unreachable sameAs is worse than none.
+   */
+  profiles: [] as string[],
 };

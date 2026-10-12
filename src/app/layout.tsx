@@ -39,11 +39,45 @@ export const viewport: Viewport = {
 
 const themeScript = `(function(){try{var t=localStorage.getItem('ibt:theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();`;
 
+/** Site-wide entity graph: who publishes this and what the site is, so search engines can tell the brand apart. */
+const entityLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${BASE}/#organization`,
+      name: BRAND.name,
+      alternateName: ["Kaagazo.com", "Kaagazo Tools"],
+      url: BASE,
+      logo: { "@type": "ImageObject", url: `${BASE}/icon.svg` },
+      description: BRAND.description,
+      email: BRAND.email,
+      areaServed: { "@type": "Country", name: "India" },
+      ...(BRAND.profiles.length ? { sameAs: BRAND.profiles } : {}),
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${BASE}/#website`,
+      name: BRAND.name,
+      alternateName: "Kaagazo.com",
+      url: BASE,
+      inLanguage: "en-IN",
+      publisher: { "@id": `${BASE}/#organization` },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: { "@type": "EntryPoint", urlTemplate: `${BASE}/tools?q={search_term_string}` },
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={uncut.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(entityLd) }} />
       </head>
       <body className="flex min-h-dvh flex-col">
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[1001] focus:rounded-lg focus:bg-surface focus:px-3 focus:py-2 focus:text-sm">Skip to content</a>

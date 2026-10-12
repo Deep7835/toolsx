@@ -5,7 +5,8 @@ import { cn } from "@/lib/cn";
 /**
  * Cycles through words with a soft slide/blur transition.
  * - Container width animates to the measured width of the active word (no layout jump).
- * - Only the active (and briefly the outgoing) word is in the DOM, so the h1 reads cleanly.
+ * - Only the active word is real text; the outgoing one is CSS generated content, so the h1
+ *   always reads as one clean sentence for crawlers mid-transition.
  * - Respects prefers-reduced-motion (instant swap).
  */
 export function RotatingWord({ words, interval = 2600, className }: { words: string[]; interval?: number; className?: string }) {
@@ -66,7 +67,7 @@ export function RotatingWord({ words, interval = 2600, className }: { words: str
     >
       <span key={`c${cur}`} className={cn("inline-block", prev !== null ? "animate-word-in" : "")}>{words[cur]}</span>
       {prev !== null && prev !== cur ? (
-        <span key={`p${prev}`} aria-hidden className="pointer-events-none absolute left-0 top-0 inline-block animate-word-out">{words[prev]}</span>
+        <span key={`p${prev}`} aria-hidden data-word={words[prev]} className="word-ghost pointer-events-none absolute left-0 top-0 inline-block animate-word-out" />
       ) : null}
     </span>
   );

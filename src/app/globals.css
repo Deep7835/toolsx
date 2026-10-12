@@ -151,6 +151,8 @@ body {
 /* Uncut Sans carries italics on an `ital` axis rather than a separate face */
 em, i, .italic { font-style: normal; font-variation-settings: "ital" 11; }
 .tabular { font-variant-numeric: tabular-nums; }
+/* Outgoing word of the rotating headline: drawn, not DOM text, so crawlers never read two words at once. */
+.word-ghost::after { content: attr(data-word); }
 
 /* subtle hairline for section dividers */
 .hairline { border-top: 1px solid var(--border); }

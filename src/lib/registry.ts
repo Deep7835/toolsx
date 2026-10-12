@@ -6,6 +6,8 @@ export type Badge = "popular" | "new" | "updated" | "ai" | "live";
 export interface ToolMeta {
   slug: string;
   name: string;
+  /** Title tag when the tool's name alone would not earn the click. Falls back to `name`. */
+  seoTitle?: string;
   description: string;
   category: CategoryId;
   tag: string; // small uppercase label, e.g. "COMPLIANCE"
@@ -147,7 +149,32 @@ const RAW: ToolMeta[] = [
   t("upi-mdr-guide", "UPI MDR 2026 Complete Guide", "Complete guide to the 2026 UPI MDR framework, 0.4% rates, ₹300 caps, P2PM exemptions and merchant categories.", "finance", "GUIDE", "2026 NPCI RULES"),
 ];
 
-export const TOOLS: ToolMeta[] = RAW.map((t) => ({ ...t, ...(CONTENT[t.slug] ?? {}) }));
+
+/** Title tags for tools whose plain name does not earn the click in search results. */
+const SEO_TITLES: Record<string, string> = {
+  "experience-letter": "Experience Letter Generator — Free PDF Format",
+  "credit-note": "Free Credit Note Generator — GST Format PDF",
+  "letterhead": "Letterhead Generator — Free A4 Design, PDF",
+  "epf-gratuity": "PF & Gratuity Calculator — 2026 Rules",
+  "team-payroll": "Variable Pay & Team Payroll Calculator",
+  "gst-calculator": "GST Calculator — Add, Remove & Reverse GST",
+  "internship-certificate": "Internship Certificate Generator — Free PDF",
+  "photo-resizer": "Image Resizer for WhatsApp, Instagram, Amazon",
+  "budget-variance": "Budget Variance Calculator — Formula & Example",
+  "in-hand-salary": "In-Hand Salary Calculator from CTC (2026)",
+  "depreciation-calculator": "Depreciation Calculator — Income Tax & Co. Act",
+  "gstin-validator": "GSTIN Validator — Check Any GST Number Free",
+  "schema-markup": "Schema Markup Generator — LocalBusiness, Product",
+  "serp-preview": "SERP Preview Tool — Google Snippet Simulator",
+  "digital-signature": "Signature Maker — Draw & Download PNG Free",
+  "barcode-generator": "Barcode Generator — EAN-13, Code 128, Free",
+  "upi-standee": "UPI QR Code Generator for Shops — Free Print",
+  "emi-calculator": "Business Loan EMI Calculator — MSME & SME",
+  "shipping-label": "Shipping Label Generator — 4×6 Thermal, Free",
+  "payment-receipt": "Payment Receipt Generator — Invoice cum Receipt",
+};
+
+export const TOOLS: ToolMeta[] = RAW.map((t) => ({ ...t, ...(CONTENT[t.slug] ?? {}), ...(SEO_TITLES[t.slug] ? { seoTitle: SEO_TITLES[t.slug] } : {}) }));
 
 export const toolBySlug = (slug: string) => TOOLS.find((x) => x.slug === slug);
 export const toolsByCategory = (id: CategoryId) => TOOLS.filter((x) => x.category === id);
