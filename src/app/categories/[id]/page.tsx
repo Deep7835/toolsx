@@ -5,6 +5,7 @@ import { CATEGORIES, type CategoryId } from "@/lib/categories";
 import { toolsByCategory } from "@/lib/registry";
 import { ToolGrid } from "@/components/layout/ToolGrid";
 import { PageHeader } from "@/components/layout/PageHeader";
+import { ToolDirectory } from "@/components/layout/ToolDirectory";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return CATEGORIES.map((c) => ({ id: c.id })); }
@@ -23,6 +24,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ id: s
     <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10 sm:py-14">
       <PageHeader eyebrow="Category" title={c.name} description={c.description} />
       <div className="mt-8"><Suspense><ToolGrid tools={tools} lockedCategory={c.id} /></Suspense></div>
+      <ToolDirectory only={c.id as CategoryId} heading={`All ${c.name} tools`} />
     </div>
   );
 }
